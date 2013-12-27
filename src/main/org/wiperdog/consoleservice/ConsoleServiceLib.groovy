@@ -1,6 +1,6 @@
-package org.wiperdog.ConsoleService
+package org.wiperdog.consoleservice
 
-import org.wiperdog.WiperdogLogger.WiperdogLogger4Xwiki;
+import org.wiperdog.wiperdoglogger.WiperdogLogger4Xwiki;
 
 class ConsoleServiceLib {
 	def static WiperdogLogger4Xwiki logger = new WiperdogLogger4Xwiki("ConsoleServiceLib")

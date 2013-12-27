@@ -1,4 +1,4 @@
-package test;
+package org.wiperdog.consoleservice;
 
 import static org.junit.Assert.*;
 import java.util.ArrayList;
@@ -9,9 +9,13 @@ import java.util.Map;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.wiperdog.ConsoleService.ConsoleServiceLib;
+import org.wiperdog.consoleservice.ConsoleServiceLib;
 
-public class TestbuildCmdList {
+/**
+ * Test method buildCmdList
+ *
+ */
+public class ConsoleServiceLib_UT_01 {
 
 	ConsoleServiceLib service;
 	HashMap<String, Map<String, String>> params;
@@ -246,7 +250,7 @@ public class TestbuildCmdList {
 		// get data of function buildCmdList
 		listCmd = (ArrayList) service.buildCmdList(false, psExec, listCmd,
 				true, params);
-		assertNull(listCmd);
+		assertTrue(listCmd.size() == 0);
 	}
 
 	/**

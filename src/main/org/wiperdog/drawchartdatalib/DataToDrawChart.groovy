@@ -1,6 +1,6 @@
-package org.wiperdog.DrawChartDataLib
+package org.wiperdog.drawchartdatalib
 
-import org.wiperdog.WiperdogLogger.WiperdogLogger4Xwiki;
+import org.wiperdog.wiperdoglogger.WiperdogLogger4Xwiki;
 
 class DataToDrawChart {
 	def static WiperdogLogger4Xwiki logger = new WiperdogLogger4Xwiki("DataToDrawChart")

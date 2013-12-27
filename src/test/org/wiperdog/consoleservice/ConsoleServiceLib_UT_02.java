@@ -1,4 +1,4 @@
-package test;
+package org.wiperdog.consoleservice;
 
 import static org.junit.Assert.*;
 
@@ -9,9 +9,13 @@ import java.util.List;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.wiperdog.ConsoleService.ConsoleServiceLib;
+import org.wiperdog.consoleservice.ConsoleServiceLib;
 
-public class TestrunProcClosure {
+/**
+ * Test method runProcClosure
+ *
+ */
+public class ConsoleServiceLib_UT_02 {
 	ConsoleServiceLib service;
 	List<String> listCmd;
 	HashMap<String, String> tmpMap;

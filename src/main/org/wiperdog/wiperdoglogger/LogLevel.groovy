@@ -1,4 +1,4 @@
-package org.wiperdog.WiperdogLogger
+package org.wiperdog.wiperdoglogger
 
 class LogLevel {
 	final static WARN = 1

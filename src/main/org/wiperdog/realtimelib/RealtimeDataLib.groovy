@@ -1,10 +1,10 @@
-package org.wiperdog.RealtimeLib
+package org.wiperdog.realtimelib
 
 import com.google.gson.Gson;
 import com.mongodb.util.JSON
 import java.text.SimpleDateFormat
-import org.wiperdog.DrawChartDataLib.DataToDrawChart
-import org.wiperdog.WiperdogLogger.WiperdogLogger4Xwiki;
+import org.wiperdog.drawchartdatalib.DataToDrawChart
+import org.wiperdog.wiperdoglogger.WiperdogLogger4Xwiki;
 
 class RealtimeDataLib {
 	def static WiperdogLogger4Xwiki logger = new WiperdogLogger4Xwiki("RealtimeDataLib")

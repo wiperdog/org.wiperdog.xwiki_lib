@@ -1,4 +1,4 @@
-package org.wiperdog.WiperdogLogger
+package org.wiperdog.wiperdoglogger
 
 class WiperdogLogger4Xwiki {
 	def name = 'Wiperdog'

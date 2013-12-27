@@ -1,9 +1,9 @@
-package org.wiperdog.Policy
+package org.wiperdog.policy
 
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
-import org.wiperdog.WiperdogLogger.WiperdogLogger4Xwiki;
+import org.wiperdog.wiperdoglogger.WiperdogLogger4Xwiki;
 
 class PolicyStringLib {
 	def static WiperdogLogger4Xwiki logger = new WiperdogLogger4Xwiki("PolicyStringLib")

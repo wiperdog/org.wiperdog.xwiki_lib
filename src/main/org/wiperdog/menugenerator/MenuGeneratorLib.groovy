@@ -1,6 +1,6 @@
-package org.wiperdog.MenuGenerator
+package org.wiperdog.menugenerator
 
-import org.wiperdog.WiperdogLogger.WiperdogLogger4Xwiki;
+import org.wiperdog.wiperdoglogger.WiperdogLogger4Xwiki;
 
 class MenuGeneratorLib {
 	def static WiperdogLogger4Xwiki logger = new WiperdogLogger4Xwiki("MenuGeneratorLib")

@@ -1,8 +1,8 @@
-package org.wiperdog.CustomMongoDbConnection
+package org.wiperdog.custommongodbconnection
 import com.gmongo.GMongo;
 import java.text.SimpleDateFormat
 
-import org.wiperdog.WiperdogLogger.WiperdogLogger4Xwiki;
+import org.wiperdog.wiperdoglogger.WiperdogLogger4Xwiki;
 
 class CMongoDBConn {
 	def db
