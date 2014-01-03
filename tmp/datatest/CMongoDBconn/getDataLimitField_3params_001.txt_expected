@@ -1,0 +1,37 @@
+[
+  {
+    "fetchAt": "20131218102321GMT+07:00",
+    "TablespaceName": "INNODB_TABLESPACE",
+    "CurrentUsedSizeKB": 6416.0,
+    "CurrentTotalSizeKB": 1036288,
+    "CurrentUsedPct": 0.6191329051
+  },
+  {
+    "fetchAt": "20131218102646GMT+07:00",
+    "TablespaceName": "INNODB_TABLESPACE",
+    "CurrentUsedSizeKB": 6416.0,
+    "CurrentTotalSizeKB": 1036288,
+    "CurrentUsedPct": 0.6191329051
+  },
+  {
+    "fetchAt": "20131218102927GMT+07:00",
+    "TablespaceName": "INNODB_TABLESPACE",
+    "CurrentUsedSizeKB": 6416.0,
+    "CurrentTotalSizeKB": 1036288,
+    "CurrentUsedPct": 0.6191329051
+  },
+  {
+    "fetchAt": "20131218103302GMT+07:00",
+    "TablespaceName": "INNODB_TABLESPACE",
+    "CurrentUsedSizeKB": 6416.0,
+    "CurrentTotalSizeKB": 1036288,
+    "CurrentUsedPct": 0.6191329051
+  },
+  {
+    "fetchAt": "20131218103323GMT+07:00",
+    "TablespaceName": "INNODB_TABLESPACE",
+    "CurrentUsedSizeKB": 6416.0,
+    "CurrentTotalSizeKB": 1036288,
+    "CurrentUsedPct": 0.6191329051
+  }
+]

@@ -44,6 +44,9 @@ class CMongoDBConn {
 		if(param_file.exists()){
 			GroovyShell shell = new GroovyShell()
 			def params = shell.evaluate(param_file)
+			if(params == null){
+				params = [:]
+			}
 			def declaredMongoDB = params['mongoDB']
 			if(declaredMongoDB != null){
 				decidedDbName = declaredMongoDB['dbName']
@@ -75,11 +78,14 @@ class CMongoDBConn {
 	 * @throws Exception
 	 */
 	def getConnection(host, port, dbname, userName, password) throws Exception{
+		assert host != null && host.trim() != "" : "Host is null or empty!"
+		assert port != null && port > 0 : "Port is null or invalid!"
 		logger.info("Begin getting connection with host : $host , port : $port , user : $userName)")
 		try{
 			this.gmongo = new GMongo(host, port)
 			this.db = gmongo.getDB(dbname)
-			if(userName != ''){
+			if(userName != null && userName.trim() != ''){
+				assert password != null && password != '' : "Password is null or empty!"
 				db.authenticate(userName, password.toCharArray())
 			}
 		}catch(Exception ex){
@@ -115,8 +121,8 @@ class CMongoDBConn {
 	def getDataAllFields(collection){
 		logger.trace("Begin getting all data")
 		def list_data = []
-		assert collection != null && collection != "" : "Can not get data ! Collection is null or empty string"
-		def result = db[collection].find();
+		assert collection != null && collection.trim() != "" : "Can not get data ! Collection is null or empty string"
+		def result = db[collection.trim()].find();
 		while(result.hasNext()){
 			list_data.add(result.next())
 		}
@@ -133,13 +139,16 @@ class CMongoDBConn {
 	 */
 	def getDataAllFields(collection,limit,istIid){
 		def list_data = []
-		assert collection != null && collection != "" : "Can not get data ! Collection is null or empty string"
+		assert collection != null && collection.trim() != "" : "Can not get data ! Collection is null or empty string"
+		assert istIid != null && istIid.trim() != "" : "Can not get data ! istIid is null or empty string"
 		assert limit != null : "Can not get data ! Limit is null"
-		def realCollectionName = collection + "." + istIid
+		def realCollectionName = collection.trim() + "." + istIid.trim()
 		logger.trace("Begin getting all data of $realCollectionName with limit of $limit")
-		def result = db[realCollectionName].find().sort( fetchAt : -1).limit(limit)
-		while(result.hasNext()){
-			list_data.add(result.next())
+		if(limit > 0){
+			def result = db[realCollectionName].find().sort( fetchAt : -1).limit(limit)
+			while(result.hasNext()){
+				list_data.add(result.next())
+			}
 		}
 		logger.trace("Got " + list_data.size() + " record(s).")
 		return (ArrayList)list_data.reverse()
@@ -154,9 +163,9 @@ class CMongoDBConn {
 	def getDataLimitFields(collection,fields){
 		logger.trace("Begin getting $collection data of these fields : $fields")
 		def list_data = []
-		assert collection != null && collection != "" : "Can not get data ! Collection is null or empty string"
-		assert (fields !=null && fields !=[]) : "Can not get data ! List fields is null or empty"
-		def result = db[collection].find().sort(fetchAt: -1)
+		assert collection != null && collection.trim() != "" : "Can not get data ! Collection is null or empty string"
+		assert fields != null && fields != []: "Can not get data ! List fields is null or empty"
+		def result = db[collection.trim()].find().sort(fetchAt: -1)
 		def tmp = [:]
 		while(result.hasNext()){
 			def doc = result.next()
@@ -165,7 +174,11 @@ class CMongoDBConn {
 					tmp["fetchAt"] = doc.fetchAt
 				}
 				fields.each{item->
-					tmp[item] = it[item]
+					if(item != 'fetchAt'){
+						if(it[item] != null){
+							tmp[item] = it[item]
+						}
+					}
 				}
 				list_data.add(tmp)
 				tmp=[:]
@@ -185,22 +198,28 @@ class CMongoDBConn {
 	def getDataLimitFields(collection,fields,limit){
 		logger.trace("Begin getting $collection data of these fields : $fields with limit of $limit")
 		def list_data = []
-		assert collection != null && collection != "" : "Can not get data ! Collection is null or empty string"
+		assert collection != null && collection.trim() != "" : "Can not get data ! Collection is null or empty string"
 		assert limit != null : "Can not get data ! Limit is null"
 		assert (fields !=null && fields !=[]) : "Can not get data ! List fields is null or empty"
-		def result = db[collection].find().sort(fetchAt: -1).limit(limit)
-		def tmp = [:]
-		while(result.hasNext()){
-			def doc = result.next()
-			doc.data.each{
-				if( tmp["fetchAt"] == null){
-					tmp["fetchAt"] = doc.fetchAt
+		if(limit > 0){
+			def result = db[collection.trim()].find().sort(fetchAt: -1).limit(limit)
+			def tmp = [:]
+			while(result.hasNext()){
+				def doc = result.next()
+				doc.data.each{
+					if( tmp["fetchAt"] == null){
+						tmp["fetchAt"] = doc.fetchAt
+					}
+					fields.each{item->
+						if(item != 'fetchAt'){
+							if(it[item] != null){
+								tmp[item] = it[item]
+							}
+						}
+					}
+					list_data.add(tmp)
+					tmp=[:]
 				}
-				fields.each{item->
-					tmp[item] = it[item]
-				}
-				list_data.add(tmp)
-				tmp=[:]
 			}
 		}
 		logger.trace("Got " + list_data.size() + " record(s).")
@@ -213,8 +232,8 @@ class CMongoDBConn {
 	 * @return type of job
 	 */
 	def getDataType(collection){
-		assert collection != null && collection != "" : "Can not get data ! Collection is null or empty string"
-		def result = db[collection].find().sort(fetchAt: -1).limit(1)
+		assert collection != null && collection.trim() != "" : "Can not get data ! Collection is null or empty string"
+		def result = db[collection.trim()].find().sort(fetchAt: -1).limit(1)
 		def doc
 		while(result.hasNext()){
 			doc = result.next()
@@ -242,30 +261,34 @@ class CMongoDBConn {
 		def list_data = []
 		assert collection != null || collection != "" || istIid != null || istIid !="" : "Can not get data ! Collection is null or empty string"
 		assert limit != null : "Can not get data ! Limit is null"
-		assert (fromDate != null && toDate != null) : "Can not get data ! 'From Date' or 'To date' is null !"
-		def result = null
-		if( toDate!= "" ) {
-			toDate = (Long)(format.parse(toDate).getTime()/1000.intValue())
-			if(fromDate!= "" ){
-				fromDate = (Long)(format.parse(fromDate).getTime()/1000.intValue())
-				result = db[realCollectionName].find( fetchedAt_bin: [ $gt: fromDate ,$lt: toDate ]).sort(fetchAt: -1).limit(limit)
+		assert (fromDate != null && toDate != null) : "Can not get data ! 'From Date' or 'To date' is null or empty String!"
+		fromDate = fromDate.trim()
+		toDate = toDate.trim()
+		if(limit > 0){
+			def result = null
+			if( toDate != "" ) {
+				toDate = (Long)(format.parse(toDate).getTime()/1000.intValue())
+				if(fromDate != "" ){
+					fromDate = (Long)(format.parse(fromDate).getTime()/1000.intValue())
+					result = db[realCollectionName].find( fetchedAt_bin: [ $gt: fromDate ,$lt: toDate ]).sort(fetchAt: -1).limit(limit)
+				} else {
+					result = db[realCollectionName].find( fetchedAt_bin: [ $lt: toDate ]).sort(fetchAt: -1).limit(limit)
+				}
 			} else {
-				result = db[realCollectionName].find( fetchedAt_bin: [ $lt: toDate ]).sort(fetchAt: -1).limit(limit)
+				if(fromDate != "" ){
+					fromDate = (Long)(format.parse(fromDate).getTime()/1000.intValue())
+					result = db[realCollectionName].find( fetchedAt_bin: [ $gt: fromDate ]).sort(fetchAt: -1).limit(limit)
+				} else {
+					return this.getDataAllFields(collection,limit,istIid)
+				}
 			}
-		} else {
-			if(fromDate!= "" ){
-				fromDate = (Long)(format.parse(fromDate).getTime()/1000.intValue())
-				result = db[realCollectionName].find( fetchedAt_bin: [ $gt: fromDate ]).sort(fetchAt: -1).limit(limit)
-			} else {
-				return this.getDataAllFields(collection,limit,istIid)
+			if(result!=null){
+				while(result.hasNext()){
+					list_data.add(result.next())
+				}
 			}
 		}
-		if(result!=null){
-			while(result.hasNext()){
-				list_data.add(result.next())
-			}
-			logger.trace("Got " + list_data.size() + " record(s).")
-			return (ArrayList)list_data.reverse()
-		}
+		logger.trace("Got " + list_data.size() + " record(s).")
+		return (ArrayList)list_data.reverse()
 	}
 }

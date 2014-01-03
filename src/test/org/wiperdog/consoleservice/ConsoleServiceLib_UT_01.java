@@ -13,7 +13,7 @@ import org.wiperdog.consoleservice.ConsoleServiceLib;
 
 /**
  * Test method buildCmdList
- *
+ * 
  */
 public class ConsoleServiceLib_UT_01 {
 
@@ -32,8 +32,9 @@ public class ConsoleServiceLib_UT_01 {
 		// set params for test (value of params is taken from the conf.params
 		// file)
 		params = new HashMap<String, Map<String, String>>();
-		// run command psExec
+		// set data command psExec
 		psExec = "cmd /c echo %PSTOOLS% \\psExec.exe";
+		// set value of params wiperdog_path
 		tmpMap = new HashMap<String, String>();
 		tmpMap.put("os", "win");
 		tmpMap.put("host", "10.0.0.184");
@@ -42,7 +43,7 @@ public class ConsoleServiceLib_UT_01 {
 		tmpMap.put("path", "D:\\testWiperdog\\1911Wiperdog");
 		params.put("wiperdog_path", tmpMap);
 		params.put("test", new HashMap<String, String>());
-		// tmp output need to compare
+		// set data output need to compare
 		tmpListCmd = new ArrayList<String>();
 		tmpListCmd.add(psExec);
 		tmpListCmd.add("\\\\10.0.0.184");
@@ -207,37 +208,35 @@ public class ConsoleServiceLib_UT_01 {
 	/**
 	 * check output with params is empty
 	 */
-	@Test
+	@Test(expected = AssertionError.class)
 	public void buildCmdListTest12() {
-		// create params
-		params = new HashMap<String, Map<String, String>>();
-		// replace host, user, pass because tmp output need to compare contains
-		// host, user, pass is empty
-		tmpListCmd.set(1, "");
-		tmpListCmd.set(5, "");
-		tmpListCmd.set(7, "");
-		// get data of function buildCmdList
-		listCmd = (ArrayList) service.buildCmdList(false, psExec, listCmd,
-				true, params);
-		assertEquals(tmpListCmd, listCmd);
+		try {
+			// create params
+			params = new HashMap<String, Map<String, String>>();
+			// get data of function buildCmdList
+			listCmd = (ArrayList) service.buildCmdList(false, psExec, listCmd,
+					true, params);
+		} catch (AssertionError ae) {
+			assertTrue(ae.getMessage().contains("Params are null or empty!"));
+			throw ae;
+		}
 	}
 
 	/**
 	 * check output with params is null
 	 */
-	@Test
+	@Test(expected = AssertionError.class)
 	public void buildCmdListTest13() {
-		// set value of params is null
-		params = null;
-		// replace host, user, pass because tmp output need to compare contains
-		// host, user, pass is empty
-		tmpListCmd.set(1, "");
-		tmpListCmd.set(5, "");
-		tmpListCmd.set(7, "");
-		// get data of function buildCmdList
-		listCmd = (ArrayList) service.buildCmdList(false, psExec, listCmd,
-				true, params);
-		assertEquals(tmpListCmd, listCmd);
+		try {
+			// set value of params is null
+			params = null;
+			// get data of function buildCmdList
+			listCmd = (ArrayList) service.buildCmdList(false, psExec, listCmd,
+					true, params);
+		} catch (AssertionError ae) {
+			assertTrue(ae.getMessage().contains("Params are null or empty!"));
+			throw ae;
+		}
 	}
 
 	/**
@@ -250,7 +249,7 @@ public class ConsoleServiceLib_UT_01 {
 		// get data of function buildCmdList
 		listCmd = (ArrayList) service.buildCmdList(false, psExec, listCmd,
 				true, params);
-		assertTrue(listCmd.size() == 0);
+		assertEquals(tmpListCmd, listCmd);
 	}
 
 	/**

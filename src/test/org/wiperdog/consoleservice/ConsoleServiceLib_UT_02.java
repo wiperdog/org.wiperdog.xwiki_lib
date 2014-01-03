@@ -13,7 +13,7 @@ import org.wiperdog.consoleservice.ConsoleServiceLib;
 
 /**
  * Test method runProcClosure
- *
+ * 
  */
 public class ConsoleServiceLib_UT_02 {
 	ConsoleServiceLib service;

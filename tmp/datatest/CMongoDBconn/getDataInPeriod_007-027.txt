@@ -1,0 +1,622 @@
+[
+  {
+    "hostId": "localhost",
+    "type": "Store",
+    "sid": "information_schema",
+    "KEYEXPR": {
+      "_unit": {
+        "CurrentUsedSizeKB": "KB",
+        "CurrentTotalSizeKB": "KB",
+        "CurrentFreeSizeKB": "KB",
+        "CurrentUsedPct": "%",
+        "MaxTotalSizeKB": "KB",
+        "MaxFreeSizeKB": "KB",
+        "MaxUsedPct": "%"
+      },
+      "_chart": [
+        {
+          "type": "pie",
+          "name": "Current usage size vs current free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "CurrentFreeSizeKB"
+          ]
+        },
+        {
+          "type": "pie",
+          "name": "Current usage size vs total free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "MaxFreeSizeKB"
+          ]
+        },
+        {
+          "type": "line",
+          "name": "Max usage percentage and current used percentage",
+          "chart_columns": [
+            "MaxUsedPct",
+            "CurrentUsedPct"
+          ]
+        }
+      ]
+    },
+    "version": "1.0",
+    "fetchAt": "20131218165430GMT+07:00",
+    "fetchedAt_bin": 1387360470,
+    "istIid": "localhost-@MYSQL-information_schema",
+    "resourceId": "As/MyInnoTbsFree",
+    "sourceJob": "MySQL.Database_Area.InnoDBTablespace_Free",
+    "instanceName": "inst1",
+    "data": [
+      {
+        "TablespaceName": "INNODB_TABLESPACE",
+        "CurrentUsedSizeKB": 6416.0,
+        "CurrentTotalSizeKB": 1036288,
+        "CurrentFreeSizeKB": 1029872,
+        "CurrentUsedPct": 0.6191329051,
+        "MaxTotalSizeKB": 22915700,
+        "MaxFreeSizeKB": 22909284,
+        "MaxUsedPct": 0.0279982719,
+        "RECORD_SEQ": 1
+      }
+    ]
+  },
+  {
+    "hostId": "localhost",
+    "type": "Store",
+    "sid": "information_schema",
+    "KEYEXPR": {
+      "_unit": {
+        "CurrentUsedSizeKB": "KB",
+        "CurrentTotalSizeKB": "KB",
+        "CurrentFreeSizeKB": "KB",
+        "CurrentUsedPct": "%",
+        "MaxTotalSizeKB": "KB",
+        "MaxFreeSizeKB": "KB",
+        "MaxUsedPct": "%"
+      },
+      "_chart": [
+        {
+          "type": "pie",
+          "name": "Current usage size vs current free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "CurrentFreeSizeKB"
+          ]
+        },
+        {
+          "type": "pie",
+          "name": "Current usage size vs total free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "MaxFreeSizeKB"
+          ]
+        },
+        {
+          "type": "line",
+          "name": "Max usage percentage and current used percentage",
+          "chart_columns": [
+            "MaxUsedPct",
+            "CurrentUsedPct"
+          ]
+        }
+      ]
+    },
+    "version": "1.0",
+    "fetchAt": "20131218165440GMT+07:00",
+    "fetchedAt_bin": 1387360480,
+    "istIid": "localhost-@MYSQL-information_schema",
+    "resourceId": "As/MyInnoTbsFree",
+    "sourceJob": "MySQL.Database_Area.InnoDBTablespace_Free",
+    "instanceName": "inst1",
+    "data": [
+      {
+        "TablespaceName": "INNODB_TABLESPACE",
+        "CurrentUsedSizeKB": 6416.0,
+        "CurrentTotalSizeKB": 1036288,
+        "CurrentFreeSizeKB": 1029872,
+        "CurrentUsedPct": 0.6191329051,
+        "MaxTotalSizeKB": 22915700,
+        "MaxFreeSizeKB": 22909284,
+        "MaxUsedPct": 0.0279982719,
+        "RECORD_SEQ": 1
+      }
+    ]
+  },
+  {
+    "hostId": "localhost",
+    "type": "Store",
+    "sid": "information_schema",
+    "KEYEXPR": {
+      "_unit": {
+        "CurrentUsedSizeKB": "KB",
+        "CurrentTotalSizeKB": "KB",
+        "CurrentFreeSizeKB": "KB",
+        "CurrentUsedPct": "%",
+        "MaxTotalSizeKB": "KB",
+        "MaxFreeSizeKB": "KB",
+        "MaxUsedPct": "%"
+      },
+      "_chart": [
+        {
+          "type": "pie",
+          "name": "Current usage size vs current free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "CurrentFreeSizeKB"
+          ]
+        },
+        {
+          "type": "pie",
+          "name": "Current usage size vs total free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "MaxFreeSizeKB"
+          ]
+        },
+        {
+          "type": "line",
+          "name": "Max usage percentage and current used percentage",
+          "chart_columns": [
+            "MaxUsedPct",
+            "CurrentUsedPct"
+          ]
+        }
+      ]
+    },
+    "version": "1.0",
+    "fetchAt": "20131218165520GMT+07:00",
+    "fetchedAt_bin": 1387360520,
+    "istIid": "localhost-@MYSQL-information_schema",
+    "resourceId": "As/MyInnoTbsFree",
+    "sourceJob": "MySQL.Database_Area.InnoDBTablespace_Free",
+    "instanceName": "inst1",
+    "data": [
+      {
+        "TablespaceName": "INNODB_TABLESPACE",
+        "CurrentUsedSizeKB": 6416.0,
+        "CurrentTotalSizeKB": 1036288,
+        "CurrentFreeSizeKB": 1029872,
+        "CurrentUsedPct": 0.6191329051,
+        "MaxTotalSizeKB": 22915700,
+        "MaxFreeSizeKB": 22909284,
+        "MaxUsedPct": 0.0279982719,
+        "RECORD_SEQ": 1
+      }
+    ]
+  },
+  {
+    "hostId": "localhost",
+    "type": "Store",
+    "sid": "information_schema",
+    "KEYEXPR": {
+      "_unit": {
+        "CurrentUsedSizeKB": "KB",
+        "CurrentTotalSizeKB": "KB",
+        "CurrentFreeSizeKB": "KB",
+        "CurrentUsedPct": "%",
+        "MaxTotalSizeKB": "KB",
+        "MaxFreeSizeKB": "KB",
+        "MaxUsedPct": "%"
+      },
+      "_chart": [
+        {
+          "type": "pie",
+          "name": "Current usage size vs current free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "CurrentFreeSizeKB"
+          ]
+        },
+        {
+          "type": "pie",
+          "name": "Current usage size vs total free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "MaxFreeSizeKB"
+          ]
+        },
+        {
+          "type": "line",
+          "name": "Max usage percentage and current used percentage",
+          "chart_columns": [
+            "MaxUsedPct",
+            "CurrentUsedPct"
+          ]
+        }
+      ]
+    },
+    "version": "1.0",
+    "fetchAt": "20131218165620GMT+07:00",
+    "fetchedAt_bin": 1387360580,
+    "istIid": "localhost-@MYSQL-information_schema",
+    "resourceId": "As/MyInnoTbsFree",
+    "sourceJob": "MySQL.Database_Area.InnoDBTablespace_Free",
+    "instanceName": "inst1",
+    "data": [
+      {
+        "TablespaceName": "INNODB_TABLESPACE",
+        "CurrentUsedSizeKB": 6416.0,
+        "CurrentTotalSizeKB": 1036288,
+        "CurrentFreeSizeKB": 1029872,
+        "CurrentUsedPct": 0.6191329051,
+        "MaxTotalSizeKB": 22915700,
+        "MaxFreeSizeKB": 22909284,
+        "MaxUsedPct": 0.0279982719,
+        "RECORD_SEQ": 1
+      }
+    ]
+  },
+  {
+    "hostId": "localhost",
+    "type": "Store",
+    "sid": "information_schema",
+    "KEYEXPR": {
+      "_unit": {
+        "CurrentUsedSizeKB": "KB",
+        "CurrentTotalSizeKB": "KB",
+        "CurrentFreeSizeKB": "KB",
+        "CurrentUsedPct": "%",
+        "MaxTotalSizeKB": "KB",
+        "MaxFreeSizeKB": "KB",
+        "MaxUsedPct": "%"
+      },
+      "_chart": [
+        {
+          "type": "pie",
+          "name": "Current usage size vs current free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "CurrentFreeSizeKB"
+          ]
+        },
+        {
+          "type": "pie",
+          "name": "Current usage size vs total free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "MaxFreeSizeKB"
+          ]
+        },
+        {
+          "type": "line",
+          "name": "Max usage percentage and current used percentage",
+          "chart_columns": [
+            "MaxUsedPct",
+            "CurrentUsedPct"
+          ]
+        }
+      ]
+    },
+    "version": "1.0",
+    "fetchAt": "20131218165720GMT+07:00",
+    "fetchedAt_bin": 1387360640,
+    "istIid": "localhost-@MYSQL-information_schema",
+    "resourceId": "As/MyInnoTbsFree",
+    "sourceJob": "MySQL.Database_Area.InnoDBTablespace_Free",
+    "instanceName": "inst1",
+    "data": [
+      {
+        "TablespaceName": "INNODB_TABLESPACE",
+        "CurrentUsedSizeKB": 6416.0,
+        "CurrentTotalSizeKB": 1036288,
+        "CurrentFreeSizeKB": 1029872,
+        "CurrentUsedPct": 0.6191329051,
+        "MaxTotalSizeKB": 22915700,
+        "MaxFreeSizeKB": 22909284,
+        "MaxUsedPct": 0.0279982719,
+        "RECORD_SEQ": 1
+      }
+    ]
+  },
+  {
+    "hostId": "localhost",
+    "type": "Store",
+    "sid": "information_schema",
+    "KEYEXPR": {
+      "_unit": {
+        "CurrentUsedSizeKB": "KB",
+        "CurrentTotalSizeKB": "KB",
+        "CurrentFreeSizeKB": "KB",
+        "CurrentUsedPct": "%",
+        "MaxTotalSizeKB": "KB",
+        "MaxFreeSizeKB": "KB",
+        "MaxUsedPct": "%"
+      },
+      "_chart": [
+        {
+          "type": "pie",
+          "name": "Current usage size vs current free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "CurrentFreeSizeKB"
+          ]
+        },
+        {
+          "type": "pie",
+          "name": "Current usage size vs total free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "MaxFreeSizeKB"
+          ]
+        },
+        {
+          "type": "line",
+          "name": "Max usage percentage and current used percentage",
+          "chart_columns": [
+            "MaxUsedPct",
+            "CurrentUsedPct"
+          ]
+        }
+      ]
+    },
+    "version": "1.0",
+    "fetchAt": "20131218165820GMT+07:00",
+    "fetchedAt_bin": 1387360700,
+    "istIid": "localhost-@MYSQL-information_schema",
+    "resourceId": "As/MyInnoTbsFree",
+    "sourceJob": "MySQL.Database_Area.InnoDBTablespace_Free",
+    "instanceName": "inst1",
+    "data": [
+      {
+        "TablespaceName": "INNODB_TABLESPACE",
+        "CurrentUsedSizeKB": 6416.0,
+        "CurrentTotalSizeKB": 1036288,
+        "CurrentFreeSizeKB": 1029872,
+        "CurrentUsedPct": 0.6191329051,
+        "MaxTotalSizeKB": 22915700,
+        "MaxFreeSizeKB": 22909284,
+        "MaxUsedPct": 0.0279982719,
+        "RECORD_SEQ": 1
+      }
+    ]
+  },
+  {
+    "hostId": "localhost",
+    "type": "Store",
+    "sid": "information_schema",
+    "KEYEXPR": {
+      "_unit": {
+        "CurrentUsedSizeKB": "KB",
+        "CurrentTotalSizeKB": "KB",
+        "CurrentFreeSizeKB": "KB",
+        "CurrentUsedPct": "%",
+        "MaxTotalSizeKB": "KB",
+        "MaxFreeSizeKB": "KB",
+        "MaxUsedPct": "%"
+      },
+      "_chart": [
+        {
+          "type": "pie",
+          "name": "Current usage size vs current free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "CurrentFreeSizeKB"
+          ]
+        },
+        {
+          "type": "pie",
+          "name": "Current usage size vs total free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "MaxFreeSizeKB"
+          ]
+        },
+        {
+          "type": "line",
+          "name": "Max usage percentage and current used percentage",
+          "chart_columns": [
+            "MaxUsedPct",
+            "CurrentUsedPct"
+          ]
+        }
+      ]
+    },
+    "version": "1.0",
+    "fetchAt": "20131218165920GMT+07:00",
+    "fetchedAt_bin": 1387360760,
+    "istIid": "localhost-@MYSQL-information_schema",
+    "resourceId": "As/MyInnoTbsFree",
+    "sourceJob": "MySQL.Database_Area.InnoDBTablespace_Free",
+    "instanceName": "inst1",
+    "data": [
+      {
+        "TablespaceName": "INNODB_TABLESPACE",
+        "CurrentUsedSizeKB": 6416.0,
+        "CurrentTotalSizeKB": 1036288,
+        "CurrentFreeSizeKB": 1029872,
+        "CurrentUsedPct": 0.6191329051,
+        "MaxTotalSizeKB": 22915700,
+        "MaxFreeSizeKB": 22909284,
+        "MaxUsedPct": 0.0279982719,
+        "RECORD_SEQ": 1
+      }
+    ]
+  },
+  {
+    "hostId": "localhost",
+    "type": "Store",
+    "sid": "information_schema",
+    "KEYEXPR": {
+      "_unit": {
+        "CurrentUsedSizeKB": "KB",
+        "CurrentTotalSizeKB": "KB",
+        "CurrentFreeSizeKB": "KB",
+        "CurrentUsedPct": "%",
+        "MaxTotalSizeKB": "KB",
+        "MaxFreeSizeKB": "KB",
+        "MaxUsedPct": "%"
+      },
+      "_chart": [
+        {
+          "type": "pie",
+          "name": "Current usage size vs current free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "CurrentFreeSizeKB"
+          ]
+        },
+        {
+          "type": "pie",
+          "name": "Current usage size vs total free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "MaxFreeSizeKB"
+          ]
+        },
+        {
+          "type": "line",
+          "name": "Max usage percentage and current used percentage",
+          "chart_columns": [
+            "MaxUsedPct",
+            "CurrentUsedPct"
+          ]
+        }
+      ]
+    },
+    "version": "1.0",
+    "fetchAt": "20131218170020GMT+07:00",
+    "fetchedAt_bin": 1387360820,
+    "istIid": "localhost-@MYSQL-information_schema",
+    "resourceId": "As/MyInnoTbsFree",
+    "sourceJob": "MySQL.Database_Area.InnoDBTablespace_Free",
+    "instanceName": "inst1",
+    "data": [
+      {
+        "TablespaceName": "INNODB_TABLESPACE",
+        "CurrentUsedSizeKB": 6416.0,
+        "CurrentTotalSizeKB": 1036288,
+        "CurrentFreeSizeKB": 1029872,
+        "CurrentUsedPct": 0.6191329051,
+        "MaxTotalSizeKB": 22915700,
+        "MaxFreeSizeKB": 22909284,
+        "MaxUsedPct": 0.0279982719,
+        "RECORD_SEQ": 1
+      }
+    ]
+  },
+  {
+    "hostId": "localhost",
+    "type": "Store",
+    "sid": "information_schema",
+    "KEYEXPR": {
+      "_unit": {
+        "CurrentUsedSizeKB": "KB",
+        "CurrentTotalSizeKB": "KB",
+        "CurrentFreeSizeKB": "KB",
+        "CurrentUsedPct": "%",
+        "MaxTotalSizeKB": "KB",
+        "MaxFreeSizeKB": "KB",
+        "MaxUsedPct": "%"
+      },
+      "_chart": [
+        {
+          "type": "pie",
+          "name": "Current usage size vs current free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "CurrentFreeSizeKB"
+          ]
+        },
+        {
+          "type": "pie",
+          "name": "Current usage size vs total free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "MaxFreeSizeKB"
+          ]
+        },
+        {
+          "type": "line",
+          "name": "Max usage percentage and current used percentage",
+          "chart_columns": [
+            "MaxUsedPct",
+            "CurrentUsedPct"
+          ]
+        }
+      ]
+    },
+    "version": "1.0",
+    "fetchAt": "20131218170120GMT+07:00",
+    "fetchedAt_bin": 1387360880,
+    "istIid": "localhost-@MYSQL-information_schema",
+    "resourceId": "As/MyInnoTbsFree",
+    "sourceJob": "MySQL.Database_Area.InnoDBTablespace_Free",
+    "instanceName": "inst1",
+    "data": [
+      {
+        "TablespaceName": "INNODB_TABLESPACE",
+        "CurrentUsedSizeKB": 6416.0,
+        "CurrentTotalSizeKB": 1036288,
+        "CurrentFreeSizeKB": 1029872,
+        "CurrentUsedPct": 0.6191329051,
+        "MaxTotalSizeKB": 22915700,
+        "MaxFreeSizeKB": 22909284,
+        "MaxUsedPct": 0.0279982719,
+        "RECORD_SEQ": 1
+      }
+    ]
+  },
+  {
+    "hostId": "localhost",
+    "type": "Store",
+    "sid": "information_schema",
+    "KEYEXPR": {
+      "_unit": {
+        "CurrentUsedSizeKB": "KB",
+        "CurrentTotalSizeKB": "KB",
+        "CurrentFreeSizeKB": "KB",
+        "CurrentUsedPct": "%",
+        "MaxTotalSizeKB": "KB",
+        "MaxFreeSizeKB": "KB",
+        "MaxUsedPct": "%"
+      },
+      "_chart": [
+        {
+          "type": "pie",
+          "name": "Current usage size vs current free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "CurrentFreeSizeKB"
+          ]
+        },
+        {
+          "type": "pie",
+          "name": "Current usage size vs total free size",
+          "chart_columns": [
+            "CurrentUsedSizeKB",
+            "MaxFreeSizeKB"
+          ]
+        },
+        {
+          "type": "line",
+          "name": "Max usage percentage and current used percentage",
+          "chart_columns": [
+            "MaxUsedPct",
+            "CurrentUsedPct"
+          ]
+        }
+      ]
+    },
+    "version": "1.0",
+    "fetchAt": "20131218170220GMT+07:00",
+    "fetchedAt_bin": 1387360940,
+    "istIid": "localhost-@MYSQL-information_schema",
+    "resourceId": "As/MyInnoTbsFree",
+    "sourceJob": "MySQL.Database_Area.InnoDBTablespace_Free",
+    "instanceName": "inst1",
+    "data": [
+      {
+        "TablespaceName": "INNODB_TABLESPACE",
+        "CurrentUsedSizeKB": 6416.0,
+        "CurrentTotalSizeKB": 1036288,
+        "CurrentFreeSizeKB": 1029872,
+        "CurrentUsedPct": 0.6191329051,
+        "MaxTotalSizeKB": 22915700,
+        "MaxFreeSizeKB": 22909284,
+        "MaxUsedPct": 0.0279982719,
+        "RECORD_SEQ": 1
+      }
+    ]
+  }
+]

@@ -15,6 +15,9 @@ class MenuGeneratorLib {
 	 **/
 	def getMenuItemsStr(treeItem, mapCollection, parentList = []) {
 		logger.info("Begin getting meunu item string")
+		if(mapCollection == null){
+			mapCollection = [:]
+		}
 		def ul_open = false
 		def result = ""
 		def parentStr = ""
@@ -88,7 +91,9 @@ class MenuGeneratorLib {
 				}
 				parentStr += parentItem
 			}
-			returnList.add(parentStr)
+			if(parentStr != ""){
+				returnList.add(parentStr)
+			}
 		}
 		logger.info("Finish getting list job group")
 		return returnList
