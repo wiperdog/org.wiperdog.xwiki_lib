@@ -1,0 +1,22 @@
+POLICY = {resultData->
+	def listMess = []
+	def ret = ['jobName' : 'MySQL.Database_Area.Top30Database', 'istIid' : 'localhost-@MYSQL-information_schema']
+	resultData.each {key,value ->
+		if(key == "D") {
+			value.each {data ->
+				if((data.UsedPct >= 95)){
+					listMess.add([level: null, message: """Dangerous: Database size used of database ${data.DatabaseNm} is too high!!!"""])
+				}
+			}
+		}
+		if(key == "M") {
+			value.each {data ->
+				if((data.UsedPct >= 90) && (data.UsedPct < 95)){
+					listMess.add([level: null, message: """Warning: Current value of database size used of database ${data.DatabaseNm} is ${data.UsedSize} byte!!!"""])
+				}
+			}
+		}
+	}
+	ret['message'] = listMess
+	return ret
+}

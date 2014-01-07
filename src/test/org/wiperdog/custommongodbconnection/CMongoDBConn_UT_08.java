@@ -16,6 +16,7 @@ public class CMongoDBConn_UT_08 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting type of Store job
+	 * Expected: Got string "Store"
 	 */
 	@Test
 	public void getDataType_001() {
@@ -25,6 +26,7 @@ public class CMongoDBConn_UT_08 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting type of Subtyped job
+	 * Expected: Got string "Subtyped"
 	 */
 	@Test
 	public void getDataType_002() {
@@ -34,6 +36,7 @@ public class CMongoDBConn_UT_08 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is null
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataType_003() {
@@ -47,6 +50,7 @@ public class CMongoDBConn_UT_08 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is empty
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataType_004() {
@@ -60,6 +64,7 @@ public class CMongoDBConn_UT_08 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is space character
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataType_005() {
@@ -74,6 +79,7 @@ public class CMongoDBConn_UT_08 extends BaseCMongoDBConnTestcase {
 	/**
 	 * Check getting type normally when collection has space character at begin
 	 * and end
+	 * Expected: Got string "Store"
 	 */
 	@Test
 	public void getDataType_006() {

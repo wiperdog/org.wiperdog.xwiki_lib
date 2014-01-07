@@ -27,7 +27,11 @@ public class CMongoDBConn_UT_07 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data with valid params
-	 * field contains fetchAt
+	 * fields contains fetchAt
+	 * Expected: 5 records with 
+	 * ["fetchAt", "TablespaceName", "CurrentUsedSizeKB", "CurrentTotalSizeKB", "CurrentUsedPct"] fields
+	 * "tmp\\datatest\\CMongoDBconn\\getDataLimitField_2params_001.txt_expected"
+	 * 
 	 * @throws FileNotFoundException 
 	 * 
 	 */
@@ -73,6 +77,10 @@ public class CMongoDBConn_UT_07 extends BaseCMongoDBConnTestcase {
 	/**
 	 * Check getting data with valid param
 	 * field doesn't contains fetchAt
+	 * Expected: 5 records with
+	 * ["fetchAt", "TablespaceName", "CurrentUsedSizeKB", "CurrentTotalSizeKB", "CurrentUsedPct"] fields
+	 * tmp\\datatest\\CMongoDBconn\\getDataLimitField_2params_002.txt_expected
+	 * 
 	 * @throws FileNotFoundException 
 	 * 
 	 */
@@ -117,6 +125,10 @@ public class CMongoDBConn_UT_07 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data with 1 field
+	 * Expected:Got 5 record with
+	 * ["fetchAt", "TablespaceName"] fields
+	 * tmp\\datatest\\CMongoDBconn\\getDataLimitField_2params_003.txt_expected
+	 * 
 	 * @throws FileNotFoundException 
 	 */
 	@Test
@@ -160,6 +172,9 @@ public class CMongoDBConn_UT_07 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data with all fields
+	 * Expected: Got 5 record with all fields
+	 * tmp\\datatest\\CMongoDBconn\\getDataLimitField_2params_004.txt_expected
+	 * 
 	 * @throws FileNotFoundException 
 	 */
 	@Test
@@ -203,6 +218,7 @@ public class CMongoDBConn_UT_07 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is null
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataLimitField_2params_005() {
@@ -217,6 +233,7 @@ public class CMongoDBConn_UT_07 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is empty
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataLimitField_2params_006() {
@@ -231,6 +248,7 @@ public class CMongoDBConn_UT_07 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is space character
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataLimitField_2params_007() {
@@ -245,6 +263,7 @@ public class CMongoDBConn_UT_07 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting 0 record when collection doesn't exist
+	 * Expected: Got 0 record
 	 */
 	@Test
 	public void getDataLimitField_2params_008() {
@@ -255,6 +274,7 @@ public class CMongoDBConn_UT_07 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when field is null
+	 * Expected: AssertionError with message "Can not get data ! List fields is null or empty string"
 	 */
 	@Test(expected=AssertionError.class)
 	public void getDataLimitField_2params_009() {
@@ -269,6 +289,7 @@ public class CMongoDBConn_UT_07 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when field is empty
+	 * Expected: AssertionError with message "Can not get data ! List fields is null or empty string"
 	 */
 	@Test(expected=AssertionError.class)
 	public void getDataLimitField_2params_010() {
@@ -284,6 +305,9 @@ public class CMongoDBConn_UT_07 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data with fields that doesn't exist
+	 * Expected: 5 records with only fetchAt field
+	 * tmp\\datatest\\CMongoDBconn\\getDataLimitField_2params_011.txt_expected
+	 * 
 	 */
 	@Test
 	public void getDataLimitField_2params_011() {

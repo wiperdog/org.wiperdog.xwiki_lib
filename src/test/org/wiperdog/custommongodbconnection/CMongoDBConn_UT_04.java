@@ -29,6 +29,8 @@ public class CMongoDBConn_UT_04 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data with valid params 5 records limit 10
+	 * Expected: Got 5 records with exactly data in 
+	 * tmp\\datatest\\CMongoDBconn\\getDataAllFields3_params_001.txt
 	 * 
 	 * @throws FileNotFoundException
 	 */
@@ -65,6 +67,8 @@ public class CMongoDBConn_UT_04 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data with valid params 20 records limit 10
+	 * Expected: Got 10 records with exactly data in 
+	 * tmp\\datatest\\CMongoDBconn\\getDataAllFields3_params_002.txt
 	 * 
 	 * @throws FileNotFoundException
 	 */
@@ -107,6 +111,7 @@ public class CMongoDBConn_UT_04 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting 0 record when limit = 0
+	 * Expected: Got 0 data
 	 */
 	@Test
 	public void getDataAllFields3_params_003() {
@@ -117,6 +122,7 @@ public class CMongoDBConn_UT_04 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting 0 record when limit < 0
+	 * Expected: Got 0 data
 	 */
 	@Test
 	public void getDataAllFields3_params_004() {
@@ -127,6 +133,7 @@ public class CMongoDBConn_UT_04 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is null
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataAllFields3_params_005() {
@@ -141,6 +148,7 @@ public class CMongoDBConn_UT_04 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is empty
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataAllFields3_params_006() {
@@ -155,6 +163,7 @@ public class CMongoDBConn_UT_04 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is space character
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataAllFields3_params_007() {
@@ -169,6 +178,7 @@ public class CMongoDBConn_UT_04 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when limit is null
+	 * Expected: AssertionError with message "Can not get data ! Limit is null"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataAllFields3_params_008() {
@@ -183,6 +193,7 @@ public class CMongoDBConn_UT_04 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when IstIid is null
+	 * Expected: AssertionError with message "Can not get data ! IstIid is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataAllFields3_params_009() {
@@ -197,6 +208,7 @@ public class CMongoDBConn_UT_04 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when IstIid is empty
+	 * Expected: AssertionError with message "Can not get data ! IstIid is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataAllFields3_params_010() {
@@ -211,6 +223,7 @@ public class CMongoDBConn_UT_04 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when IstIid is space character
+	 * Expected: AssertionError with message "Can not get data ! IstIid is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataAllFields3_params_011() {
@@ -225,6 +238,7 @@ public class CMongoDBConn_UT_04 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting 0 record when collection doesn't exist
+	 * Expected: Got 0 data
 	 */
 	@Test
 	public void getDataAllFields3_params_012() {
@@ -235,6 +249,7 @@ public class CMongoDBConn_UT_04 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting 0 record when istIid doesn't exist
+	 * Expected: Got 0 data
 	 */
 	@Test
 	public void getDataAllFields3_params_013() {
@@ -246,6 +261,8 @@ public class CMongoDBConn_UT_04 extends BaseCMongoDBConnTestcase {
 	/**
 	 * Check getting data normally with collection and istIid has space
 	 * character at begin and end
+	 * Expected: Got limit(10) records with data exactly in 
+	 * tmp\\datatest\\CMongoDBconn\\getDataAllFields3_params_014.txt
 	 */
 	@Test
 	public void getDataAllFields3_params_014() {

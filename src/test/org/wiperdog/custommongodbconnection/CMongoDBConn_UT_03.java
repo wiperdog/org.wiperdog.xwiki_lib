@@ -18,6 +18,7 @@ public class CMongoDBConn_UT_03 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check remote connect with valid param's file path
+	 * Expected: Connect successful result is Gmongo, getDb return a com.mongodb.DB instance
 	 */
 	@Test
 	public void getConnectionStringFilePath001() {
@@ -34,6 +35,7 @@ public class CMongoDBConn_UT_03 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check local connect with valid param's file path
+	 * Expected: Connect successful result is Gmongo, getDb return a com.mongodb.DB instance
 	 */
 	@Test
 	public void getConnectionStringFilePath002() {
@@ -47,6 +49,7 @@ public class CMongoDBConn_UT_03 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle with invalid param's file's path
+	 * Expected: Exception because of FileNotFound
 	 */
 	@Test(expected = Exception.class)
 	public void getConnectionStringFilePath003() {
@@ -57,6 +60,7 @@ public class CMongoDBConn_UT_03 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle with empty param's file's path
+	 * Expected: Exception when reading file
 	 */
 	@Test(expected = Exception.class)
 	public void getConnectionStringFilePath005() {

@@ -27,6 +27,9 @@ public class CMongoDBConn_UT_05 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data with valid param
+	 * Expected: Got data exactly in 
+	 * tmp\\datatest\\CMongoDBconn\\getDataAllFields_collection_001.txt
+	 * 5 records with all fields
 	 * 
 	 * @throws FileNotFoundException
 	 */
@@ -68,6 +71,7 @@ public class CMongoDBConn_UT_05 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is null
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataAllFields_collection_002() {
@@ -82,6 +86,7 @@ public class CMongoDBConn_UT_05 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is empty
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataAllFields_collection_003() {
@@ -96,6 +101,7 @@ public class CMongoDBConn_UT_05 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is space character
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataAllFields_collection_004() {
@@ -111,6 +117,9 @@ public class CMongoDBConn_UT_05 extends BaseCMongoDBConnTestcase {
 	/**
 	 * Check getting data normally when collection has space character at begin
 	 * and end
+	 * Expected: Got data exactly in 
+	 * tmp\\datatest\\CMongoDBconn\\getDataAllFields_collection_005.txt
+	 * 5 records with all fields
 	 * 
 	 * @throws FileNotFoundException
 	 */

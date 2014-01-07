@@ -48,6 +48,7 @@ public class ConsoleServiceLib_UT_02 {
 
 	/**
 	 * check output with value of waitFor is false on Linux
+	 * Expected: run command success, do not err
 	 */
 	@Test
 	public void runProcClosureTest01() {
@@ -62,6 +63,7 @@ public class ConsoleServiceLib_UT_02 {
 
 	/**
 	 * check output with value of waitFor is true on Linux
+	 * Expected: run command success, do not err and value of exitVal greater than 0.
 	 */
 	@Test
 	public void runProcClosureTest02() {
@@ -77,6 +79,7 @@ public class ConsoleServiceLib_UT_02 {
 
 	/**
 	 * check output with value of waitFor is false on Windows
+	 * Expected: run command success, do not err
 	 */
 	@Test
 	public void runProcClosureTest03() {
@@ -91,6 +94,7 @@ public class ConsoleServiceLib_UT_02 {
 
 	/**
 	 * check output with value of waitFor is true on Windows
+	 * Expected: run command success, do not err and value of exitVal greater than 0.
 	 */
 	@Test
 	public void runProcClosureTest04() {
@@ -106,6 +110,7 @@ public class ConsoleServiceLib_UT_02 {
 
 	/**
 	 * check output with listCmd is empty
+	 * Expected: run command failure, return information of error
 	 */
 	@Test
 	public void runProcClosureTest05() {
@@ -113,12 +118,14 @@ public class ConsoleServiceLib_UT_02 {
 		listCmd = new ArrayList<String>();
 		// get data of function runProcClosure
 		tmpMap = (HashMap) service.runProcClosure(listCmd, workDir, false);
+		System.out.println(tmpMap);
 		assertTrue(tmpMap.get("in").length() == 0);
 		assertTrue(tmpMap.get("err").length() > 0);
 	}
 
 	/**
 	 * check output with listCmd is null
+	 * Expected: run command failure, return information of error
 	 */
 	@Test
 	public void runProcClosureTest06() {
@@ -132,6 +139,7 @@ public class ConsoleServiceLib_UT_02 {
 
 	/**
 	 * check output with workDir is empty
+	 * Expected: run command failure, return information of error
 	 */
 	@Test
 	public void runProcClosureTest07() {
@@ -145,6 +153,7 @@ public class ConsoleServiceLib_UT_02 {
 
 	/**
 	 * check output with workDir is null
+	 * Expected: run command success, do not err
 	 */
 	@Test
 	public void runProcClosureTest08() {
@@ -158,6 +167,7 @@ public class ConsoleServiceLib_UT_02 {
 
 	/**
 	 * check output with waitFor is empty
+	 * Expected: run command success, do not err
 	 */
 	@Test
 	public void runProcClosureTest09() {
@@ -169,6 +179,7 @@ public class ConsoleServiceLib_UT_02 {
 
 	/**
 	 * check output with waitFor is null
+	 * Expected: run command success, do not err
 	 */
 	@Test
 	public void runProcClosureTest10() {
@@ -180,6 +191,7 @@ public class ConsoleServiceLib_UT_02 {
 
 	/**
 	 * check exception if the listCmd contains a syntax error
+	 * Expected: run command failure, return information of error
 	 */
 	@Test
 	public void runProcClosureTest11() {

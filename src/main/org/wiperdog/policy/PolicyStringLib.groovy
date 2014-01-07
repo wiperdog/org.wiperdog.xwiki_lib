@@ -56,6 +56,8 @@ class PolicyStringLib {
 	def generatePolicyString(data, listKey, type, mapConditionLevel){
 		logger.trace("Begin generate policy's string")
 		def policyStr = ""
+		if(data == null || data == [:])
+			return ""
 		//return data
 		try {
 			if(type == "store") {
@@ -84,29 +86,31 @@ class PolicyStringLib {
 					policyStr += "\treturn ret\n}"
 				}
 			} else if(type == "subtyped") {
-				policyStr += "POLICY = {resultData->\n"
-				policyStr += "\tdef listMess = []\n"
-				policyStr += "\tdef ret = ['jobName' : '" + data.jobName + "', 'istIid' : '" + data.instanceName + "']\n"
-				policyStr += "\tresultData.each {key,value ->\n"
-				data.mappolicy.each {keyData,valueData ->
-					if(valueData != [:]) {
-						policyStr += "\t\tif(key == \"" + keyData + "\") {\n"
-						policyStr += "\t\t\tvalue.each {data ->\n"
-						valueData.each {key,value ->
-							// If
-							policyStr += "\t\t\t\tif(" + getDataConditionsAfterEdit(key, listKey) + "){\n"
-							// Message
-							policyStr += "\t\t\t\t\tlistMess.add([level: " + getLevel(key, mapConditionLevel, keyData) + ", message: \"\"\""+ value +"\"\"\"])\n"
-							policyStr += "\t\t\t\t}\n"
+				if(data.mappolicy != null && data.mappolicy.size() > 0){
+					policyStr += "POLICY = {resultData->\n"
+					policyStr += "\tdef listMess = []\n"
+					policyStr += "\tdef ret = ['jobName' : '" + data.jobName + "', 'istIid' : '" + data.instanceName + "']\n"
+					policyStr += "\tresultData.each {key,value ->\n"
+					data.mappolicy.each {keyData,valueData ->
+						if(valueData != [:]) {
+							policyStr += "\t\tif(key == \"" + keyData + "\") {\n"
+							policyStr += "\t\t\tvalue.each {data ->\n"
+							valueData.each {key,value ->
+								// If
+								policyStr += "\t\t\t\tif(" + getDataConditionsAfterEdit(key, listKey) + "){\n"
+								// Message
+								policyStr += "\t\t\t\t\tlistMess.add([level: " + getLevel(key, mapConditionLevel, keyData) + ", message: \"\"\""+ value +"\"\"\"])\n"
+								policyStr += "\t\t\t\t}\n"
+							}
+							policyStr += "\t\t\t}\n"
+							policyStr += "\t\t}\n"
 						}
-						policyStr += "\t\t\t}\n"
-						policyStr += "\t\t}\n"
 					}
+					policyStr += "\t}\n"
+					policyStr += "\tret['message'] = listMess\n"
+					policyStr += "\treturn ret\n"
+					policyStr += "}"
 				}
-				policyStr += "\t}\n"
-				policyStr += "\tret['message'] = listMess\n"
-				policyStr += "\treturn ret\n"
-				policyStr += "}"
 			}
 			logger.trace("Finish generate policy's string")
 			logger.trace(policyStr)
@@ -123,6 +127,8 @@ class PolicyStringLib {
 	 * @return condition's string
 	 */
 	def getDataConditionsAfterEdit(String stringOfPolicy, dataKey){
+		if(stringOfPolicy == null)
+			return ""
 		List OperatorList = [
 			" ",
 			"\\(",
@@ -142,6 +148,14 @@ class PolicyStringLib {
 		String strKeyPattern = convertListToString(dataKey, "|")
 		String strOperator = convertListToString(OperatorList, "|")
 
+		// For compile pattern.
+		// If strKeyPattern is empty, it could make mistake to matcher
+		// So make it null if strKeyPattern is empty
+		if(strKeyPattern == "")
+			strKeyPattern = null
+		if(strOperator == "")
+			strOperator = null
+		
 		//Create macher
 		macherPattern = "(" + strOperator + ")(" + strKeyPattern + ")(" + strOperator + "|\\.)"
 		pattern = Pattern.compile(macherPattern, Pattern.DOTALL);
@@ -164,6 +178,8 @@ class PolicyStringLib {
 	 * @return message's string
 	 */
 	def getDataMessageAfterEdit(String stringOfMessage, dataKey){
+		if(stringOfMessage == null)
+			return ""
 		//Replace all unnecessary space
 		String macherPattern = "([ ]{2,})"
 		Pattern pattern = Pattern.compile(macherPattern, Pattern.DOTALL);
@@ -172,6 +188,11 @@ class PolicyStringLib {
 		stringOfMessage = stringOfMessage.replaceAll('"""', '\'\'\'')
 		String strKeyPattern = convertListToString(dataKey, "|")
 
+		// For compile pattern.
+		// If strKeyPattern is empty, it could make mistake to matcher
+		// So make it null if strKeyPattern is empty 
+		if(strKeyPattern == "")
+			strKeyPattern = null
 		//Remove unneed data
 		macherPattern = "(\\\$\\{data\\.)(" + strKeyPattern + ")(\\})"
 		pattern = Pattern.compile(macherPattern, Pattern.DOTALL);
@@ -204,11 +225,14 @@ class PolicyStringLib {
 	 */
 	def convertListToString (List listData, String concatStr = "|"){
 		def strRet = ""
-		listData.each {key->
-			strRet += key + concatStr
+		if(listData != null && concatStr != null){
+			listData.each {key->
+				strRet += key + concatStr
+			}
+			if (strRet != "") {
+				strRet = strRet.subSequence(0, strRet.length() - concatStr.length())
+			}
 		}
-		if (strRet != "") {
-			strRet = strRet.subSequence(0, strRet.length() - concatStr.length())
-		}
+		return strRet
 	}
 }

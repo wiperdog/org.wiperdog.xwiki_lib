@@ -34,6 +34,11 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 	 * Return 10 record from fromDate to toDate
 	 * limit = 10
 	 * records = 20
+	 * 
+	 * Expected: Got 10 first records with fromDate is the 1st one, toDate is the 10th one
+	 * 10 first records in 
+	 * tmp\\datatest\\CmongoDBconn\\getDataInPeriod_001-006.txt
+	 * 
 	 * @throws FileNotFoundException
 	 * @throws ParseException
 	 */
@@ -95,6 +100,11 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 	 * Check getting 10 newest record from beginning to toDate
 	 * limit : 10
 	 * records : 20
+	 * 
+	 * Expected: Got 10 newest records
+	 * record 11th - 20th in 
+	 * tmp\\datatest\\CmongoDBconn\\getDataInPeriod_001-006.txt
+	 * 
 	 * @throws FileNotFoundException
 	 * @throws ParseException
 	 */
@@ -154,6 +164,11 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 	 * Check getting newest data from fromDate to end of table
 	 * limit : 10
 	 * records : 20
+	 * 
+	 * Expected: Got 10 newest records
+	 * 10th - 20th record in 
+	 * tmp\\datatest\\CmongoDBconn\\getDataInPeriod_001-006.txt
+	 * 
 	 * @throws ParseException
 	 * @throws FileNotFoundException
 	 */
@@ -213,6 +228,10 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 	 * Check getting data newest data with records < limit
 	 * limit : 30
 	 * records : 20
+	 * 
+	 * Expected: Got all records (20) in
+	 * tmp\\datatest\\CmongoDBconn\\getDataInPeriod_001-006.txt
+	 * 
 	 * @throws ParseException
 	 * @throws FileNotFoundException
 	 */
@@ -268,6 +287,9 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting 0 record when limit = 0
+	 * 
+	 * Expected: Got 0 record
+	 * 
 	 * @throws FileNotFoundException
 	 * @throws ParseException
 	 */
@@ -308,6 +330,9 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting 0 record when limit < 0
+	 * 
+	 * Expected: Got 0 record
+	 * 
 	 * @throws FileNotFoundException
 	 */
 	@Test
@@ -350,6 +375,10 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 	 * return 8 records except first and last record
 	 * fromDate = firstRecord's time
 	 * toDate = lastRecord's time
+	 * 
+	 * Expected: Got 8 records (2nd - 8th) in 
+	 * tmp\\datatest\\CmongoDBconn\\getDataInPeriod_007-027.txt
+	 * 
 	 * @throws FileNotFoundException
 	 * @throws ParseException
 	 */
@@ -410,6 +439,10 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 	 * Return 9 records except lastRecord
 	 * fromDate = firstRecord's time - 1 (Include first record in result)
 	 * toDate = lastRecord's time
+	 * 
+	 * Expected: Got 9 records (1st - 9th) in 
+	 * tmp\\datatest\\CmongoDBconn\\getDataInPeriod_007-027.txt
+	 * 
 	 * @throws ParseException
 	 * @throws FileNotFoundException
 	 */
@@ -471,6 +504,10 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 	 * Return 8 records except firstRecord and lastRecord
 	 * fromDate = firstRecord's time + 1 (Exclude first record in result)
 	 * toDate = lastRecord's time
+	 * 
+	 * Expected: Got 9 records (2nd - 10th) in 
+	 * tmp\\datatest\\CmongoDBconn\\getDataInPeriod_007-027.txt
+	 * 
 	 * @throws ParseException
 	 * @throws FileNotFoundException
 	 */
@@ -532,6 +569,10 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 	 * Return 8 records except firstRecord and lastRecord
 	 * fromDate = firstRecord's time (Exclude first record in result)
 	 * toDate = lastRecord's time - 1 (Exclude last record in result)
+	 * 
+	 * Expected: Got 8 records (2nd - 9th) in
+	 * tmp\\datatest\\CmongoDBconn\\getDataInPeriod_007-027.txt
+	 * 
 	 * @throws ParseException
 	 * @throws FileNotFoundException
 	 */
@@ -593,6 +634,9 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 	 * Return 9 records except firstRecord
 	 * fromDate = firstRecord's time (Exclude first record in result)
 	 * toDate = lastRecord's time + 1 (Include last record in result)
+	 * Expected: Got 9 records(2nd - 10th) in
+	 * tmp\\datatest\\CmongoDBconn\\getDataInPeriod_007-027.txt
+	 * 
 	 * @throws ParseException
 	 * @throws FileNotFoundException
 	 */
@@ -654,6 +698,10 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 	 * Return 8 records except firstRecord and lastRecord
 	 * fromDate = firstRecord's time + 1 (Exclude first record in result)
 	 * toDate = lastRecord's time - 1 (Exclude last record in result)
+	 * 
+	 * Expected: Got 8 records (2nd - 9th) in 
+	 * tmp\\datatest\\CmongoDBconn\\getDataInPeriod_007-027.txt
+	 * 
 	 * @throws ParseException
 	 * @throws FileNotFoundException
 	 */
@@ -713,6 +761,7 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting 0 record when collection doesn't exist
+	 * Expected: Got 0 record
 	 */
 	@Test
 	public void getDataInPeriod_013() {
@@ -722,6 +771,7 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is null
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataInPeriod_014() {
@@ -735,6 +785,7 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is empty
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataInPeriod_015() {
@@ -748,6 +799,7 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when collection is space character
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataInPeriod_016() {
@@ -761,6 +813,10 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data normally when collection has space character at begin and end
+	 * 
+	 * Expected: Got all 10 records in
+	 * tmp\\datatest\\CmongoDBconn\\getDataInPeriod_007-027.txt
+	 * 
 	 * @throws FileNotFoundException
 	 * @throws ParseException
 	 */
@@ -809,6 +865,7 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting 0 record when istIid doesn't exist
+	 * Expected: Got 0 record
 	 */
 	@Test
 	public void getDataInPeriod_018() {
@@ -818,6 +875,7 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when istIid is null
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataInPeriod_019() {
@@ -831,6 +889,7 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when istIid is empty
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataInPeriod_020() {
@@ -844,6 +903,7 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when istIid is space character
+	 * Expected: AssertionError with message "Can not get data ! Collection is null or empty string"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataInPeriod_021() {
@@ -857,6 +917,7 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when fromDate is null
+	 * Expected: AssertionError with message "Can not get data ! 'From Date' or 'To date' is null !"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataInPeriod_022() {
@@ -870,6 +931,10 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data normally when fromDate is space character
+	 * 
+	 * Expected: Got all 10 records in  
+	 * tmp\\datatest\\CmongoDBconn\\getDataInPeriod_007-027.txt
+	 * 
 	 * @throws FileNotFoundException
 	 */
 	@Test
@@ -917,6 +982,7 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when toDate is null
+	 * Expected: AssertionError with message "Can not get data ! 'From Date' or 'To date' is null !"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataInPeriod_024() {
@@ -930,6 +996,10 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data normally when toDate is space character
+	 * 
+	 * Expected: Got all 10 records in
+	 * "tmp\\datatest\\CmongoDBconn\\getDataInPeriod_007-027.txt"
+	 * 
 	 * @throws FileNotFoundException
 	 */
 	@Test
@@ -977,6 +1047,7 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when fromDate and toDate are null
+	 * Expected: AssertionError with message "Can not get data ! 'From Date' or 'To date' is null !"
 	 */
 	@Test(expected=AssertionError.class)
 	public void getDataInPeriod_026() {
@@ -990,6 +1061,9 @@ public class CMongoDBConn_UT_09 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data normally when fromDate and toDate are space character
+	 * Expected: Got all 10 records in
+	 * tmp\\datatest\\CmongoDBconn\\getDataInPeriod_007-027.txt
+	 * 
 	 * @throws FileNotFoundException
 	 */
 	@Test

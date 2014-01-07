@@ -61,7 +61,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check output with isLocalhost: true and isInteractive: true
+	 * Check output with isLocalhost: true and isInteractive: true
+	 * Expected: value of listCmd is empty
 	 */
 	@Test
 	public void buildCmdListTest01() {
@@ -72,7 +73,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check output with isLocalhost: false and isInteractive: true
+	 * Check output with isLocalhost: false and isInteractive: true
+	 * Expected: value of listCmd containing a variable is -i
 	 */
 	@Test
 	public void buildCmdListTest02() {
@@ -83,7 +85,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check output with isLocalhost: true and isInteractive: false
+	 * Check output with isLocalhost: true and isInteractive: false
+	 * Expected: value of listCmd is empty
 	 */
 	@Test
 	public void buildCmdListTest03() {
@@ -94,7 +97,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check output with isLocalhost: false and isInteractive: false
+	 * Check output with isLocalhost: false and isInteractive: false
+	 * Expected: value of listCmd not contain a variable is -i
 	 */
 	@Test
 	public void buildCmdListTest04() {
@@ -107,7 +111,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check output with isLocalhost is empty
+	 * Check output with isLocalhost is empty
+	 * Expected: value of listCmd is not empty (correct data)
 	 */
 	@Test
 	public void buildCmdListTest05() {
@@ -118,7 +123,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check output with isLocalhost is null
+	 * Check output with isLocalhost is null
+	 * Expected: value of listCmd is not empty (correct data)
 	 */
 	@Test
 	public void buildCmdListTest06() {
@@ -129,7 +135,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check output with psExec is empty
+	 * Check output with psExec is empty
+	 * Expected: value of psExec in listCmd is empty
 	 */
 	@Test
 	public void buildCmdListTest07() {
@@ -145,7 +152,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check output with psExec is null
+	 * Check output with psExec is null
+	 * Expected: value of psExec in listCmd is null
 	 */
 	@Test
 	public void buildCmdListTest08() {
@@ -161,7 +169,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check output with listCmd is not empty
+	 * Check output with listCmd is not empty
+	 * Expected: value of listCmd containing "abc" and "def"
 	 */
 	@Test
 	public void buildCmdListTest09() {
@@ -180,7 +189,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check output with isInteractive is empty
+	 * Check output with isInteractive is empty
+	 * Expected: value of listCmd not contain a variable is -i
 	 */
 	@Test
 	public void buildCmdListTest10() {
@@ -193,7 +203,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check output with isInteractive is null
+	 * Check output with isInteractive is null
+	 * Expected: value of listCmd not contain a variable is -i
 	 */
 	@Test
 	public void buildCmdListTest11() {
@@ -206,7 +217,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check output with params is empty
+	 * Check output with params is empty
+	 * Expected: show message about error
 	 */
 	@Test(expected = AssertionError.class)
 	public void buildCmdListTest12() {
@@ -223,7 +235,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check output with params is null
+	 * Check output with params is null
+	 * Expected: show message about error
 	 */
 	@Test(expected = AssertionError.class)
 	public void buildCmdListTest13() {
@@ -240,7 +253,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check exception if the listCmd is null
+	 * Check exception if the listCmd is null
+	 * Expected: value of listCmd is not empty (correct data)
 	 */
 	@Test
 	public void buildCmdListTest14() {
@@ -253,7 +267,8 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check exception if value of params does not contains wiperdog_path
+	 * Check exception if value of params does not contains wiperdog_path
+	 * Expected: value of listCmd containing host, user and pass is empty
 	 */
 	@Test
 	public void buildCmdListTest15() {
@@ -272,8 +287,9 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check exception if value of params does not contains host of
+	 * Check exception if value of params does not contains host of
 	 * wiperdog_path
+	 * Expected: value of listCmd containing host is empty
 	 */
 	@Test
 	public void buildCmdListTest16() {
@@ -294,8 +310,9 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check exception if value of params does not contains user of
+	 * Check exception if value of params does not contains user of
 	 * wiperdog_path
+	 * Expected: value of listCmd containing user is empty
 	 */
 	@Test
 	public void buildCmdListTest17() {
@@ -316,8 +333,9 @@ public class ConsoleServiceLib_UT_01 {
 	}
 
 	/**
-	 * check exception if value of params does not contains pass of
+	 * Check exception if value of params does not contains pass of
 	 * wiperdog_path
+	 * Expected: value of listCmd containing pass is empty
 	 */
 	@Test
 	public void buildCmdListTest18() {

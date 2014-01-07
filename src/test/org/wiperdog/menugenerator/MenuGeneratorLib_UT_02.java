@@ -66,7 +66,8 @@ public class MenuGeneratorLib_UT_02 {
 
 	/**
 	 * Check output with value of groupItemsMap is not a map empty (correct
-	 * input data)
+	 * input data).
+	 * Expected: list of job groups is correctly
 	 */
 	@Test
 	public void getListJobGroupTest01() {
@@ -80,7 +81,8 @@ public class MenuGeneratorLib_UT_02 {
 	/**
 	 * Check output with two variable is groupItemsMap and parentList. Value of
 	 * groupItemsMap is not empty and parentList is not empty (correct input
-	 * data)
+	 * data).
+	 * Expected: list of job groups contains data of parentList
 	 */
 	@Test
 	public void getListJobGroupTest02() {
@@ -99,7 +101,8 @@ public class MenuGeneratorLib_UT_02 {
 
 	/**
 	 * Check output with value of groupItemsList is not a list empty (correct
-	 * input data)
+	 * input data).
+	 * Expected: list of job groups is empty
 	 */
 	@Test
 	public void getListJobGroupTest03() {
@@ -114,7 +117,8 @@ public class MenuGeneratorLib_UT_02 {
 	/**
 	 * Check output with two variable is groupItemsList and parentList. Value of
 	 * groupItemsList is not a list empty and parentList is not empty (correct
-	 * input data)
+	 * input data).
+	 * Expected: list of job groups contains only data of parentList
 	 */
 	@Test
 	public void getListJobGroupTest04() {
@@ -127,7 +131,8 @@ public class MenuGeneratorLib_UT_02 {
 	}
 
 	/**
-	 * Check output with value of groupItemsMap is a map empty
+	 * Check output with value of groupItemsMap is a map empty.
+	 * Expected: list of job groups is empty
 	 */
 	@Test
 	public void getListJobGroupTest05() {
@@ -139,7 +144,8 @@ public class MenuGeneratorLib_UT_02 {
 	}
 
 	/**
-	 * Check output with value of groupItemsMap is null
+	 * Check output with value of groupItemsMap is null.
+	 * Expected: list of job groups is empty
 	 */
 	@Test
 	public void getListJobGroupTest06() {
@@ -151,7 +157,8 @@ public class MenuGeneratorLib_UT_02 {
 	}
 
 	/**
-	 * Check output with value of groupItemsList is a list empty
+	 * Check output with value of groupItemsList is a list empty.
+	 * Expected: list of job groups is empty
 	 */
 	@Test
 	public void getListJobGroupTest07() {
@@ -165,7 +172,8 @@ public class MenuGeneratorLib_UT_02 {
 
 	/**
 	 * Check output with two variable is groupItemsMap and parentList. Value of
-	 * groupItemsMap is not a map empty and parentList is null
+	 * groupItemsMap is not a map empty and parentList is null.
+	 * Expected: list of job groups is correctly
 	 */
 	@Test
 	public void getListJobGroupTest08() {
@@ -179,7 +187,8 @@ public class MenuGeneratorLib_UT_02 {
 
 	/**
 	 * Check output with two variable is groupItemsList and parentList. Value of
-	 * groupItemsList is not a list empty and parentList is null
+	 * groupItemsList is not a list empty and parentList is null.
+	 * Expected: list of job groups is empty
 	 */
 	@Test
 	public void getListJobGroupTest09() {

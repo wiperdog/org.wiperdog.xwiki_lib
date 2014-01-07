@@ -25,6 +25,7 @@ public class CMongoDBConn_UT_02 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check remote connect with valid param's file
+	 * Expected: Connect successful result is Gmongo, getDb return a com.mongodb.DB instance
 	 * 
 	 * @throws Exception
 	 * 
@@ -40,6 +41,7 @@ public class CMongoDBConn_UT_02 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check local connect with valid param's file
+	 * Expected: Connect successful result is Gmongo, getDb return a com.mongodb.DB instance
 	 * 
 	 * @throws Exception
 	 */
@@ -54,6 +56,7 @@ public class CMongoDBConn_UT_02 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when param's file doesn't exist
+	 * Expected: Exception with message "File params doesn\'t existed!"
 	 * 
 	 * @throws Exception
 	 */
@@ -71,6 +74,7 @@ public class CMongoDBConn_UT_02 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when param's file is empty
+	 * Expected: Exception with message "Params file doesn\'t contain mongoDB"
 	 * 
 	 * @throws Exception
 	 */
@@ -89,6 +93,7 @@ public class CMongoDBConn_UT_02 extends BaseCMongoDBConnTestcase {
 	/**
 	 * Check exception handle when param's file doesn't contains mongodb
 	 * declaration
+	 * Expected: Exception with message "Params file doesn\'t contain mongoDB"
 	 * 
 	 * @throws Exception
 	 * 

@@ -89,7 +89,8 @@ public class MenuGeneratorLib_UT_01 {
 	/**
 	 * Check output with two variable is treeItemMap and mapCollection. Value of
 	 * treeItemMap is not a map empty and mapCollection is not empty (correct
-	 * input data)
+	 * input data).
+	 * Expected: menu sorted correctly by each group
 	 */
 	@Test
 	public void getMenuItemsStrTest01() {
@@ -102,7 +103,8 @@ public class MenuGeneratorLib_UT_01 {
 	/**
 	 * Check output with three variable is treeItemMap, mapCollection and
 	 * parentList. Value of treeItemMap is not a map empty, mapCollection and
-	 * parentList is not empty (correct input data)
+	 * parentList is not empty (correct input data).
+	 * Expected: leaves of menu is empty
 	 */
 	@Test
 	public void getMenuItemsStrTest02() {
@@ -111,15 +113,14 @@ public class MenuGeneratorLib_UT_01 {
 		// get data of function getMenuItemsStr
 		tmpResultActual = (String) menuLib.getMenuItemsStr(treeItemMap,
 				mapCollection, parentList);
-		System.out.println(tmpOutput);
-		System.out.println(tmpResultActual);
 		assertEquals(tmpOutput, tmpResultActual);
 	}
 
 	/**
 	 * Check output with two variable is treeItemList and mapCollection. Value
 	 * of treeItemList is not a list empty and mapCollection is not empty
-	 * (correct input data)
+	 * (correct input data).
+	 * Expected: menu is empty
 	 */
 	@Test
 	public void getMenuItemsStrTest03() {
@@ -134,7 +135,8 @@ public class MenuGeneratorLib_UT_01 {
 	/**
 	 * Check output with three variable is treeItemList, mapCollection and
 	 * parentList. Value of treeItemList is not a list empty, mapCollection and
-	 * parentList is not empty (correct input data)
+	 * parentList is not empty (correct input data).
+	 * Expected: menu contains two leaves of MYSQL
 	 */
 	@Test
 	public void getMenuItemsStrTest04() {
@@ -147,7 +149,8 @@ public class MenuGeneratorLib_UT_01 {
 	}
 
 	/**
-	 * Check output with value of treeItemMap is a map empty
+	 * Check output with value of treeItemMap is a map empty.
+	 * Expected: menu is empty
 	 */
 	@Test
 	public void getMenuItemsStrTest05() {
@@ -162,7 +165,8 @@ public class MenuGeneratorLib_UT_01 {
 	}
 
 	/**
-	 * Check output with value of treeItemMap is null
+	 * Check output with value of treeItemMap is null.
+	 * Expected: menu is empty
 	 */
 	@Test
 	public void getMenuItemsStrTest06() {
@@ -178,7 +182,8 @@ public class MenuGeneratorLib_UT_01 {
 
 	/**
 	 * Check output with value of mapCollection is a map empty and treeItemMap
-	 * is not a map empty
+	 * is not a map empty.
+	 * Expected: leaves of menu is empty
 	 */
 	@Test
 	public void getMenuItemsStrTest07() {
@@ -194,7 +199,8 @@ public class MenuGeneratorLib_UT_01 {
 
 	/**
 	 * Check output with value of mapCollection is null and treeItemMap is not a
-	 * map empty
+	 * map empty.
+	 * Expected: leaves of menu is empty
 	 */
 	@Test
 	public void getMenuItemsStrTest08() {
@@ -210,7 +216,8 @@ public class MenuGeneratorLib_UT_01 {
 
 	/**
 	 * Check output with value of treeItemList is a list empty and mapCollection
-	 * is not empty
+	 * is not empty.
+	 * Expected: menu is empty
 	 */
 	@Test
 	public void getMenuItemsStrTest09() {
@@ -226,7 +233,8 @@ public class MenuGeneratorLib_UT_01 {
 
 	/**
 	 * Check output with value of mapCollection is a map empty and treeItemList
-	 * is not a list empty
+	 * is not a list empty.
+	 * Expected: menu is empty
 	 */
 	@Test
 	public void getMenuItemsStrTest10() {
@@ -242,7 +250,8 @@ public class MenuGeneratorLib_UT_01 {
 
 	/**
 	 * Check output with value of mapCollection is null and treeItemList is not
-	 * a list empty
+	 * a list empty.
+	 * Expected: menu is empty
 	 */
 	@Test
 	public void getMenuItemsStrTest11() {
@@ -258,7 +267,8 @@ public class MenuGeneratorLib_UT_01 {
 
 	/**
 	 * Check output with value of parentList is null and treeItemMap is not a
-	 * map empty
+	 * map empty.
+	 * Expected: menu sorted correctly by each group
 	 */
 	@Test
 	public void getMenuItemsStrTest12() {
@@ -274,7 +284,8 @@ public class MenuGeneratorLib_UT_01 {
 
 	/**
 	 * Check output with value of parentList is null and treeItemList is not a
-	 * list empty
+	 * list empty.
+	 * Expected: menu is empty
 	 */
 	@Test
 	public void getMenuItemsStrTest13() {

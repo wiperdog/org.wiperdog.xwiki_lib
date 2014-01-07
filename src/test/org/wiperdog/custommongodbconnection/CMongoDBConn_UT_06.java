@@ -34,6 +34,9 @@ public class CMongoDBConn_UT_06 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data with valid params records : 5 limit : 10
+	 * Expected: Got 5 records with 
+	 * ["fetchAt", "TablespaceName", "CurrentUsedSizeKB", "CurrentTotalSizeKB", "CurrentUsedPct"] fields
+	 * tmp\\datatest\\CMongoDBconn\\getDataLimitField_3params_001.txt_expected
 	 * 
 	 * @throws FileNotFoundException
 	 */
@@ -78,6 +81,9 @@ public class CMongoDBConn_UT_06 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data with valid params records : 20 limit : 10
+	 * Expected: Got 10 records with
+	 * ["fetchAt", "TablespaceName", "CurrentUsedSizeKB", "CurrentTotalSizeKB", "CurrentUsedPct"] fields
+	 * tmp\\datatest\\CMongoDBconn\\getDataLimitField_3params_002.txt_expected
 	 * 
 	 * @throws FileNotFoundException
 	 */
@@ -122,6 +128,7 @@ public class CMongoDBConn_UT_06 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting 0 record when limit = 0
+	 * Expected: Got 0 record
 	 */
 	@Test
 	public void getDataLimitField_3params_003() {
@@ -133,6 +140,7 @@ public class CMongoDBConn_UT_06 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting 0 record when limit < 0
+	 * Expected: Got 0 record
 	 */
 	@Test
 	public void getDataLimitField_3params_004() {
@@ -144,6 +152,9 @@ public class CMongoDBConn_UT_06 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data with 1 field
+	 * Expected: Got 5 records with
+	 * ["fetchAt", "TablespaceName"] fields
+	 * tmp\\datatest\\CMongoDBconn\\getDataLimitField_3params_005.txt_expected
 	 * 
 	 * @throws FileNotFoundException
 	 */
@@ -188,6 +199,8 @@ public class CMongoDBConn_UT_06 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data with all fields
+	 * Expected: Got 5 records with all fields
+	 * "tmp\\datatest\\CMongoDBconn\\getDataLimitField_3params_006.txt_expected"
 	 * 
 	 * @throws FileNotFoundException
 	 */
@@ -232,6 +245,7 @@ public class CMongoDBConn_UT_06 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when limit is null
+	 * Expected: AssertionError with message "Can not get data ! Limit is null"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataLimitField_3params_007() {
@@ -247,6 +261,8 @@ public class CMongoDBConn_UT_06 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check getting data with fields that doesn't exist
+	 * Expected: Got 5 records with only fetchAt field
+	 * tmp\\datatest\\CMongoDBconn\\getDataLimitField_3params_008.txt_expected
 	 * 
 	 * @throws FileNotFoundException
 	 */
@@ -291,6 +307,7 @@ public class CMongoDBConn_UT_06 extends BaseCMongoDBConnTestcase {
 
 	/**
 	 * Check exception handle when no field is provided
+	 * Expected: AssertionError with message "Can not get data ! List fields is null or empty"
 	 */
 	@Test(expected = AssertionError.class)
 	public void getDataLimitField_3params_009() {
