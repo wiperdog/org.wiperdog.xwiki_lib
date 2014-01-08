@@ -31,6 +31,11 @@
 			<artifactId>junit</artifactId>
 			<version>4.8.2</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>2.16</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -52,6 +57,23 @@
 			</resource>
 		</resources>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.16</version>
+				<configuration>
+					<!-- <skipTests>true</skipTests>-->
+					<includes>
+						<include>**/*UT*.java</include>
+					</includes>
+					<excludes>
+						<exclude>**/ConsoleServiceLib_UT_02.java</exclude>
+						<exclude>**/CMongoDBConn_UT_01.java</exclude>
+						<exclude>**/CMongoDBConn_UT_02.java</exclude>
+						<exclude>**/CMongoDBConn_UT_03.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<!-- 2.8.0-01 and later require maven-compiler-plugin 3.1 or higher -->
