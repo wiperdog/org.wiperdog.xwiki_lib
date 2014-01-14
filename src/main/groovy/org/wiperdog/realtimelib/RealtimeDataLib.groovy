@@ -16,6 +16,8 @@ class RealtimeDataLib {
 	 * @param typeChart type of data draw chart
 	 */
 	def drawChart(key,value,typeChart) {
+		assert typeChart != null && typeChart.trim() != "" : "data type is null or empty!"
+		typeChart = typeChart.trim()
 		logger.trace("Begin getting Pie data for realtime monitoring")
 		def dataPie = getDataJson(value,"pie")
 		def lstName
@@ -56,11 +58,13 @@ class RealtimeDataLib {
 
 		//Prepare data, list container for draw chart and tags of hidden chart
 		def mapDataToDraw = [:]
-		mapDataToDraw['value'] = value
-		mapDataToDraw['typeChart'] = typeChart
-		mapDataToDraw['jsonPie'] = jsonPie
-		mapDataToDraw['jsonContainerPie'] = jsonContainerPie
-		mapDataToDraw['key'] = key
+		if(jsonPie != null && jsonContainerPie != null){
+			mapDataToDraw['value'] = value
+			mapDataToDraw['typeChart'] = typeChart
+			mapDataToDraw['jsonPie'] = jsonPie
+			mapDataToDraw['jsonContainerPie'] = jsonContainerPie
+			mapDataToDraw['key'] = key
+		}
 		logger.trace("Finish getting Pie data for realtime monitoring")
 		return mapDataToDraw
 	}
@@ -71,6 +75,10 @@ class RealtimeDataLib {
 	 * @return data data after convert to draw chart
 	*/
 	def getDataJson(value,type) {
+		assert value != null && value != [] : "data is null or empty!"
+		if(type != null){
+			type = type.trim()
+		}
 		def data = []
 		if(type == "pie" && DataToDrawChart.getDataToDrawPie(value) != []) {
 			//get data to draw pie
@@ -86,7 +94,7 @@ class RealtimeDataLib {
 	*/
 	def parseJson(data) {
 		def json
-		if(data != []) {
+		if(data != null && data != [] && data != "") {
 			//convert data to json
 			json = JSON.serialize(data)
 		}
@@ -101,6 +109,7 @@ class RealtimeDataLib {
 	 * @return finalListData
 	*/
 	def getAdditionData(collection, key) {
+		assert collection != null && collection != [] : "Collection is null or empty!"
 		def finalListData = []
 		def chartAreaNum = 0
 		def chartBarNum = 0
@@ -112,7 +121,7 @@ class RealtimeDataLib {
 			key_unit = [:]
 			}
 			if (key_root == null) {
-			key_root = [:]
+			key_root = []
 			}
 			//Convert format
 			def lstDataForKey = []
@@ -142,8 +151,8 @@ class RealtimeDataLib {
 				}
 				lstDataForKey = []
 			}
-			return finalListData
 		}
+		return finalListData
 	}
 	
 	/**
@@ -192,7 +201,7 @@ class RealtimeDataLib {
 			//Loop each data in one monitor data
 			def dataMonitor = record['data']
 	
-						 if (key_root == [:] && record['data'].size() >= 1) {
+						 if (key_root == [] && record['data'].size() >= 1) {
 							 def newCollection = []
 							 newCollection.add(record['data'][record['data'].size() - 1])
 							 dataMonitor = newCollection
@@ -248,7 +257,10 @@ class RealtimeDataLib {
 	
 			//Hint data
 			resultRecord["detailData"] = hintDataList
-			returnResult.add(resultRecord)
+			if(resultRecord['data'] != null && resultRecord['data'] != [] 
+				&& resultRecord["detailData"] != null && resultRecord["detailData"] != []){
+				returnResult.add(resultRecord)
+			}
 			resultRecord = [:]
 			chartDataList = []
 			hintDataList = []
@@ -269,6 +281,7 @@ class RealtimeDataLib {
 	 * @return returnResult
 	*/
 	def getAdditionDataBar(collection, chartCollumns, hintColumns, key_root, key_unit, chart_Num, key = '') {
+		assert collection != null && collection != [] : "Collection is null or empty!"
 		logger.trace("Begin getting addition data of Bar chart for realtime monitoring $collection")
 		def returnResult = []
 		def resultRecord = [:]
@@ -348,7 +361,10 @@ class RealtimeDataLib {
 	
 							//Hint data
 							resultRecord["detailData"] = hintDataList
-							returnResult.add(resultRecord)
+							if(resultRecord["data"] != null && resultRecord["data"] != []
+								&& resultRecord["detailData"] != null && resultRecord["detailData"] != []){
+								returnResult.add(resultRecord)
+							}
 							resultRecord = [:]
 							chartDataList = []
 							hintDataList = []
@@ -370,6 +386,7 @@ class RealtimeDataLib {
 	 * @return returnResult
 	*/
 	def getAdditionDataArea(collection, chartCollumns, hintColumns, key_root, key_unit, chart_Num, nameOfChart, key = '') {
+		assert collection != null && collection != [] : "Collection is null or empty!"
 		logger.trace("Begin getting addition data of Area chart for realtime monitoring $collection")
 		def returnResult = []
 		def resultRecord = [:]
@@ -385,7 +402,7 @@ class RealtimeDataLib {
 						 //Loop each data in one monitor data
 						 def dataMonitor = record['data']
 	
-						 if (key_root == [:] && record['data'].size() >=1) {
+						 if (key_root == [] && record['data'].size() >=1) {
 							 def newCollection = []
 							 newCollection.add(record['data'][0])
 							 dataMonitor = newCollection
@@ -462,7 +479,10 @@ class RealtimeDataLib {
 	
 							 //Hint data
 							 resultRecord["detailData"] = hintDataList
-							 returnResult.add(resultRecord)
+							 if(resultRecord["data"] != null && resultRecord["data"] != []
+								 && resultRecord["detailData"] != null && resultRecord["detailData"] != []){
+								 returnResult.add(resultRecord)
+							 }
 							 
 							 //Reset data
 							 resultRecord = [:]
@@ -481,6 +501,7 @@ class RealtimeDataLib {
 	 * @param fetchedAt_bin
 	*/
 	def convertFetchAtBin(fetchedAt_bin) {
+		assert fetchedAt_bin != null : "fetchAt is null!"
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss z")
 		def milis = ((Long)fetchedAt_bin) * 1000
 		String dateFormatted = sdf.format(new Date(milis))

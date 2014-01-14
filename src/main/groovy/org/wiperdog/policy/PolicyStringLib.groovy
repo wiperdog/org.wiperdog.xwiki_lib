@@ -225,7 +225,10 @@ class PolicyStringLib {
 	 */
 	def convertListToString (List listData, String concatStr = "|"){
 		def strRet = ""
-		if(listData != null && concatStr != null){
+		if(concatStr == null || concatStr == ""){
+			concatStr = "|"
+		}
+		if(listData != null){
 			listData.each {key->
 				strRet += key + concatStr
 			}

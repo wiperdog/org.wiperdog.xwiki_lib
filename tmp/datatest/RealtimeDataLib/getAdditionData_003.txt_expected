@@ -1,0 +1,176 @@
+[
+  {
+    "type": "area",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "chartName": "0_db_test1_1",
+    "nameOfChart": "Draw Area Read Time( db_test1.1 )",
+    "data": [
+      {
+        "seriesName": "ReadTimeDbl",
+        "value": 11
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "ReadTimeDbl",
+        "detail": {
+          "ReadTimeDbl": "11( msec )",
+          "WriteTimeDbl": "11( msec )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "chartName": "0_db_test2_1",
+    "nameOfChart": "Draw Area Read Time( db_test2.1 )",
+    "data": [
+      {
+        "seriesName": "ReadTimeDbl",
+        "value": 44
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "ReadTimeDbl",
+        "detail": {
+          "ReadTimeDbl": "44( msec )",
+          "WriteTimeDbl": "44( msec )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "chartName": "0_db_test3_5",
+    "nameOfChart": "Draw Area Read Time( db_test3.5 )",
+    "data": [
+      {
+        "seriesName": "ReadTimeDbl",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "ReadTimeDbl",
+        "detail": {
+          "ReadTimeDbl": "33( msec )",
+          "WriteTimeDbl": "33( msec )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "chartName": "1_db_test1_1",
+    "nameOfChart": "Draw Area Write Time( db_test1.1 )",
+    "data": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "value": 11
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "value": 11
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "detail": {
+          "WriteTimeDbl": "11( msec )",
+          "TotalTimeIODbl": "11( msec )",
+          "AverageIOTimeDbl": "11( msec )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "detail": {
+          "WriteTimeDbl": "11( msec )",
+          "TotalTimeIODbl": "11( msec )",
+          "AverageIOTimeDbl": "11( msec )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "chartName": "1_db_test2_1",
+    "nameOfChart": "Draw Area Write Time( db_test2.1 )",
+    "data": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "value": 44
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "value": 44
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "detail": {
+          "WriteTimeDbl": "44( msec )",
+          "TotalTimeIODbl": "44( msec )",
+          "AverageIOTimeDbl": "44( msec )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "detail": {
+          "WriteTimeDbl": "44( msec )",
+          "TotalTimeIODbl": "44( msec )",
+          "AverageIOTimeDbl": "44( msec )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "chartName": "1_db_test3_5",
+    "nameOfChart": "Draw Area Write Time( db_test3.5 )",
+    "data": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "value": 33
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "detail": {
+          "WriteTimeDbl": "33( msec )",
+          "TotalTimeIODbl": "33( msec )",
+          "AverageIOTimeDbl": "33( msec )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "detail": {
+          "WriteTimeDbl": "33( msec )",
+          "TotalTimeIODbl": "33( msec )",
+          "AverageIOTimeDbl": "33( msec )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,134 @@
+[
+  [
+    {
+      "type": "pie",
+      "chart_name": "Current Size Page",
+      "unit": "( pages )",
+      "data": [
+        [
+          "CurrentUsedSizePageInt",
+          84.0
+        ],
+        [
+          "CurrentFreeSizePageInt",
+          76.0
+        ]
+      ],
+      "name": "TestJob324.TestJob324_log"
+    },
+    {
+      "type": "pie",
+      "chart_name": "Current Size Page",
+      "unit": "( pages )",
+      "data": [
+        [
+          "CurrentUsedSizePageInt",
+          176.0
+        ],
+        [
+          "CurrentFreeSizePageInt",
+          112.0
+        ]
+      ],
+      "name": "TestJob324.TestJob324"
+    },
+    {
+      "type": "pie",
+      "chart_name": "Current Size Page",
+      "unit": "( pages )",
+      "data": [
+        [
+          "CurrentUsedSizePageInt",
+          84.0
+        ],
+        [
+          "CurrentFreeSizePageInt",
+          76.0
+        ]
+      ],
+      "name": "TestJob.TestJob_log"
+    },
+    {
+      "type": "pie",
+      "chart_name": "Current Size Page",
+      "unit": "( pages )",
+      "data": [
+        [
+          "CurrentUsedSizePageInt",
+          176.0
+        ],
+        [
+          "CurrentFreeSizePageInt",
+          112.0
+        ]
+      ],
+      "name": "TestJob.TestJob"
+    }
+  ],
+  [
+    {
+      "type": "pie",
+      "chart_name": "Current Used Size vs Max Free Size",
+      "unit": "( pages )",
+      "data": [
+        [
+          "CurrentUsedSizePageInt",
+          84.0
+        ],
+        [
+          "MaxFreeSizePageInt",
+          3300049.0
+        ]
+      ],
+      "name": "TestJob324.TestJob324_log"
+    },
+    {
+      "type": "pie",
+      "chart_name": "Current Used Size vs Max Free Size",
+      "unit": "( pages )",
+      "data": [
+        [
+          "CurrentUsedSizePageInt",
+          176.0
+        ],
+        [
+          "MaxFreeSizePageInt",
+          3300085.0
+        ]
+      ],
+      "name": "TestJob324.TestJob324"
+    },
+    {
+      "type": "pie",
+      "chart_name": "Current Used Size vs Max Free Size",
+      "unit": "( pages )",
+      "data": [
+        [
+          "CurrentUsedSizePageInt",
+          84.0
+        ],
+        [
+          "MaxFreeSizePageInt",
+          3300049.0
+        ]
+      ],
+      "name": "TestJob.TestJob_log"
+    },
+    {
+      "type": "pie",
+      "chart_name": "Current Used Size vs Max Free Size",
+      "unit": "( pages )",
+      "data": [
+        [
+          "CurrentUsedSizePageInt",
+          176.0
+        ],
+        [
+          "MaxFreeSizePageInt",
+          3300085.0
+        ]
+      ],
+      "name": "TestJob.TestJob"
+    }
+  ]
+]

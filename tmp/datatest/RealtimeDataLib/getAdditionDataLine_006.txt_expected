@@ -1,0 +1,51 @@
+[
+  {
+    "type": "line_",
+    "chartName": "CurrentUsedPct_MaxUsedPct",
+    "categories": "2013/11/05 07:36:52 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "TestJob324.TestJob324_log(CurrentUsedPct)",
+        "value": 53.0
+      },
+      {
+        "seriesName": "TestJob324.TestJob324_log(MaxUsedPct)",
+        "value": 85.0
+      },
+      {
+        "seriesName": "TestJob324.TestJob324(CurrentUsedPct)",
+        "value": 61.0
+      },
+      {
+        "seriesName": "TestJob324.TestJob324(MaxUsedPct)",
+        "value": 94.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "TestJob324.TestJob324_log(CurrentUsedPct)",
+        "detail": {
+          "fetchAt": "2013/11/05 07:36:52 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "TestJob324.TestJob324_log(MaxUsedPct)",
+        "detail": {
+          "fetchAt": "2013/11/05 07:36:52 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "TestJob324.TestJob324(CurrentUsedPct)",
+        "detail": {
+          "fetchAt": "2013/11/05 07:36:52 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "TestJob324.TestJob324(MaxUsedPct)",
+        "detail": {
+          "fetchAt": "2013/11/05 07:36:52 GMT+07:00"
+        }
+      }
+    ]
+  }
+]

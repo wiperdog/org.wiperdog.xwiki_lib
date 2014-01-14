@@ -1,0 +1,70 @@
+[
+	{
+		"hostId":"localhost", 
+		"type":"Store", 
+		"sid":"master", 
+		"KEYEXPR":{
+			"_root":["DatabaseName", "PhysicalName"], 
+			"_sequence":["AverageIOTimeDbl", "AverageIOTimeCumDbl"], 
+			"_unit":{
+				"ReadsCumCnt":"count", "BytesReadCumCnt":"byte", "ReadTimeDbl":"msec", "WritesCumCnt":"count", "BytesWriteCumCnt":"byte", "WriteTimeDbl":"msec", "TotalTimeIODbl":"msec", "BytesOnDiskDbl":"byte", "ReadsCnt":"count/interval", "BytesReadsCnt":"byte/interval", "WritesCnt":"count/interval", "BytesWritesCnt":"byte/interval", "ReadsRateVal":"count/sec", "BytesReadRateVal":"byte/sec", "WritesRateVal":"count/sec", "BytesWritesRateVal":"byte/sec", "AverageIOTimeDbl":"msec", "AverageIOTimeCumDbl":"msec"
+			}, 
+			"_chart":[
+				{
+				        "type": "area",
+				        "name": "Draw Area Read Time",
+				        "chart_columns": ["ReadTimeDbl"],
+					"hint_columns": ["ReadsCumCnt", "WritesCumCnt"]
+				},
+				{
+				        "type": "area",
+				        "name": "Draw Area Write Time",
+				        "chart_columns": ["WriteTimeDbl", "TotalTimeIODbl"],
+				        "hint_columns": ["AverageIOTimeDbl"]
+				}
+			]
+		}, 
+		"version":"1.0", 
+		"fetchAt":"20140108145426GMT+07:00", 
+		"fetchedAt_bin":1389167666, 
+		"istIid":"localhost-@MSSQL-master", 
+		"resourceId":"Pf/MsDtFileIoStat", 
+		"sourceJob":"SQL_Server.Database_Statistic.TestJobAreaStoreUnit", 
+		"instanceName":"inst1", 
+		"data":[]
+	},
+	{
+		"hostId":"localhost", 
+		"type":"Store", 
+		"sid":"master", 
+		"KEYEXPR":{
+			"_root":["DatabaseName", "PhysicalName"], 
+			"_sequence":["AverageIOTimeDbl", "AverageIOTimeCumDbl"], 
+			"_unit":{
+				"ReadsCumCnt":"count", "BytesReadCumCnt":"byte", "ReadTimeDbl":"msec", "WritesCumCnt":"count", "BytesWriteCumCnt":"byte", "WriteTimeDbl":"msec", "TotalTimeIODbl":"msec", "BytesOnDiskDbl":"byte", "ReadsCnt":"count/interval", "BytesReadsCnt":"byte/interval", "WritesCnt":"count/interval", "BytesWritesCnt":"byte/interval", "ReadsRateVal":"count/sec", "BytesReadRateVal":"byte/sec", "WritesRateVal":"count/sec", "BytesWritesRateVal":"byte/sec", "AverageIOTimeDbl":"msec", "AverageIOTimeCumDbl":"msec"
+			}, 
+			"_chart":[
+				{
+				        "type": "area",
+				        "name": "Draw Area Read Time",
+				        "chart_columns": ["ReadTimeDbl"],
+					"hint_columns": ["ReadsCumCnt", "WritesCumCnt"]
+				},
+				{
+				        "type": "area",
+				        "name": "Draw Area Write Time",
+				        "chart_columns": ["WriteTimeDbl", "TotalTimeIODbl"],
+				        "hint_columns": ["AverageIOTimeDbl"]
+				}
+			]
+		}, 
+		"version":"1.0", 
+		"fetchAt":"20140108165822GMT+07:00", 
+		"fetchedAt_bin":1389175102, 
+		"istIid":"localhost-@MSSQL-master", 
+		"resourceId":"Pf/MsDtFileIoStat", 
+		"sourceJob":"SQL_Server.Database_Statistic.TestJobAreaStoreUnit", 
+		"instanceName":"inst1", 
+		"data":[]
+	}
+]

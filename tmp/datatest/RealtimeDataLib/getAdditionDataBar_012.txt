@@ -1,0 +1,178 @@
+[
+	{
+        "hostId" : "localhost",
+        "type" : "Store",
+        "sid" : "master",
+        "KEYEXPR" : {
+                "_sequence" : [
+                        "AverageIOTimeDbl",
+                        "AverageIOTimeCumDbl"
+                ],
+                "_unit" : {
+                        "ReadsCumCnt" : "count",
+                        "BytesReadCumCnt" : "byte",
+                        "ReadTimeDbl" : "msec",
+                        "WritesCumCnt" : "count",
+                        "BytesWriteCumCnt" : "byte",
+                        "WriteTimeDbl" : "msec",
+                        "TotalTimeIODbl" : "msec",
+                        "BytesOnDiskDbl" : "byte",
+                        "ReadsCnt" : "count/interval",
+                        "BytesReadsCnt" : "byte/interval",
+                        "WritesCnt" : "count/interval",
+                        "BytesWritesCnt" : "byte/interval",
+                        "ReadsRateVal" : "count/sec",
+                        "BytesReadRateVal" : "byte/sec",
+                        "WritesRateVal" : "count/sec",
+                        "BytesWritesRateVal" : "byte/sec",
+                        "AverageIOTimeDbl" : "msec"
+                },
+                "_chart" : [
+                        {
+                                "type" : "bar",
+                                "name" : "Read/Write Time",
+                                "chart_columns" : [
+                                        "ReadTimeDbl",
+                                        "WriteTimeDbl"
+                                ],
+                                "hint_columns" : [
+                                        "AverageIOTimeDbl",
+                                        "AverageIOTimeCumDbl"
+                                ]
+                        },
+                        {
+                                "type" : "bar",
+                                "name" : "Read/Write Bytes Size",
+                                "chart_columns" : [
+                                        "BytesReadsCnt",
+                                        "BytesWritesCnt"
+                                ],
+                                "hint_columns" : [
+                                        "BytesReadCumCnt"
+                                ]
+                        }
+                ]
+        },
+        "version" : "1.0",
+        "fetchAt" : "20140106133845GMT+07:00",
+        "fetchedAt_bin" : 1388983115,
+        "istIid" : "localhost-@MSSQL-master",
+        "resourceId" : "Pf/MsDtFileIoStat",
+        "sourceJob" : "SQL_Server.Database_Statistic.TestJobBarStoreUnit",
+        "instanceName" : "inst1",
+        "data" : [
+                {
+                        "DatabaseName" : "db_test",
+                        "PhysicalName" : "tbl_1.mdf",
+                        "FileID" : 1,
+                        "ReadsCumCnt" : 11,
+                        "BytesReadCumCnt" : 11,
+                        "ReadTimeDbl" : 11,
+                        "WritesCumCnt" : 11,
+                        "BytesWriteCumCnt" : 11,
+                        "WriteTimeDbl" : 11,
+                        "TotalTimeIODbl" : 11,
+                        "BytesOnDiskDbl" : 11,
+                        "ReadsCnt" : 11,
+                        "BytesReadsCnt" : 11,
+                        "WritesCnt" : 11,
+                        "BytesWritesCnt" : 11,
+                        "ReadsRateVal" : 11.5,
+                        "BytesReadRateVal" : 11,
+                        "WritesRateVal" : 11,
+                        "BytesWritesRateVal" : 11,
+                        "AverageIOTimeDbl" : 11,
+                        "AverageIOTimeCumDbl" : 11.4,
+                        "RECORD_SEQ" : 1
+                }
+        ]
+	},
+	{
+        "hostId" : "localhost",
+        "type" : "Store",
+        "sid" : "master",
+        "KEYEXPR" : {
+                "_sequence" : [
+                        "AverageIOTimeDbl",
+                        "AverageIOTimeCumDbl"
+                ],
+                "_unit" : {
+                        "ReadsCumCnt" : "count",
+                        "BytesReadCumCnt" : "byte",
+                        "ReadTimeDbl" : "msec",
+                        "WritesCumCnt" : "count",
+                        "BytesWriteCumCnt" : "byte",
+                        "WriteTimeDbl" : "msec",
+                        "TotalTimeIODbl" : "msec",
+                        "BytesOnDiskDbl" : "byte",
+                        "ReadsCnt" : "count/interval",
+                        "BytesReadsCnt" : "byte/interval",
+                        "WritesCnt" : "count/interval",
+                        "BytesWritesCnt" : "byte/interval",
+                        "ReadsRateVal" : "count/sec",
+                        "BytesReadRateVal" : "byte/sec",
+                        "WritesRateVal" : "count/sec",
+                        "BytesWritesRateVal" : "byte/sec",
+                        "AverageIOTimeDbl" : "msec"
+                },
+                "_chart" : [
+                        {
+                                "type" : "bar",
+                                "name" : "Read/Write Time",
+                                "chart_columns" : [
+                                        "ReadTimeDbl",
+                                        "WriteTimeDbl"
+                                ],
+                                "hint_columns" : [
+                                        "AverageIOTimeDbl",
+                                        "AverageIOTimeCumDbl"
+                                ]
+                        },
+                        {
+                                "type" : "bar",
+                                "name" : "Read/Write Bytes Size",
+                                "chart_columns" : [
+                                        "BytesReadsCnt",
+                                        "BytesWritesCnt"
+                                ],
+                                "hint_columns" : [
+                                        "BytesReadCumCnt"
+                                ]
+                        }
+                ]
+        },
+        "version" : "1.0",
+        "fetchAt" : "20140106133849GMT+07:00",
+        "fetchedAt_bin" : 1388983119,
+        "istIid" : "localhost-@MSSQL-master",
+        "resourceId" : "Pf/MsDtFileIoStat",
+        "sourceJob" : "SQL_Server.Database_Statistic.TestJobBarStoreUnit",
+        "instanceName" : "inst1",
+        "data" : [
+                {
+                        "DatabaseName" : "db_test",
+                        "PhysicalName" : "tbl_1.mdf",
+                        "FileID" : 1,
+                        "ReadsCumCnt" : 11,
+                        "BytesReadCumCnt" : 11,
+                        "ReadTimeDbl" : 11,
+                        "WritesCumCnt" : 11,
+                        "BytesWriteCumCnt" : 11,
+                        "WriteTimeDbl" : 11,
+                        "TotalTimeIODbl" : 11,
+                        "BytesOnDiskDbl" : 11,
+                        "ReadsCnt" : 11,
+                        "BytesReadsCnt" : 11,
+                        "WritesCnt" : 11,
+                        "BytesWritesCnt" : 11,
+                        "ReadsRateVal" : 11.5,
+                        "BytesReadRateVal" : 11,
+                        "WritesRateVal" : 11,
+                        "BytesWritesRateVal" : 11,
+                        "AverageIOTimeDbl" : 11,
+                        "AverageIOTimeCumDbl" : 11.4,
+                        "RECORD_SEQ" : 1
+                }
+        ]
+	}
+]

@@ -118,7 +118,6 @@ public class ConsoleServiceLib_UT_02 {
 		listCmd = new ArrayList<String>();
 		// get data of function runProcClosure
 		tmpMap = (HashMap) service.runProcClosure(listCmd, workDir, false);
-		System.out.println(tmpMap);
 		assertTrue(tmpMap.get("in").length() == 0);
 		assertTrue(tmpMap.get("err").length() > 0);
 	}

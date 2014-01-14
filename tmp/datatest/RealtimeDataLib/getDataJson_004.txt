@@ -1,0 +1,190 @@
+[
+  {
+    "_id": {
+      "_time": 1383612233,
+      "_machine": 2109717787,
+      "_inc": 2063286342,
+      "_new": false
+    },
+    "hostId": "localhost",
+    "type": "Store",
+    "sid": "master",
+    "KEYEXPR": {
+      "_sequence": [
+        "CacheHitRatioDiffPct",
+        "CacheHitRatioPct"
+      ],
+      "_unit": {
+        "FreeListStallsPerSecVal": "count/sec",
+        "FreePagesCnt": "pages",
+        "TotalPagesCnt": "pages",
+        "TargetPagesCnt": "pages",
+        "DatabasePagesCnt": "pages",
+        "StolenPagesCnt": "pages",
+        "LazyWritesPerSecVal": "count/sec",
+        "CheckpointPagesPerSecVal": "count/sec",
+        "PageReadsPerSecVal": "pages/sec",
+        "PageWritesPerSecVal": "pages/sec",
+        "PageLifeExpectancyInt": "sec",
+        "PagesInCacheDiffCnt": "pages/interval",
+        "PagesDiffCnt": "pages/interval",
+        "PagesInCacheCnt": "pages",
+        "PagesCnt": "pages",
+        "CacheHitRatioPct": "%",
+        "CacheHitRatioDiffPct": "%"
+      },
+      "_chart": [
+        {
+          "type": "line",
+          "name": "Cache Hit Ratio",
+          "chart_columns": [
+            "CacheHitRatioPct"
+          ],
+          "hint_columns": [
+            "PagesDiffCnt",
+            "PagesInCacheCnt"
+          ]
+        },
+        {
+          "type": "line",
+          "name": "Buffer Cache Activity",
+          "chart_columns": [
+            "PageReadsPerSecVal",
+            "PageWritesPerSecVal",
+            "LazyWritesPerSecVal",
+            "CheckpointPagesPerSecVal"
+          ]
+        },
+        {
+          "type": "line",
+          "name": "Page Life Expectancy",
+          "chart_columns": [
+            "PageLifeExpectancyInt"
+          ]
+        }
+      ]
+    },
+    "version": "1.0",
+    "fetchAt": "20131105074353GMT+07:00",
+    "fetchedAt_bin": 1383612233,
+    "istIid": "localhost-@MSSQL-master",
+    "resourceId": "Pf/MsBufferCHR",
+    "sourceJob": "SQL_Server.Performance.Buffer_Cache_Hit_Ratio",
+    "data": [
+      {
+        "FreeListStallsPerSecVal": 0,
+        "FreePagesCnt": 147,
+        "TotalPagesCnt": 1906,
+        "TargetPagesCnt": 22955,
+        "DatabasePagesCnt": 872,
+        "StolenPagesCnt": 887,
+        "LazyWritesPerSecVal": 35,
+        "CheckpointPagesPerSecVal": 52,
+        "PageReadsPerSecVal": 5218,
+        "PageWritesPerSecVal": 155,
+        "PageLifeExpectancyInt": 255561,
+        "PagesInCacheDiffCnt": 100,
+        "PagesDiffCnt": 100,
+        "PagesInCacheCnt": 138,
+        "PagesCnt": 138,
+        "CacheHitRatioDiffPct": 100,
+        "CacheHitRatioPct": 100,
+        "RECORD_SEQ": 1
+      }
+    ]
+  },
+  {
+    "_id": {
+      "_time": 1383612407,
+      "_machine": 2109717787,
+      "_inc": 2063286344,
+      "_new": false
+    },
+    "hostId": "localhost",
+    "type": "Store",
+    "sid": "master",
+    "KEYEXPR": {
+      "_sequence": [
+        "CacheHitRatioDiffPct",
+        "CacheHitRatioPct"
+      ],
+      "_unit": {
+        "FreeListStallsPerSecVal": "count/sec",
+        "FreePagesCnt": "pages",
+        "TotalPagesCnt": "pages",
+        "TargetPagesCnt": "pages",
+        "DatabasePagesCnt": "pages",
+        "StolenPagesCnt": "pages",
+        "LazyWritesPerSecVal": "count/sec",
+        "CheckpointPagesPerSecVal": "count/sec",
+        "PageReadsPerSecVal": "pages/sec",
+        "PageWritesPerSecVal": "pages/sec",
+        "PageLifeExpectancyInt": "sec",
+        "PagesInCacheDiffCnt": "pages/interval",
+        "PagesDiffCnt": "pages/interval",
+        "PagesInCacheCnt": "pages",
+        "PagesCnt": "pages",
+        "CacheHitRatioPct": "%",
+        "CacheHitRatioDiffPct": "%"
+      },
+      "_chart": [
+        {
+          "type": "line",
+          "name": "Cache Hit Ratio",
+          "chart_columns": [
+            "CacheHitRatioPct"
+          ],
+          "hint_columns": [
+            "PagesDiffCnt",
+            "PagesInCacheCnt"
+          ]
+        },
+        {
+          "type": "line",
+          "name": "Buffer Cache Activity",
+          "chart_columns": [
+            "PageReadsPerSecVal",
+            "PageWritesPerSecVal",
+            "LazyWritesPerSecVal",
+            "CheckpointPagesPerSecVal"
+          ]
+        },
+        {
+          "type": "line",
+          "name": "Page Life Expectancy",
+          "chart_columns": [
+            "PageLifeExpectancyInt"
+          ]
+        }
+      ]
+    },
+    "version": "1.0",
+    "fetchAt": "20131105074647GMT+07:00",
+    "fetchedAt_bin": 1383612407,
+    "istIid": "localhost-@MSSQL-master",
+    "resourceId": "Pf/MsBufferCHR",
+    "sourceJob": "SQL_Server.Performance.Buffer_Cache_Hit_Ratio",
+    "data": [
+      {
+        "FreeListStallsPerSecVal": 0,
+        "FreePagesCnt": 152,
+        "TotalPagesCnt": 1905,
+        "TargetPagesCnt": 1905,
+        "DatabasePagesCnt": 872,
+        "StolenPagesCnt": 881,
+        "LazyWritesPerSecVal": 35,
+        "CheckpointPagesPerSecVal": 52,
+        "PageReadsPerSecVal": 5218,
+        "PageWritesPerSecVal": 155,
+        "PageLifeExpectancyInt": 255561,
+        "PagesInCacheDiffCnt": -126,
+        "PagesDiffCnt": -126,
+        "PagesInCacheCnt": 12,
+        "PagesCnt": 12,
+        "CacheHitRatioDiffPct": 100,
+        "CacheHitRatioPct": 100,
+        "RECORD_SEQ": 2
+      }
+    ]
+  }
+]

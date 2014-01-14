@@ -1,0 +1,134 @@
+[
+  {
+    "type": "area",
+    "categories": "2013/12/20 09:06:38 GMT+07:00",
+    "chartName": "D_0_db_test1",
+    "nameOfChart": "Draw Area Size D( db_test1 )",
+    "data": [
+      {
+        "seriesName": "UsedIndexCumSize",
+        "value": 15.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "UsedIndexCumSize",
+        "detail": {
+          "UsedIndexCumSize": "15.0( byte )",
+          "DataFreeCumSize": "10.0( byte )",
+          "fetchAt": "2013/12/20 09:06:38 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/20 09:06:38 GMT+07:00",
+    "chartName": "D_0_db_test2",
+    "nameOfChart": "Draw Area Size D( db_test2 )",
+    "data": [
+      {
+        "seriesName": "UsedIndexCumSize",
+        "value": 25.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "UsedIndexCumSize",
+        "detail": {
+          "UsedIndexCumSize": "25.0( byte )",
+          "DataFreeCumSize": "20.0( byte )",
+          "fetchAt": "2013/12/20 09:06:38 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/20 09:06:38 GMT+07:00",
+    "chartName": "M_0_tbl_test1",
+    "nameOfChart": "Draw Area Size M( tbl_test1 )",
+    "data": [
+      {
+        "seriesName": "UsedIndexSize",
+        "value": 110.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "UsedIndexSize",
+        "detail": {
+          "UsedIndexCumSize": "120.0( byte )",
+          "UsedIndexSize": 110.0,
+          "fetchAt": "2013/12/20 09:06:38 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/20 09:06:38 GMT+07:00",
+    "chartName": "M_0_tbl_test2",
+    "nameOfChart": "Draw Area Size M( tbl_test2 )",
+    "data": [
+      {
+        "seriesName": "UsedIndexSize",
+        "value": 210.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "UsedIndexSize",
+        "detail": {
+          "UsedIndexCumSize": "220.0( byte )",
+          "UsedIndexSize": 210.0,
+          "fetchAt": "2013/12/20 09:06:38 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/20 09:06:38 GMT+07:00",
+    "chartName": "M_1_tbl_test1",
+    "nameOfChart": "Draw Area Index Cum Size M( tbl_test1 )",
+    "data": [
+      {
+        "seriesName": "UsedIndexCumSize",
+        "value": 120.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "UsedIndexCumSize",
+        "detail": {
+          "UsedIndexCumSize": "120.0( byte )",
+          "DataFreeCumSize": "100.0( byte )",
+          "fetchAt": "2013/12/20 09:06:38 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/20 09:06:38 GMT+07:00",
+    "chartName": "M_1_tbl_test2",
+    "nameOfChart": "Draw Area Index Cum Size M( tbl_test2 )",
+    "data": [
+      {
+        "seriesName": "UsedIndexCumSize",
+        "value": 220.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "UsedIndexCumSize",
+        "detail": {
+          "UsedIndexCumSize": "220.0( byte )",
+          "DataFreeCumSize": "200.0( byte )",
+          "fetchAt": "2013/12/20 09:06:38 GMT+07:00"
+        }
+      }
+    ]
+  }
+]

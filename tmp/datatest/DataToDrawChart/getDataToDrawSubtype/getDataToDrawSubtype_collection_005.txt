@@ -1,0 +1,53 @@
+[
+	{
+	        "hostId" : "localhost",
+	        "type" : "Subtyped",
+	        "sid" : "master",
+	        "KEYEXPR" : {
+	                "M" : ["FileNm"],
+	                "D" : ["DatabaseNm","FileNm"],
+	                "_sequence" : {
+	                    "M" : ["UsedCumPct","UsedCumSize","UsedDataCumSize"],
+	                    "D" : ["UsedCumPct","UsedCumSize","UsedDataCumSize"]
+	                },
+	                "_unit" : {
+				"UsedDataCumSize" : "byte","UsedCumSize" : "byte","UsedDataPct" : "%","UsedIndexCumSize" : "byte","DataFreeCumSize" : "byte","UsedCumPct" : "%","UsedPct" : "%"
+			},
+	                "_description" : {
+                        "D" : "Top 10 database increase storage fastest this time",
+                        "M" : "Top 20 database of storage usage"
+	                },
+	                "_chart" : {
+	                        "D" : [
+                                {
+                                    "type" : "pie",
+                                    "name" : "Draw Area Size D",
+                                    "chart_columns" : ["UsedCumSize","DataFreeCumSize"],
+                                    "hint_columns" : ["UsedDataCumSize","DataFreeCumSize"]
+                                },
+                                {
+                                    "type" : "line",
+                                    "name" : "Draw Area CumPct D",
+                                    "chart_columns" : ["UsedPct","UsedCumPct","UsedDataPct"]
+                                }
+	                        ],
+	                        "M" : [
+                                {
+                                    "type" : "pie",
+                                    "name" : "Draw Area Index Size M",
+                                    "chart_columns" : ["UsedIndexSize","UsedIndexCumSize","UsedCumSize"],
+                                    "hint_columns" : ["UsedPct","UsedCumPct","UsedIndexCumSize"]
+                                }
+	                        ]
+	                }
+	        },
+	        "version" : "1.0",
+	        "fetchAt" : "20140109134240GMT+07:00",
+	        "fetchedAt_bin" : 1389249760,
+	        "istIid" : "localhost-@MSSQL-master",
+	        "resourceId" : "As/MyTopNDb",
+		"sourceJob":"SQL_Server.Database_Statistic.TestDrawSubtype", 
+		"instanceName":"inst1", 
+	        "data" : {}
+	}
+]

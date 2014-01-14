@@ -1,0 +1,122 @@
+[
+  {
+    "type": "line_",
+    "chartName": "CurrentUsedPct_MaxUsedPct",
+    "categories": "2013/11/05 07:36:52 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "CurrentUsedPct",
+        "value": 53.0
+      },
+      {
+        "seriesName": "MaxUsedPct",
+        "value": 85.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "CurrentUsedPct",
+        "detail": {
+          "MaxTotalSizePageInt": "3300133.0( pages )",
+          "MaxFreeSizePageInt": "3300049.0( pages )",
+          "FileSizePageInt": "160.0( pages )",
+          "CurrentUsedSizePageInt": "84.0( pages )",
+          "fetchAt": "2013/11/05 07:36:52 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "MaxUsedPct",
+        "detail": {
+          "MaxTotalSizePageInt": "3300133.0( pages )",
+          "MaxFreeSizePageInt": "3300049.0( pages )",
+          "FileSizePageInt": "160.0( pages )",
+          "CurrentUsedSizePageInt": "84.0( pages )",
+          "fetchAt": "2013/11/05 07:36:52 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "line_",
+    "chartName": "CurrentUsedPct_MaxUsedPct",
+    "categories": "2013/11/05 07:37:39 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "CurrentUsedPct",
+        "value": 53.0
+      },
+      {
+        "seriesName": "MaxUsedPct",
+        "value": 85.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "CurrentUsedPct",
+        "detail": {
+          "MaxTotalSizePageInt": "3300133.0( pages )",
+          "MaxFreeSizePageInt": "3300049.0( pages )",
+          "FileSizePageInt": "160.0( pages )",
+          "CurrentUsedSizePageInt": "84.0( pages )",
+          "fetchAt": "2013/11/05 07:37:39 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "MaxUsedPct",
+        "detail": {
+          "MaxTotalSizePageInt": "3300133.0( pages )",
+          "MaxFreeSizePageInt": "3300049.0( pages )",
+          "FileSizePageInt": "160.0( pages )",
+          "CurrentUsedSizePageInt": "84.0( pages )",
+          "fetchAt": "2013/11/05 07:37:39 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "line_",
+    "chartName": "MaxUsedPct",
+    "categories": "2013/11/05 07:36:52 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "MaxUsedPct",
+        "value": 85.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "MaxUsedPct",
+        "detail": {
+          "MaxTotalSizePageInt": "3300133.0( pages )",
+          "MaxFreeSizePageInt": "3300049.0( pages )",
+          "FileSizePageInt": "160.0( pages )",
+          "CurrentUsedSizePageInt": "84.0( pages )",
+          "fetchAt": "2013/11/05 07:36:52 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "line_",
+    "chartName": "MaxUsedPct",
+    "categories": "2013/11/05 07:37:39 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "MaxUsedPct",
+        "value": 85.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "MaxUsedPct",
+        "detail": {
+          "MaxTotalSizePageInt": "3300133.0( pages )",
+          "MaxFreeSizePageInt": "3300049.0( pages )",
+          "FileSizePageInt": "160.0( pages )",
+          "CurrentUsedSizePageInt": "84.0( pages )",
+          "fetchAt": "2013/11/05 07:37:39 GMT+07:00"
+        }
+      }
+    ]
+  }
+]

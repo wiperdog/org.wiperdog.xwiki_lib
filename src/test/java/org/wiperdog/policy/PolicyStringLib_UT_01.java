@@ -62,7 +62,7 @@ public class PolicyStringLib_UT_01 {
 	}
 
 	/**
-	 * Check output with two variable is condition and mapConditionLevel data
+	 * Check output with two variable is condition and mapConditionLevel; data
 	 * type is Store and level of the condition is High value of condition
 	 * exists in mapConditionLevel.
 	 * Expected: level of condition is High
@@ -78,7 +78,7 @@ public class PolicyStringLib_UT_01 {
 	}
 
 	/**
-	 * Check output with two variable is condition and mapConditionLevel data
+	 * Check output with two variable is condition and mapConditionLevel; data
 	 * type is Store and level of the condition is Medium value of condition
 	 * exists in mapConditionLevel.
 	 * Expected: level of condition is Medium
@@ -96,7 +96,7 @@ public class PolicyStringLib_UT_01 {
 	}
 
 	/**
-	 * Check output with two variable is condition and mapConditionLevel data
+	 * Check output with two variable is condition and mapConditionLevel; data
 	 * type is Store and level of the condition is Low value of condition exists
 	 * in mapConditionLevel.
 	 * Expected: level of condition is Low
@@ -115,7 +115,7 @@ public class PolicyStringLib_UT_01 {
 
 	/**
 	 * Check output with three variable is condition, mapConditionLevel and
-	 * group data type is Subtyped and level of the condition is High value of
+	 * group; data type is Subtyped and level of the condition is High value of
 	 * condition exists in mapConditionLevel.
 	 * Expected: level of condition is High
 	 */
@@ -135,7 +135,7 @@ public class PolicyStringLib_UT_01 {
 
 	/**
 	 * Check output with three variable is condition, mapConditionLevel and
-	 * group data type is Subtyped and level of the condition is Medium value of
+	 * group; data type is Subtyped and level of the condition is Medium value of
 	 * condition exists in mapConditionLevel.
 	 * Expected: level of condition is Medium
 	 */
@@ -155,7 +155,7 @@ public class PolicyStringLib_UT_01 {
 
 	/**
 	 * Check output with three variable is condition, mapConditionLevel and
-	 * group data type is Subtyped and level of the condition is Low value of
+	 * group; data type is Subtyped and level of the condition is Low value of
 	 * condition exists in mapConditionLevel.
 	 * Expected: level of condition is Low
 	 */
@@ -175,69 +175,60 @@ public class PolicyStringLib_UT_01 {
 
 	/**
 	 * Check output with value of condition is empty.
-	 * Expected: exception occurs, not returning data
-	 * @throws Exception
+	 * Expected: return data is null
 	 */
-	@Test(expected = Exception.class)
-	public void getLevelTest07() throws Exception {
+	@Test
+	public void getLevelTest07() {
 		// set data typed is store
 		mapConditionLevel = mapConditionLevelStore;
 		// set value of condition is empty
 		condition = "";
 		// get data of function getLevel
-		tmpResultActual = (Integer) policy.getLevel(condition,
-				mapConditionLevel);
+		assertNull(policy.getLevel(condition, mapConditionLevel));
 	}
 
 	/**
 	 * Check output with value of condition is null.
-	 * Expected: exception occurs, not returning data
-	 * @throws Exception
+	 * Expected: return data is null
 	 */
-	@Test(expected = Exception.class)
-	public void getLevelTest08() throws Exception {
+	@Test
+	public void getLevelTest08() {
 		// set data typed is store
 		mapConditionLevel = mapConditionLevelStore;
 		// set value of condition is null
 		condition = null;
 		// get data of function getLevel
-		tmpResultActual = (Integer) policy.getLevel(condition,
-				mapConditionLevel);
+		assertNull(policy.getLevel(condition, mapConditionLevel));
 	}
 
 	/**
 	 * Check output with value of mapConditionLevel is empty.
-	 * Expected: exception occurs, not returning data
-	 * @throws Exception
+	 * Expected: return data is null
 	 */
-	@Test(expected = Exception.class)
-	public void getLevelTest09() throws Exception {
+	@Test
+	public void getLevelTest09() {
 		// get data of function getLevel
-		tmpResultActual = (Integer) policy.getLevel(condition,
-				mapConditionLevel);
+		assertNull(policy.getLevel(condition, mapConditionLevel));
 	}
 
 	/**
 	 * Check output with value of mapConditionLevel is null.
-	 * Expected: exception occurs, not returning data
-	 * @throws Exception
+	 * Expected: return data is null
 	 */
-	@Test(expected = Exception.class)
-	public void getLevelTest10() throws Exception {
+	@Test
+	public void getLevelTest10() {
 		// set value of mapConditionLevel is null
 		mapConditionLevel = null;
 		// get data of function getLevel
-		tmpResultActual = (Integer) policy.getLevel(condition,
-				mapConditionLevel);
+		assertNull(policy.getLevel(condition,mapConditionLevel));
 	}
 
 	/**
 	 * Check output with value of group is empty.
-	 * Expected: exception occurs, not returning data
-	 * @throws Exception
+	 * Expected: return data is null
 	 */
-	@Test(expected = Exception.class)
-	public void getLevelTest11() throws Exception {
+	@Test
+	public void getLevelTest11() {
 		// set data typed is subtyped
 		mapConditionLevel = mapConditionLevelSubtyped;
 		// set value of condition for test
@@ -245,14 +236,13 @@ public class PolicyStringLib_UT_01 {
 		// set value of group is empty
 		group = "";
 		// get data of function getLevel
-		tmpResultActual = (Integer) policy.getLevel(condition,
-				mapConditionLevel, group);
+		assertNull(policy.getLevel(condition, mapConditionLevel, group));
 	}
 
 	/**
-	 * Check output with value of a group in mapConditionLevel is empty data
-	 * type is Subtyped.
-	 * Expected: exception occurs, not returning data
+	 * Check output with value of a group in mapConditionLevel is empty, data
+	 * type is Subtyped and value of condition not exists in group.
+	 * Expected: return data is null
 	 */
 	@Test
 	public void getLevelTest12() {
@@ -261,20 +251,17 @@ public class PolicyStringLib_UT_01 {
 		// set value of condition for test
 		condition = "(data.UsedPct == 10)";
 		// set value of group
-		group = "M";
+		group = "D";
 		// get data of function getLevel
-		tmpResultActual = (Integer) policy.getLevel(condition,
-				mapConditionLevelSubtyped, group);
-		assertTrue(tmpResultActual == 3);
+		assertNull(policy.getLevel(condition, mapConditionLevelSubtyped, group));
 	}
 
 	/**
 	 * Check output with value of group is not D or M
-	 * Expected: exception occurs, not returning data
-	 * @throws Exception
+	 * Expected: return data is null
 	 */
-	@Test(expected = Exception.class)
-	public void getLevelTest13() throws Exception {
+	@Test
+	public void getLevelTest13() {
 		// set data typed is subtyped
 		mapConditionLevel = mapConditionLevelSubtyped;
 		// set value of condition for test
@@ -282,35 +269,31 @@ public class PolicyStringLib_UT_01 {
 		// set value of group
 		group = "E";
 		// get data of function getLevel
-		tmpResultActual = (Integer) policy.getLevel(condition,
-				mapConditionLevel, group);
+		assertNull(policy.getLevel(condition, mapConditionLevel, group));
 	}
 
 	/**
-	 * Check output with two variable is condition and mapConditionLevel data
+	 * Check output with two variable is condition and mapConditionLevel, data
 	 * type is Store and value of condition not exists in mapConditionLevel.
-	 * Expected: exception occurs, not returning data
-	 * @throws Exception
+	 * Expected: return data is null
 	 */
-	@Test(expected = Exception.class)
-	public void getLevelTest14() throws Exception {
+	@Test
+	public void getLevelTest14() {
 		// set data typed is store
 		mapConditionLevel = mapConditionLevelStore;
 		// set value of condition for test
 		condition = "(data.UsedPct >= 95)";
 		// get data of function getLevel
-		tmpResultActual = (Integer) policy.getLevel(condition,
-				mapConditionLevel);
+		assertNull(policy.getLevel(condition, mapConditionLevel));
 	}
 
 	/**
 	 * Check output with three variable is condition, mapConditionLevel and
-	 * group data type is Subtyped and value of condition not exists in
+	 * group; data type is Subtyped and value of condition not exists in
 	 * mapConditionLevel.
-	 * Expected: exception occurs, not returning data
-	 * @throws Exception
+	 * Expected: return data is null
 	 */
-	@Test(expected = Exception.class)
+	@Test
 	public void getLevelTest15() throws Exception {
 		// set data typed is subtyped
 		mapConditionLevel = mapConditionLevelSubtyped;
@@ -319,7 +302,6 @@ public class PolicyStringLib_UT_01 {
 		// set value of group
 		group = "D";
 		// get data of function getLevel
-		tmpResultActual = (Integer) policy.getLevel(condition,
-				mapConditionLevel, group);
+		assertNull(policy.getLevel(condition, mapConditionLevel, group));
 	}
 }

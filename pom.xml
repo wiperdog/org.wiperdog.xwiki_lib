@@ -68,7 +68,7 @@
 					</includes>
 					<excludes>
 						<exclude>**/ConsoleServiceLib_UT_02.java</exclude>
-						<exclude>**/CMongoDBConn_UT_01.java</exclude>
+						<exclude>**/CMongoDBConn_UT_*.java</exclude>
 						<exclude>**/CMongoDBConn_UT_02.java</exclude>
 						<exclude>**/CMongoDBConn_UT_03.java</exclude>
 					</excludes>

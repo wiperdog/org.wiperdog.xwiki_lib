@@ -12,6 +12,9 @@ class DataToDrawChart {
 	 */
 	def static getDataToDrawBar(collection){
 		logger.info("Begin getting data to draw bar of " + collection)
+		if(collection == null || collection == []){
+			return []
+		}
 		def result
 		def dataSize = collection.size
 		if (dataSize > 2) {
@@ -23,6 +26,9 @@ class DataToDrawChart {
 			result = collection
 		}
 		def dataChart = result.KEYEXPR._chart[0]
+		if(dataChart == null || dataChart == [:]){
+			return []
+		}
 		def type
 		def resultData
 		def finalResultData = []
@@ -64,7 +70,7 @@ class DataToDrawChart {
 					if(result.KEYEXPR != null) {
 						KEYEXPR = result.KEYEXPR._root[0]
 					}
-					if(KEYEXPR != null) {
+					if(KEYEXPR != null && KEYEXPR != []) {
 						def lstKey = []
 						result.each{record->
 							record.data.each {dat->
@@ -82,7 +88,9 @@ class DataToDrawChart {
 								def dataChartColumn
 								def key = ""
 								keySet.each{ key += it + "." }
-								key = key.substring(0, key.length()-1)
+								if(key.length() > 0){
+									key = key.substring(0, key.length()-1)
+								}
 
 								if(dataToDraw[key] == null){
 									dataToDraw[key] = []
@@ -127,7 +135,9 @@ class DataToDrawChart {
 								KEYEXPR.each {eKeyexpr ->
 									key += elementData[eKeyexpr] + "."
 								}
-								key = key.substring(0, key.length()-1)
+								if(key.length() > 0){
+									key = key.substring(0, key.length()-1)
+								}
 								if(hintData[key] == null) {
 									hintData[key] = []
 								}
@@ -197,6 +207,10 @@ class DataToDrawChart {
 		logger.info("Begin getting data to draw line of " + collection)
 		def finalResult = []
 		def returnResult = []
+		if(collection == null || collection == [] 
+			|| collection[0].KEYEXPR == null || collection[0].KEYEXPR == [:]){
+			return finalResult
+		}
 		def key_chart = collection[0].KEYEXPR._chart
 		def key_root = collection[0].KEYEXPR._root
 		def key_unit = collection[0].KEYEXPR._unit
@@ -234,6 +248,9 @@ class DataToDrawChart {
 			if(chart.type == "line"){
 				def result = [:]
 				def collumns = chart.chart_columns
+				if(collumns == null || collumns == []){
+					return finalResult
+				}
 				def hintColumns = chart.chart_columns.clone()
 				if(chart.hint_columns != null){
 					chart.hint_columns.each{hintCol->
@@ -295,9 +312,19 @@ class DataToDrawChart {
 								def fullDetailData = [:]
 								fullDetailData.fetchAt = record.fetchAt
 								if(hintColumns != null){
+									def listDelCols = []
 									hintColumns.each{hintCol->
-										fullDetailData[hintCol] = eachData[hintCol]  + (key_unit[hintCol] != null ? ("( " + key_unit[hintCol] + " )") : "")
+										if(eachData.containsKey(hintCol)){
+											if(eachData[hintCol] != null){
+												fullDetailData[hintCol] = eachData[hintCol]  + (key_unit[hintCol] != null ? ("( " + key_unit[hintCol] + " )") : "")
+											}
+										}else{
+											listDelCols.add(hintCol)
+										}
 									}
+									// Delete unused field in hintColumns
+									hintColumns.removeAll(listDelCols)
+									result.hint_columns = hintColumns
 								}else{
 									fullDetailData = eachData
 									fullDetailData.fetchAt = record.fetchAt
@@ -329,22 +356,33 @@ class DataToDrawChart {
 	 */
 	def static getDataToDrawPie(collection){
 		logger.info("Begin getting data to draw pie of " + collection)
+		if(collection == null || collection == []){
+			return []
+		}
 		def result = collection[collection.size() - 1]
+		if(result.KEYEXPR == null || result.KEYEXPR == [:] || result.KEYEXPR == []){
+			return []
+		}
 		def dataChart = result.KEYEXPR._chart
 		def type
 		def resultData
 		def finalResultData = []
 		def numOfChart
+		if(dataChart == null || dataChart == []){
+			return finalResultData
+		}
 		dataChart.each {elementChart ->
 			type = elementChart.type
 			if(type == "pie") {
+				def dataPie = [:]
 				numOfChart = 0
 				resultData = []
 				result.data.each {elementData ->
-					def dataPie = [:]
 					dataPie['type'] = "pie"
 					dataPie['chart_name'] = elementChart.name
-					if (result.KEYEXPR._unit != null) {
+					if (result.KEYEXPR._unit != null
+						&& elementChart.chart_columns != null
+						&& result.KEYEXPR._unit[elementChart.chart_columns[0]] != null) {
 						dataPie['unit'] = '( ' + result.KEYEXPR._unit[elementChart.chart_columns[0]] + ' )'
 					} else {
 						dataPie['unit'] = ""
@@ -363,7 +401,7 @@ class DataToDrawChart {
 						KEYEXPR = result.KEYEXPR._root
 					}
 					dataPie['name'] = ""
-					if(KEYEXPR != null) {
+					if(KEYEXPR != null && KEYEXPR != []) {
 						KEYEXPR.each {
 							dataPie['name'] += elementData[it] + "."
 						}
@@ -373,6 +411,7 @@ class DataToDrawChart {
 						numOfChart++
 					}
 					resultData.add(dataPie)
+					dataPie = [:]
 				}
 				finalResultData.add(resultData)
 			}
@@ -388,116 +427,129 @@ class DataToDrawChart {
 	 */
 	def static getDataToDrawArea(collection){
 		logger.info("Begin getting data to draw area of " + collection)
-		def result = collection
-		def dataChart = result.KEYEXPR._chart[0]
-		def type
-		def resultData
 		def finalResultData = []
-		def lstKey
-		def  unit = result[0].KEYEXPR._unit
-		if (unit == null) {
-			unit = [:]
-		}
-
-		dataChart.each {itemDataChart ->
-			type = itemDataChart.type
-			if(type == "area") {
-				resultData = []
-				def chart_columns = itemDataChart.chart_columns
-				def keyExprRoot = null
-				if(result.KEYEXPR != null) {
-					keyExprRoot = result.KEYEXPR._root[0]
-				}
-				def finalData = [:]
-				if(keyExprRoot == null) {// KEYEXPR hasn't _root
-					// xAxis
-					def mapCategories = [:]
-					mapCategories['categories'] = result['fetchAt']
-					finalData['xAxis'] = mapCategories
-					// chart_name
-					finalData['chart_name'] = itemDataChart.name
-
-					def series = []
-					def listFinalData = []
-					def detail_data = []
-					chart_columns.each {chartColumn ->
-
-						// series
-						def tmp = [:]
-						tmp['name'] = chartColumn
-						tmp['data'] = []
-						result.each {itemResult ->
-							if (itemResult.data[0] != null) {
-								tmp['data'].add(itemResult.data[0][chartColumn])
-							} else {
-								tmp['data'].add(null)
-							}
-						}
-						series.add(tmp)
-						finalData['unit'] = unit[chartColumn]
+		if(collection != null && collection != [] && collection.KEYEXPR != null && collection.KEYEXPR._chart != null && collection.KEYEXPR._chart != []){
+			def result = collection
+			def dataChart = result.KEYEXPR._chart[0]
+			def type
+			def resultData
+			def lstKey
+			def  unit = result[0].KEYEXPR._unit
+			if (unit == null) {
+				unit = [:]
+			}
+	
+			dataChart.each {itemDataChart ->
+				type = itemDataChart.type
+				if(type == "area") {
+					resultData = []
+					def chart_columns = itemDataChart.chart_columns
+					if(chart_columns == null || chart_columns == []){
+						return finalResultData
 					}
-					finalData['series'] = series
-					finalData['chartItemName'] = ["root"]
-					resultData.add(finalData)
-					finalData = [:]
-				} else { // KEYEXPR has _root
-					lstKey = []
-					result.each{record->
-						record.data.each {dat->
-							def tmp = []
-							keyExprRoot.each{
-								tmp.add(dat[it])
-							}
-							if(!lstKey.contains(tmp)){
-								lstKey.add(tmp)
-							}
-						}
+					def keyExprRoot = null
+					if(result.KEYEXPR != null) {
+						keyExprRoot = result.KEYEXPR._root[0]
 					}
-					def itemList = []
-					lstKey.each {keySet ->
+					def finalData = [:]
+					if(keyExprRoot == null || keyExprRoot == []) {// KEYEXPR hasn't _root
 						// xAxis
 						def mapCategories = [:]
 						mapCategories['categories'] = result['fetchAt']
 						finalData['xAxis'] = mapCategories
-
-						def valueOfKey = ""
-						keySet.each{ valueOfKey += it + "." }
-						valueOfKey = valueOfKey.substring(0, valueOfKey.length()-1)
-						finalData['chart_name'] = itemDataChart.name + " (" + valueOfKey + ")"
-						itemList.add(valueOfKey.replaceAll("\\.","_"))
-						finalData['series'] = []
-						def mapSeries
-						chart_columns.each {itemChart ->
-							mapSeries = [:]
-							mapSeries['name'] = itemChart
-							mapSeries['data'] = []
-							def isHasData
-							result['data'].each {oneRunData ->
-								isHasData = false
-								oneRunData.each {itemData ->
-									def dataKey = ""
-									keyExprRoot.each {itemKeyExpr ->
-										dataKey += itemData[itemKeyExpr] + "."
-									}
-									dataKey = dataKey.substring(0, dataKey.length()-1)
-									if (valueOfKey.equals(dataKey)) {
-										isHasData = true
-										mapSeries['data'].add(itemData[itemChart])
-									}
-								}
-								if (!isHasData) {
-									mapSeries['data'].add(null)
+						// chart_name
+						finalData['chart_name'] = itemDataChart.name != null?itemDataChart.name:""
+	
+						def series = []
+						def listFinalData = []
+						def detail_data = []
+						chart_columns.each {chartColumn ->
+	
+							// series
+							def tmp = [:]
+							tmp['name'] = chartColumn
+							tmp['data'] = []
+							result.each {itemResult ->
+								if (itemResult.data[0] != null) {
+									tmp['data'].add(itemResult.data[0][chartColumn])
+								} else {
+									tmp['data'].add(null)
 								}
 							}
-							finalData['series'].add(mapSeries)
-							finalData['unit'] = unit[itemChart]
+							series.add(tmp)
+							finalData['unit'] = unit[chartColumn]
 						}
-						finalData['chartItemName'] = itemList
+						finalData['series'] = series
+						finalData['chartItemName'] = ["root"]
 						resultData.add(finalData)
 						finalData = [:]
-					}
-				} // End else
-				finalResultData.add(resultData)
+					} else { // KEYEXPR has _root
+						lstKey = []
+						result.each{record->
+							record.data.each {dat->
+								def tmp = []
+								keyExprRoot.each{
+									tmp.add(dat[it])
+								}
+								if(!lstKey.contains(tmp)){
+									lstKey.add(tmp)
+								}
+							}
+						}
+						def itemList = []
+						lstKey.each {keySet ->
+							// xAxis
+							def mapCategories = [:]
+							mapCategories['categories'] = result['fetchAt']
+							finalData['xAxis'] = mapCategories
+	
+							def valueOfKey = ""
+							keySet.each{ valueOfKey += it + "." }
+							if(valueOfKey.length() > 0){
+								valueOfKey = valueOfKey.substring(0, valueOfKey.length()-1)
+							}
+							if(valueOfKey != ""){
+								finalData['chart_name'] = (itemDataChart.name != null ? itemDataChart.name:"") + " (" + valueOfKey + ")"
+							}else{
+								finalData['chart_name'] = itemDataChart.name
+							}
+							itemList.add(valueOfKey.replaceAll("\\.","_"))
+							finalData['series'] = []
+							def mapSeries
+							chart_columns.each {itemChart ->
+								mapSeries = [:]
+								mapSeries['name'] = itemChart
+								mapSeries['data'] = []
+								def isHasData
+								result['data'].each {oneRunData ->
+									isHasData = false
+									oneRunData.each {itemData ->
+										def dataKey = ""
+										keyExprRoot.each {itemKeyExpr ->
+											dataKey += itemData[itemKeyExpr] + "."
+										}
+										if(dataKey.length() > 0){
+											dataKey = dataKey.substring(0, dataKey.length()-1)
+										}
+										if (valueOfKey.equals(dataKey)) {
+											isHasData = true
+											mapSeries['data'].add(itemData[itemChart])
+										}
+									}
+									if (!isHasData) {
+										mapSeries['data'].add(null)
+									}
+								}
+								finalData['series'].add(mapSeries)
+								finalData['unit'] = unit[itemChart]
+							}
+							finalData['chartItemName'] = itemList
+							resultData.add(finalData)
+							finalData = [:]
+						}
+					} // End else
+					finalResultData.add(resultData)
+				}
 			}
 		}
 		logger.info("Finish getting data to draw area")
@@ -513,7 +565,9 @@ class DataToDrawChart {
 		logger.info("Begin getting subtyped data")
 		def listDataStore = []
 		def mapForKey = [:]
-
+		if(dataSubtype == null || dataSubtype == []){
+			return mapForKey
+		}
 		def listKey = []
 		dataSubtype[0]['data'].each {
 			listKey.add(it.key)
@@ -530,36 +584,48 @@ class DataToDrawChart {
 						// process data keyexpr
 						def mapKeyexpr = [:]
 						// root of keyexpr
-						if(eachRunJob['KEYEXPR'][keySubtype] != null) {
-							mapKeyexpr['_root'] = eachRunJob['KEYEXPR'][keySubtype]
-						}
-						// chart of keyexpr
-						if(eachRunJob.KEYEXPR._chart instanceof Map) {
-							// chart is map data
-							eachRunJob.KEYEXPR._chart.keySet().each {
-								if(keySubtype == it) {
-									mapKeyexpr['_chart'] = eachRunJob['KEYEXPR']['_chart'][it]
+						if(eachRunJob['KEYEXPR'] != null){
+							if(eachRunJob['KEYEXPR'][keySubtype] != null) {
+								mapKeyexpr['_root'] = eachRunJob['KEYEXPR'][keySubtype]
+							}
+							// chart of keyexpr
+							if(eachRunJob.KEYEXPR._chart instanceof Map) {
+								// chart is map data
+								eachRunJob.KEYEXPR._chart.keySet().each {
+									if(keySubtype == it) {
+										mapKeyexpr['_chart'] = eachRunJob['KEYEXPR']['_chart'][it]
+									}
+								}
+							} else {
+								mapKeyexpr['_chart'] = eachRunJob.KEYEXPR._chart
+							}
+							// unit of keyexpr
+							//Check if unit by key of subtype
+							if (eachRunJob.KEYEXPR._unit != null){
+								eachRunJob.KEYEXPR._unit.keySet().each {
+									if(keySubtype == it) {
+										mapKeyexpr['_unit'] = eachRunJob['KEYEXPR']['_unit'][it]
+									}
+								}
+								// Check _unit is common used or not
+								// common used has format : {"field1":"unit1", "field2":"unit2"}
+								// not common used has format : {"D":{field1:unit1, field2:unit2}, "M":{...}}
+								// If not common used -> Set separated group
+								if (mapKeyexpr['_unit'] == null 
+									&& eachRunJob.KEYEXPR._unit != null 
+									&& eachRunJob.KEYEXPR._unit instanceof Map) {
+									def tmpKeySetArray = eachRunJob.KEYEXPR._unit.keySet().toArray()
+									if(tmpKeySetArray.length > 0 && !(eachRunJob.KEYEXPR._unit[tmpKeySetArray[0]] instanceof Map)){
+										mapKeyexpr['_unit'] = eachRunJob.KEYEXPR._unit
+									}else{
+										mapKeyexpr['_unit'] = [:]
+									}
 								}
 							}
-						} else {
-							mapKeyexpr['_chart'] = eachRunJob.KEYEXPR._chart
+	
+							// description of keyexpr
+							mapKeyexpr['_description'] = eachRunJob.KEYEXPR._description
 						}
-						// unit of keyexpr
-						//Check if unit by key of subtype
-						if (eachRunJob.KEYEXPR._unit != null){
-							eachRunJob.KEYEXPR._unit.keySet().each {
-								if(keySubtype == it) {
-									mapKeyexpr['_unit'] = eachRunJob['KEYEXPR']['_unit'][it]
-								}
-							}
-							if (mapKeyexpr['_unit'] == null) {
-								mapKeyexpr['_unit'] = eachRunJob.KEYEXPR._unit
-							}
-						}
-
-						// description of keyexpr
-						mapKeyexpr['_description'] = eachRunJob.KEYEXPR._description
-
 						dataStoreKey['KEYEXPR'] = mapKeyexpr
 						mapKeyexpr = [:]
 					} else {

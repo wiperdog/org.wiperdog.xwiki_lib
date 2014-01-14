@@ -1,0 +1,90 @@
+{
+  "D": [
+    [
+      {
+        "type": "pie",
+        "chart_name": "Ratio of used data size, index size vs data free size",
+        "unit": "( byte )",
+        "data": [
+          [
+            "UsedDataSize",
+            4313920.0
+          ],
+          [
+            "UsedIndexSize",
+            2581504.0
+          ],
+          [
+            "DataFreeSize",
+            2.3484444672E10
+          ]
+        ],
+        "name": "sakila"
+      },
+      {
+        "type": "pie",
+        "chart_name": "Ratio of used data size, index size vs data free size",
+        "unit": "( byte )",
+        "data": [
+          [
+            "UsedDataSize",
+            374048.0
+          ],
+          [
+            "UsedIndexSize",
+            66560.0
+          ],
+          [
+            "DataFreeSize",
+            2.3484444672E10
+          ]
+        ],
+        "name": "world"
+      }
+    ]
+  ],
+  "M": [
+    [
+      {
+        "type": "pie",
+        "chart_name": "Ratio of used data size, index size vs data free size",
+        "unit": "( byte )",
+        "data": [
+          [
+            "UsedDataSize",
+            5000000.0
+          ],
+          [
+            "UsedIndexSize",
+            5000000.0
+          ],
+          [
+            "DataFreeSize",
+            5.0E8
+          ]
+        ],
+        "name": "sakila"
+      },
+      {
+        "type": "pie",
+        "chart_name": "Ratio of used data size, index size vs data free size",
+        "unit": "( byte )",
+        "data": [
+          [
+            "UsedDataSize",
+            500000.0
+          ],
+          [
+            "UsedIndexSize",
+            50000.0
+          ],
+          [
+            "DataFreeSize",
+            5.0E8
+          ]
+        ],
+        "name": "world"
+      }
+    ]
+  ]
+}

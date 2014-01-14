@@ -1,0 +1,82 @@
+[
+	{
+        "hostId" : null,
+        "type" : "Store",
+        "sid" : null,
+        "KEYEXPR" : {
+                "_root" : [
+                        "PhysicalName"
+                ],
+                "_sequence" : [
+                        "AverageIOTimeDbl",
+                        "AverageIOTimeCumDbl"
+                ],
+                "_unit" : {
+                        "ReadsCumCnt" : "count",
+                        "BytesReadCumCnt" : "byte",
+                        "ReadTimeDbl" : "msec",
+                        "WritesCumCnt" : "count",
+                        "BytesWriteCumCnt" : "byte",
+                        "WriteTimeDbl" : "msec",
+                        "TotalTimeIODbl" : "msec",
+                        "BytesOnDiskDbl" : "byte",
+                        "ReadsCnt" : "count/interval",
+                        "BytesReadsCnt" : "byte/interval",
+                        "WritesCnt" : "count/interval",
+                        "BytesWritesCnt" : "byte/interval",
+                        "ReadsRateVal" : "count/sec",
+                        "BytesReadRateVal" : "byte/sec",
+                        "WritesRateVal" : "count/sec",
+                        "BytesWritesRateVal" : "byte/sec",
+                        "AverageIOTimeDbl" : "msec"
+                },
+                "_chart" : [
+                        {
+                                "type" : "area",
+                                "name" : "Draw Area Write Time",
+                                "chart_columns" : [
+                                        "WriteTimeDbl",
+                                        "TotalTimeIODbl"
+                                ],
+                                "hint_columns" : [
+                                        "AverageIOTimeDbl",
+                                        "TotalTimeIODbl"
+                                ]
+                        }
+                ]
+        },
+        "version" : "1.0",
+        "fetchAt" : "20131220094520GMT+07:00",
+        "fetchedAt_bin" : 1387507520,
+        "istIid" : null,
+        "resourceId" : "Pf/MsDtFileIoStat",
+        "sourceJob" : "SQL_Server.Database_Statistic.TestJobAreaStoreUnit",
+        "instanceName" : null,
+        "data" : [
+                {
+                        "DatabaseName" : "wiperTest",
+                        "PhysicalName" : "wiperTest_log.LDF",
+                        "FileID" : 2,
+                        "ReadsCumCnt" : 7,
+                        "BytesReadCumCnt" : 397824,
+                        "ReadTimeDbl" : 12,
+                        "WritesCumCnt" : 0,
+                        "BytesWriteCumCnt" : 0,
+                        "WriteTimeDbl" : 122,
+                        "TotalTimeIODbl" : 377,
+                        "BytesOnDiskDbl" : 589824,
+                        "ReadsCnt" : 90,
+                        "BytesReadsCnt" : 12,
+                        "WritesCnt" : 10,
+                        "BytesWritesCnt" : 12,
+                        "ReadsRateVal" : 3.5,
+                        "BytesReadRateVal" : 198912,
+                        "WritesRateVal" : 0,
+                        "BytesWritesRateVal" : 0,
+                        "AverageIOTimeDbl" : 0,
+                        "AverageIOTimeCumDbl" : 53.8571428571,
+                        "RECORD_SEQ" : 649
+                }
+        ]
+	}
+]

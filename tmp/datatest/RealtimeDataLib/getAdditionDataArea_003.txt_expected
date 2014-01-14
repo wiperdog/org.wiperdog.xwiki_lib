@@ -1,0 +1,70 @@
+[
+  {
+    "type": "area",
+    "categories": "2013/12/20 09:45:20 GMT+07:00",
+    "chartName": "0_wiperTest_log_LDF",
+    "nameOfChart": "Draw Area Write Time( wiperTest_log.LDF )",
+    "data": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "value": 122.0
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "value": 377.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "detail": {
+          "AverageIOTimeDbl": "0.0( msec )",
+          "TotalTimeIODbl": "377.0( msec )",
+          "fetchAt": "2013/12/20 09:45:20 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "detail": {
+          "AverageIOTimeDbl": "0.0( msec )",
+          "TotalTimeIODbl": "377.0( msec )",
+          "fetchAt": "2013/12/20 09:45:20 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/20 09:45:20 GMT+07:00",
+    "chartName": "0_THANHMX_LDF",
+    "nameOfChart": "Draw Area Write Time( THANHMX.LDF )",
+    "data": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "value": 95.0
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "value": 120.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "detail": {
+          "AverageIOTimeDbl": "0.0( msec )",
+          "TotalTimeIODbl": "120.0( msec )",
+          "fetchAt": "2013/12/20 09:45:20 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "detail": {
+          "AverageIOTimeDbl": "0.0( msec )",
+          "TotalTimeIODbl": "120.0( msec )",
+          "fetchAt": "2013/12/20 09:45:20 GMT+07:00"
+        }
+      }
+    ]
+  }
+]

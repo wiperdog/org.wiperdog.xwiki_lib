@@ -1,0 +1,204 @@
+[
+  {
+    "type": "bar",
+    "chartName": "D_0_UsedDataPct",
+    "categories": "2013/12/20 09:19:54 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1",
+        "value": 10.0
+      },
+      {
+        "seriesName": "db_test2",
+        "value": 20.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1",
+        "detail": {
+          "UsedDataPct": "10.0( % )",
+          "DataFreeCumSize": "10.0( byte )",
+          "fetchAt": "2013/12/20 09:19:54 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2",
+        "detail": {
+          "UsedDataPct": "20.0( % )",
+          "DataFreeCumSize": "20.0( byte )",
+          "fetchAt": "2013/12/20 09:19:54 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "D_1_UsedCumPct",
+    "categories": "2013/12/20 09:19:54 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1",
+        "value": 10.0
+      },
+      {
+        "seriesName": "db_test2",
+        "value": 20.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1",
+        "detail": {
+          "UsedPct": "10.0( % )",
+          "UsedCumPct": "10.0( % )",
+          "UsedDataPct": "10.0( % )",
+          "fetchAt": "2013/12/20 09:19:54 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2",
+        "detail": {
+          "UsedPct": "20.0( % )",
+          "UsedCumPct": "20.0( % )",
+          "UsedDataPct": "20.0( % )",
+          "fetchAt": "2013/12/20 09:19:54 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "D_1_UsedPct",
+    "categories": "2013/12/20 09:19:54 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1",
+        "value": 10.0
+      },
+      {
+        "seriesName": "db_test2",
+        "value": 20.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1",
+        "detail": {
+          "UsedPct": "10.0( % )",
+          "UsedCumPct": "10.0( % )",
+          "UsedDataPct": "10.0( % )",
+          "fetchAt": "2013/12/20 09:19:54 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2",
+        "detail": {
+          "UsedPct": "20.0( % )",
+          "UsedCumPct": "20.0( % )",
+          "UsedDataPct": "20.0( % )",
+          "fetchAt": "2013/12/20 09:19:54 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "M_0_DataFreeCumSize",
+    "categories": "2013/12/20 09:19:54 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "tbl_test1",
+        "value": 100.0
+      },
+      {
+        "seriesName": "tbl_test2",
+        "value": 200.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "tbl_test1",
+        "detail": {
+          "fetchAt": "2013/12/20 09:19:54 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "tbl_test2",
+        "detail": {
+          "fetchAt": "2013/12/20 09:19:54 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "M_1_UsedDataPct",
+    "categories": "2013/12/20 09:19:54 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "tbl_test1",
+        "value": 100.0
+      },
+      {
+        "seriesName": "tbl_test2",
+        "value": 200.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "tbl_test1",
+        "detail": {
+          "UsedPct": "100.0( % )",
+          "UsedCumPct": "100.0( % )",
+          "UsedDataPct": "100.0( % )",
+          "fetchAt": "2013/12/20 09:19:54 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "tbl_test2",
+        "detail": {
+          "UsedPct": "200.0( % )",
+          "UsedCumPct": "200.0( % )",
+          "UsedDataPct": "200.0( % )",
+          "fetchAt": "2013/12/20 09:19:54 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "M_1_UsedPct",
+    "categories": "2013/12/20 09:19:54 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "tbl_test1",
+        "value": 100.0
+      },
+      {
+        "seriesName": "tbl_test2",
+        "value": 200.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "tbl_test1",
+        "detail": {
+          "UsedPct": "100.0( % )",
+          "UsedCumPct": "100.0( % )",
+          "UsedDataPct": "100.0( % )",
+          "fetchAt": "2013/12/20 09:19:54 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "tbl_test2",
+        "detail": {
+          "UsedPct": "200.0( % )",
+          "UsedCumPct": "200.0( % )",
+          "UsedDataPct": "200.0( % )",
+          "fetchAt": "2013/12/20 09:19:54 GMT+07:00"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "type": "bar",
+    "chartName": "0_ReadTimeDbl",
+    "categories": "2014/01/06 11:38:35 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test.tbl_1.mdf",
+        "value": 11.0
+      },
+      {
+        "seriesName": "luvina.tbl_2.mdf",
+        "value": 22.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test.tbl_1.mdf",
+        "detail": {
+          "AverageIOTimeDbl": "11.0( msec )",
+          "AverageIOTimeCumDbl": 11.4,
+          "fetchAt": "2014/01/06 11:38:35 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "luvina.tbl_2.mdf",
+        "detail": {
+          "AverageIOTimeDbl": "22.0( msec )",
+          "AverageIOTimeCumDbl": 22.4,
+          "fetchAt": "2014/01/06 11:38:35 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "0_WriteTimeDbl",
+    "categories": "2014/01/06 11:38:35 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test.tbl_1.mdf",
+        "value": 11.0
+      },
+      {
+        "seriesName": "luvina.tbl_2.mdf",
+        "value": 22.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test.tbl_1.mdf",
+        "detail": {
+          "AverageIOTimeDbl": "11.0( msec )",
+          "AverageIOTimeCumDbl": 11.4,
+          "fetchAt": "2014/01/06 11:38:35 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "luvina.tbl_2.mdf",
+        "detail": {
+          "AverageIOTimeDbl": "22.0( msec )",
+          "AverageIOTimeCumDbl": 22.4,
+          "fetchAt": "2014/01/06 11:38:35 GMT+07:00"
+        }
+      }
+    ]
+  }
+]

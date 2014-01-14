@@ -1,0 +1,11 @@
+POLICY = {resultData->
+	def listMess = []
+	def ret = ['jobName' : 'MySQL.Database_Area.InnoDBTablespace_Free', 'istIid' : 'localhost-@MYSQL-information_schema']
+	resultData.each{data->
+		if((data.MaxUsedPct >= 95)){
+			listMess.add([level: 3, message: """Dangerous: The size used of table space TablespaceName is too high!!!"""])
+		}
+	}
+	ret['message'] = listMess
+	return ret
+}

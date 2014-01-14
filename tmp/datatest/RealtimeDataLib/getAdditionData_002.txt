@@ -1,0 +1,145 @@
+[
+	{
+        "hostId" : null,
+        "type" : "Store",
+        "sid" : null,
+        "KEYEXPR" : {
+                "_root" : [
+                        "DatabaseName",
+                        "FileID"
+                ],
+                "_sequence" : [
+                        "AverageIOTimeDbl",
+                        "AverageIOTimeCumDbl"
+                ],
+                "_unit" : {
+                        "ReadsCumCnt" : "count",
+                        "BytesReadCumCnt" : "byte",
+                        "ReadTimeDbl" : "msec",
+                        "WritesCumCnt" : "count",
+                        "BytesWriteCumCnt" : "byte",
+                        "WriteTimeDbl" : "msec",
+                        "TotalTimeIODbl" : "msec",
+                        "BytesOnDiskDbl" : "byte",
+                        "ReadsCnt" : "count/interval",
+                        "BytesReadsCnt" : "byte/interval",
+                        "WritesCnt" : "count/interval",
+                        "BytesWritesCnt" : "byte/interval",
+                        "ReadsRateVal" : "count/sec",
+                        "BytesReadRateVal" : "byte/sec",
+                        "WritesRateVal" : "count/sec",
+                        "BytesWritesRateVal" : "byte/sec",
+                        "AverageIOTimeDbl" : "msec"
+                },
+                "_chart" : [
+                        {
+                                "type" : "bar",
+                                "name" : "Draw Bar CumSize",
+                                "chart_columns" : [
+                                        "BytesReadCumCnt",
+                                        "BytesWriteCumCnt"
+                                ],
+                                "hint_columns" : [
+                                        "BytesOnDiskDbl",
+                                        "BytesReadCumCnt",
+                                        "BytesWriteCumCnt"
+                                ]
+                        },
+                        {
+                                "type" : "bar",
+                                "name" : "Draw Bar BytesSize",
+                                "chart_columns" : [
+                                        "BytesReadsCnt",
+                                        "BytesWritesCnt"
+                                ],
+                                "hint_columns" : [
+                                        "BytesReadsCnt",
+                                        "BytesWritesCnt",
+                                        "BytesWriteCumCnt"
+                                ]
+                        }
+                ]
+        },
+        "version" : "1.0",
+        "fetchAt" : "20131219134250GMT+07:00",
+        "fetchedAt_bin" : 1387435370,
+        "istIid" : null,
+        "resourceId" : "Pf/MsDtFileIoStat",
+        "sourceJob" : "SQL_Server.Database_Statistic.TestJobAllStore",
+        "instanceName" : null,
+        "data" : [
+                {
+                        "DatabaseName" : "db_test1",
+                        "PhysicalName" : "wiperTest.mdf",
+                        "FileID" : 1,
+                        "ReadsCumCnt" : 11,
+                        "BytesReadCumCnt" : 11,
+                        "ReadTimeDbl" : 11,
+                        "WritesCumCnt" : 11,
+                        "BytesWriteCumCnt" : 11,
+                        "WriteTimeDbl" : 11,
+                        "TotalTimeIODbl" : 11,
+                        "BytesOnDiskDbl" : 11,
+                        "ReadsCnt" : 20,
+                        "BytesReadsCnt" : 11,
+                        "WritesCnt" : 11,
+                        "BytesWritesCnt" : 11,
+                        "ReadsRateVal" : 11,
+                        "BytesReadRateVal" : 11,
+                        "WritesRateVal" : 11,
+                        "BytesWritesRateVal" : 11,
+                        "AverageIOTimeDbl" : 11,
+                        "AverageIOTimeCumDbl" : 11,
+                        "RECORD_SEQ" : 171
+                },
+                {
+                        "DatabaseName" : "db_test2",
+                        "PhysicalName" : "wiperTest_log.LDF",
+                        "FileID" : 1,
+                        "ReadsCumCnt" : 44,
+                        "BytesReadCumCnt" : 44,
+                        "ReadTimeDbl" : 44,
+                        "WritesCumCnt" : 44,
+                        "BytesWriteCumCnt" : 44,
+                        "WriteTimeDbl" : 44,
+                        "TotalTimeIODbl" : 44,
+                        "BytesOnDiskDbl" : 44,
+                        "ReadsCnt" : 44,
+                        "BytesReadsCnt" : 44,
+                        "WritesCnt" : 44,
+                        "BytesWritesCnt" : 44,
+                        "ReadsRateVal" : 44,
+                        "BytesReadRateVal" : 44,
+                        "WritesRateVal" : 44,
+                        "BytesWritesRateVal" : 44,
+                        "AverageIOTimeDbl" : 44,
+                        "AverageIOTimeCumDbl" : 44,
+                        "RECORD_SEQ" : 172
+                },
+                {
+                        "DatabaseName" : "db_test3",
+                        "PhysicalName" : "ABC.LDF",
+                        "FileID" : 5,
+                        "ReadsCumCnt" : 33,
+                        "BytesReadCumCnt" : 33,
+                        "ReadTimeDbl" : 33,
+                        "WritesCumCnt" : 33,
+                        "BytesWriteCumCnt" : 33,
+                        "WriteTimeDbl" : 33,
+                        "TotalTimeIODbl" : 33,
+                        "BytesOnDiskDbl" : 33,
+                        "ReadsCnt" : 33,
+                        "BytesReadsCnt" : 33,
+                        "WritesCnt" : 33,
+                        "BytesWritesCnt" : 33,
+                        "ReadsRateVal" : 33,
+                        "BytesReadRateVal" : 33,
+                        "WritesRateVal" : 33,
+                        "BytesWritesRateVal" : 33,
+                        "AverageIOTimeDbl" : 33,
+                        "AverageIOTimeCumDbl" : 33,
+                        "RECORD_SEQ" : 173
+                }
+        ]
+	}
+]

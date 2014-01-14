@@ -1,0 +1,140 @@
+[
+  {
+    "type": "line_",
+    "chartName": "ReadsCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1.1(ReadsCnt)",
+        "value": 20
+      },
+      {
+        "seriesName": "db_test2.1(ReadsCnt)",
+        "value": 44
+      },
+      {
+        "seriesName": "db_test3.5(ReadsCnt)",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1.1(ReadsCnt)",
+        "detail": {
+          "ReadsCnt": "20( count/interval )",
+          "ReadsCumCnt": "11( count )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2.1(ReadsCnt)",
+        "detail": {
+          "ReadsCnt": "44( count/interval )",
+          "ReadsCumCnt": "44( count )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test3.5(ReadsCnt)",
+        "detail": {
+          "ReadsCnt": "33( count/interval )",
+          "ReadsCumCnt": "33( count )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "line_",
+    "chartName": "ReadsCumCnt_WritesCumCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1.1(ReadsCumCnt)",
+        "value": 11
+      },
+      {
+        "seriesName": "db_test1.1(WritesCumCnt)",
+        "value": 11
+      },
+      {
+        "seriesName": "db_test2.1(ReadsCumCnt)",
+        "value": 44
+      },
+      {
+        "seriesName": "db_test2.1(WritesCumCnt)",
+        "value": 44
+      },
+      {
+        "seriesName": "db_test3.5(ReadsCumCnt)",
+        "value": 33
+      },
+      {
+        "seriesName": "db_test3.5(WritesCumCnt)",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1.1(ReadsCumCnt)",
+        "detail": {
+          "ReadsCumCnt": "11( count )",
+          "WritesCumCnt": "11( count )",
+          "WritesCnt": "11( count/interval )",
+          "ReadsCnt": "20( count/interval )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test1.1(WritesCumCnt)",
+        "detail": {
+          "ReadsCumCnt": "11( count )",
+          "WritesCumCnt": "11( count )",
+          "WritesCnt": "11( count/interval )",
+          "ReadsCnt": "20( count/interval )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2.1(ReadsCumCnt)",
+        "detail": {
+          "ReadsCumCnt": "44( count )",
+          "WritesCumCnt": "44( count )",
+          "WritesCnt": "44( count/interval )",
+          "ReadsCnt": "44( count/interval )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2.1(WritesCumCnt)",
+        "detail": {
+          "ReadsCumCnt": "44( count )",
+          "WritesCumCnt": "44( count )",
+          "WritesCnt": "44( count/interval )",
+          "ReadsCnt": "44( count/interval )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test3.5(ReadsCumCnt)",
+        "detail": {
+          "ReadsCumCnt": "33( count )",
+          "WritesCumCnt": "33( count )",
+          "WritesCnt": "33( count/interval )",
+          "ReadsCnt": "33( count/interval )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test3.5(WritesCumCnt)",
+        "detail": {
+          "ReadsCumCnt": "33( count )",
+          "WritesCumCnt": "33( count )",
+          "WritesCnt": "33( count/interval )",
+          "ReadsCnt": "33( count/interval )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  }
+]

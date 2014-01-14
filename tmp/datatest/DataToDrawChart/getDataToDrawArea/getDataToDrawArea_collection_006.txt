@@ -1,0 +1,162 @@
+[
+	{
+		"hostId":"localhost", 
+		"type":"Store", 
+		"sid":"master", 
+		"KEYEXPR":{
+			"_root":["DatabaseName", "PhysicalName"], 
+			"_sequence":["AverageIOTimeDbl", "AverageIOTimeCumDbl"],
+			"_chart":[
+				{
+				        "type": "area",
+				        "name": "Draw Area Read Time",
+				        "chart_columns": ["ReadTimeDbl"],
+					"hint_columns": ["ReadsCumCnt", "WritesCumCnt"]
+				},
+				{
+				        "type": "area",
+				        "name": "Draw Area Write Time",
+				        "chart_columns": ["WriteTimeDbl", "TotalTimeIODbl"],
+				        "hint_columns": ["AverageIOTimeDbl"]
+				}
+			]
+		}, 
+		"version":"1.0", 
+		"fetchAt":"20140108145426GMT+07:00", 
+		"fetchedAt_bin":1389167666, 
+		"istIid":"localhost-@MSSQL-master", 
+		"resourceId":"Pf/MsDtFileIoStat", 
+		"sourceJob":"SQL_Server.Database_Statistic.TestJobAreaStoreUnit", 
+		"instanceName":"inst1", 
+		"data":[
+			{
+				"DatabaseName" : "db_test1",
+				"PhysicalName" : "tbl_test1",
+				"FileID" : 1,
+				"ReadsCumCnt" : 22,
+				"BytesReadCumCnt" : 753,
+				"ReadTimeDbl" : 870,
+				"WritesCumCnt" : 1,
+				"BytesWriteCumCnt" : 819,
+				"WriteTimeDbl" : 25,
+				"TotalTimeIODbl" : 895,
+				"BytesOnDiskDbl" : 235,
+				"ReadsCnt" : 22,
+				"BytesReadsCnt" : 10,
+				"WritesCnt" : 1,
+				"BytesWritesCnt" : 20,
+				"ReadsRateVal" : 11,
+				"BytesReadRateVal" : 376,
+				"WritesRateVal" : 0.5,
+				"BytesWritesRateVal" : 409,
+				"AverageIOTimeDbl" : 15,
+				"AverageIOTimeCumDbl" : 25,
+				"RECORD_SEQ":1
+			}, 
+			{
+				"DatabaseName" : "db_test2",
+				"PhysicalName" : "tbl_test2",
+				"FileID" : 2,
+				"ReadsCumCnt" : 7,
+				"BytesReadCumCnt" : 397,
+				"ReadTimeDbl" : 377,
+				"WritesCumCnt" : 20,
+				"BytesWriteCumCnt" : 20,
+				"WriteTimeDbl" : 20,
+				"TotalTimeIODbl" : 377,
+				"BytesOnDiskDbl" : 589,
+				"ReadsCnt" : 7,
+				"BytesReadsCnt" : 30,
+				"WritesCnt" : 20,
+				"BytesWritesCnt" : 40,
+				"ReadsRateVal" : 3.5,
+				"BytesReadRateVal" : 198,
+				"WritesRateVal" : 20,
+				"BytesWritesRateVal" : 20,
+				"AverageIOTimeDbl" : 35,
+				"AverageIOTimeCumDbl" : 45,
+				"RECORD_SEQ":2
+			}
+		]
+	},
+	{
+		"hostId":"localhost", 
+		"type":"Store", 
+		"sid":"master", 
+		"KEYEXPR":{
+			"_root":["DatabaseName", "PhysicalName"], 
+			"_sequence":["AverageIOTimeDbl", "AverageIOTimeCumDbl"],
+			"_chart":[
+				{
+				        "type": "area",
+				        "name": "Draw Area Read Time",
+				        "chart_columns": ["ReadTimeDbl"],
+					"hint_columns": ["ReadsCumCnt", "WritesCumCnt"]
+				},
+				{
+				        "type": "area",
+				        "name": "Draw Area Write Time",
+				        "chart_columns": ["WriteTimeDbl", "TotalTimeIODbl"],
+				        "hint_columns": ["AverageIOTimeDbl"]
+				}
+			]
+		}, 
+		"version":"1.0", 
+		"fetchAt":"20140108165822GMT+07:00", 
+		"fetchedAt_bin":1389175102, 
+		"istIid":"localhost-@MSSQL-master", 
+		"resourceId":"Pf/MsDtFileIoStat", 
+		"sourceJob":"SQL_Server.Database_Statistic.TestJobAreaStoreUnit", 
+		"instanceName":"inst1", 
+		"data":[
+			{
+				"DatabaseName" : "db_test1",
+				"PhysicalName" : "tbl_test1",
+				"FileID" : 1,
+				"ReadsCumCnt" : 22,
+				"BytesReadCumCnt" : 753,
+				"ReadTimeDbl" : 70,
+				"WritesCumCnt" : 1,
+				"BytesWriteCumCnt" : 819,
+				"WriteTimeDbl" : 70,
+				"TotalTimeIODbl" : 895,
+				"BytesOnDiskDbl" : 235,
+				"ReadsCnt" : 30,
+				"BytesReadsCnt" : 10,
+				"WritesCnt" : 15,
+				"BytesWritesCnt" : 20,
+				"ReadsRateVal" : 11,
+				"BytesReadRateVal" : 376,
+				"WritesRateVal" : 0.5,
+				"BytesWritesRateVal" : 409,
+				"AverageIOTimeDbl" : 15,
+				"AverageIOTimeCumDbl" : 25,
+				"RECORD_SEQ":1
+			}, 
+			{
+				"DatabaseName" : "db_test2",
+				"PhysicalName" : "tbl_test2",
+				"FileID" : 2,
+				"ReadsCumCnt" : 7,
+				"BytesReadCumCnt" : 397,
+				"ReadTimeDbl" : 300,
+				"WritesCumCnt" : 20,
+				"BytesWriteCumCnt" : 20,
+				"WriteTimeDbl" : 100,
+				"TotalTimeIODbl" : 377,
+				"BytesOnDiskDbl" : 589,
+				"ReadsCnt" : 20,
+				"BytesReadsCnt" : 30,
+				"WritesCnt" : 30,
+				"BytesWritesCnt" : 40,
+				"ReadsRateVal" : 3.5,
+				"BytesReadRateVal" : 198,
+				"WritesRateVal" : 20,
+				"BytesWritesRateVal" : 20,
+				"AverageIOTimeDbl" : 35,
+				"AverageIOTimeCumDbl" : 45,
+				"RECORD_SEQ":2
+			}
+		]
+	}
+]

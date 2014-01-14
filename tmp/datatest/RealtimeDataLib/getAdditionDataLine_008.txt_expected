@@ -1,0 +1,150 @@
+[
+  {
+    "type": "line",
+    "chartName": "D_UsedCumSize",
+    "categories": "2013/12/20 15:39:10 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1(UsedCumSize)",
+        "value": 10.0
+      },
+      {
+        "seriesName": "db_test2(UsedCumSize)",
+        "value": 20.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1(UsedCumSize)",
+        "detail": {
+          "UsedDataCumSize": "10.0( byte )",
+          "UsedCumSize": "10.0( byte )",
+          "fetchAt": "2013/12/20 15:39:10 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2(UsedCumSize)",
+        "detail": {
+          "UsedDataCumSize": "20.0( byte )",
+          "UsedCumSize": "20.0( byte )",
+          "fetchAt": "2013/12/20 15:39:10 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "line",
+    "chartName": "D_UsedDataCumSize",
+    "categories": "2013/12/20 15:39:10 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1(UsedDataCumSize)",
+        "value": 10.0
+      },
+      {
+        "seriesName": "db_test2(UsedDataCumSize)",
+        "value": 20.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1(UsedDataCumSize)",
+        "detail": {
+          "fetchAt": "2013/12/20 15:39:10 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2(UsedDataCumSize)",
+        "detail": {
+          "fetchAt": "2013/12/20 15:39:10 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "line",
+    "chartName": "M_UsedDataCumSize",
+    "categories": "2013/12/20 15:39:10 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "tbl_test1(UsedDataCumSize)",
+        "value": 100.0
+      },
+      {
+        "seriesName": "tbl_test2(UsedDataCumSize)",
+        "value": 200.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "tbl_test1(UsedDataCumSize)",
+        "detail": {
+          "fetchAt": "2013/12/20 15:39:10 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "tbl_test2(UsedDataCumSize)",
+        "detail": {
+          "fetchAt": "2013/12/20 15:39:10 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "line",
+    "chartName": "M_UsedCumSize_DataFreeCumSize",
+    "categories": "2013/12/20 15:39:10 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "tbl_test1(UsedCumSize)",
+        "value": 100.0
+      },
+      {
+        "seriesName": "tbl_test1(DataFreeCumSize)",
+        "value": 100.0
+      },
+      {
+        "seriesName": "tbl_test2(UsedCumSize)",
+        "value": 200.0
+      },
+      {
+        "seriesName": "tbl_test2(DataFreeCumSize)",
+        "value": 200.0
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "tbl_test1(UsedCumSize)",
+        "detail": {
+          "UsedDataCumSize": "100.0( byte )",
+          "DataFreeCumSize": "100.0( byte )",
+          "fetchAt": "2013/12/20 15:39:10 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "tbl_test1(DataFreeCumSize)",
+        "detail": {
+          "UsedDataCumSize": "100.0( byte )",
+          "DataFreeCumSize": "100.0( byte )",
+          "fetchAt": "2013/12/20 15:39:10 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "tbl_test2(UsedCumSize)",
+        "detail": {
+          "UsedDataCumSize": "200.0( byte )",
+          "DataFreeCumSize": "200.0( byte )",
+          "fetchAt": "2013/12/20 15:39:10 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "tbl_test2(DataFreeCumSize)",
+        "detail": {
+          "UsedDataCumSize": "200.0( byte )",
+          "DataFreeCumSize": "200.0( byte )",
+          "fetchAt": "2013/12/20 15:39:10 GMT+07:00"
+        }
+      }
+    ]
+  }
+]

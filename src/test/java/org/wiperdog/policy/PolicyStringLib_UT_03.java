@@ -28,7 +28,6 @@ public class PolicyStringLib_UT_03 {
 		// set value of dataKey for test
 		dataKey = Arrays.asList(new String[] { "TablespaceName",
 				"CurrentUsedPct", "MaxFreeSizeKB", "MaxUsedPct" });
-		System.out.println(dataKey.getClass());
 		// set string of Policy for test
 		stringOfPolicy = "(MaxUsedPct >= 95)";
 		// set data output need to compare

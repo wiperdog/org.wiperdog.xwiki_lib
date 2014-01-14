@@ -1,0 +1,108 @@
+[
+	{
+	        "hostId" : "localhost",
+	        "type" : "Subtyped",
+	        "sid" : "master",
+	        "KEYEXPR" : {
+	                "M" : ["FileNm"],
+	                "D" : ["DatabaseNm","FileNm"],
+	                "_sequence" : {
+	                    "M" : ["UsedCumPct","UsedCumSize","UsedDataCumSize"],
+	                    "D" : ["UsedCumPct","UsedCumSize","UsedDataCumSize"]
+	                },
+	                "_unit" : {},
+	                "_description" : {
+                        "D" : "Top 10 database increase storage fastest this time",
+                        "M" : "Top 20 database of storage usage"
+	                },
+	                "_chart" : {
+	                        "D" : [
+                                {
+                                    "type" : "pie",
+                                    "name" : "Draw Area Size D",
+                                    "chart_columns" : ["UsedCumSize","DataFreeCumSize"],
+                                    "hint_columns" : ["UsedDataCumSize","DataFreeCumSize"]
+                                },
+                                {
+                                    "type" : "line",
+                                    "name" : "Draw Area CumPct D",
+                                    "chart_columns" : ["UsedPct","UsedCumPct","UsedDataPct"]
+                                }
+	                        ],
+	                        "M" : [
+                                {
+                                    "type" : "pie",
+                                    "name" : "Draw Area Index Size M",
+                                    "chart_columns" : ["UsedIndexSize","UsedIndexCumSize","UsedCumSize"],
+                                    "hint_columns" : ["UsedPct","UsedCumPct","UsedIndexCumSize"]
+                                }
+	                        ]
+	                }
+	        },
+	        "version" : "1.0",
+	        "fetchAt" : "20140109134240GMT+07:00",
+	        "fetchedAt_bin" : 1389249760,
+	        "istIid" : "localhost-@MSSQL-master",
+	        "resourceId" : "As/MyTopNDb",
+		"sourceJob":"SQL_Server.Database_Statistic.TestDrawSubtype", 
+		"instanceName":"inst1", 
+	        "data" : {
+	                "D" : [
+	                        {
+	                            "UsedDataPct" : 10,
+	                            "DataFreeCumSize" : 10,
+	                            "DatabaseNm" : "db_test1",
+	                            "FileNm" : "luvina.mdf",
+	                            "UsedDataCumSize" : 10,
+	                            "UsedCumPct" : 10,
+	                            "UsedIndexCumSize" : 15,
+	                            "UsedIndexSize" : 10,
+	                            "UsedPct" : 10,
+	                            "UsedCumSize" : 15,
+	                            "RECORD_SEQ" : 1
+	                        },
+	                        {
+	                            "UsedDataPct" : 20,
+	                            "DataFreeCumSize" : 20,
+	                            "DatabaseNm" : "db_test2",
+	                            "FileNm" : "insight.mdf",
+	                            "UsedDataCumSize" : 20,
+	                            "UsedCumPct" : 20,
+	                            "UsedIndexCumSize" : 25,
+	                            "UsedIndexSize" : 20,
+	                            "UsedPct" : 20,
+	                            "UsedCumSize" : 25,
+	                            "RECORD_SEQ" : 2
+	                        }
+	                ],
+	                "M" : [
+	                        {
+	                            "UsedDataPct" : 100,
+	                            "DataFreeCumSize" : 100,
+	                            "DatabaseNm" : "thanhmx",
+	                            "FileNm" : "tbl_test1",
+	                            "UsedDataCumSize" : 100,
+	                            "UsedCumPct" : 100,
+	                            "UsedIndexCumSize" : 120,
+	                            "UsedIndexSize" : 110,
+	                            "UsedPct" : 100,
+	                            "UsedCumSize" : 100,
+	                            "RECORD_SEQ" : 3
+	                        },
+	                        {
+	                            "UsedDataPct" : 200,
+	                            "DataFreeCumSize" : 200,
+	                            "DatabaseNm" : "wiki",
+	                            "FileNm" : "tbl_test2",
+	                            "UsedDataCumSize" : 200,
+	                            "UsedCumPct" : 200,
+	                            "UsedIndexCumSize" : 220,
+	                            "UsedIndexSize" : 210,
+	                            "UsedPct" : 200,
+	                            "UsedCumSize" : 200,
+	                            "RECORD_SEQ" : 4
+                        }
+	                ]
+	        }
+	}
+]

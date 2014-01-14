@@ -1,0 +1,1 @@
+[[{"type":"pie","chart_name":"Read/Write Count","unit":"( count/interval )","data":[["ReadsCnt",30.0],["WritesCnt",15.0]],"name":"db_test1.tbl_test1"},{"type":"pie","chart_name":"Read/Write Count","unit":"( count/interval )","data":[["ReadsCnt",20.0],["WritesCnt",30.0]],"name":"db_test2.tbl_test2"}]]

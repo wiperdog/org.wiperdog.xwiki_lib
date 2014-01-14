@@ -1,0 +1,206 @@
+[
+  {
+    "type": "line_",
+    "chartName": "ReadsCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "ReadsCnt",
+        "value": 20
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "ReadsCnt",
+        "detail": {
+          "ReadsCnt": "20( count/interval )",
+          "ReadsCumCnt": "11( count )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "line_",
+    "chartName": "ReadsCumCnt_WritesCumCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "ReadsCumCnt",
+        "value": 11
+      },
+      {
+        "seriesName": "WritesCumCnt",
+        "value": 11
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "ReadsCumCnt",
+        "detail": {
+          "ReadsCumCnt": "11( count )",
+          "WritesCumCnt": "11( count )",
+          "WritesCnt": "11( count/interval )",
+          "ReadsCnt": "20( count/interval )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "WritesCumCnt",
+        "detail": {
+          "ReadsCumCnt": "11( count )",
+          "WritesCumCnt": "11( count )",
+          "WritesCnt": "11( count/interval )",
+          "ReadsCnt": "20( count/interval )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "0_BytesReadCumCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "BytesReadCumCnt",
+        "value": 11
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "BytesReadCumCnt",
+        "detail": {
+          "BytesReadCumCnt": "11( byte )",
+          "BytesWriteCumCnt": "11( byte )",
+          "BytesOnDiskDbl": "11( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "0_BytesWriteCumCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "BytesWriteCumCnt",
+        "value": 11
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "BytesWriteCumCnt",
+        "detail": {
+          "BytesReadCumCnt": "11( byte )",
+          "BytesWriteCumCnt": "11( byte )",
+          "BytesOnDiskDbl": "11( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "1_BytesReadsCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "BytesReadsCnt",
+        "value": 11
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "BytesReadsCnt",
+        "detail": {
+          "BytesReadsCnt": "11( byte/interval )",
+          "BytesWritesCnt": "11( byte/interval )",
+          "BytesWriteCumCnt": "11( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "1_BytesWritesCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "BytesWritesCnt",
+        "value": 11
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "BytesWritesCnt",
+        "detail": {
+          "BytesReadsCnt": "11( byte/interval )",
+          "BytesWritesCnt": "11( byte/interval )",
+          "BytesWriteCumCnt": "11( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "chartName": "0_root",
+    "nameOfChart": "Draw Area Read Time( 0_root )",
+    "data": [
+      {
+        "seriesName": "ReadTimeDbl",
+        "value": 11
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "ReadTimeDbl",
+        "detail": {
+          "ReadTimeDbl": "11( msec )",
+          "WriteTimeDbl": "11( msec )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "chartName": "1_root",
+    "nameOfChart": "Draw Area Write Time( 1_root )",
+    "data": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "value": 11
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "value": 11
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "detail": {
+          "WriteTimeDbl": "11( msec )",
+          "TotalTimeIODbl": "11( msec )",
+          "AverageIOTimeDbl": "11( msec )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "detail": {
+          "WriteTimeDbl": "11( msec )",
+          "TotalTimeIODbl": "11( msec )",
+          "AverageIOTimeDbl": "11( msec )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,500 @@
+[
+  {
+    "hostId": "localhost",
+    "type": "Subtyped",
+    "sid": "information_schema",
+    "KEYEXPR": {
+      "M": [
+        "DatabaseNm"
+      ],
+      "D": [
+        "DatabaseNm"
+      ],
+      "_sequence": {
+        "M": [
+          "UsedPct",
+          "UsedSize",
+          "UsedDataSize"
+        ],
+        "D": [
+          "UsedPct",
+          "UsedSize",
+          "UsedDataSize"
+        ]
+      },
+      "_unit": {
+        "UsedDataSize": "byte",
+        "UsedSize": "byte",
+        "UsedDataPct": "%",
+        "UsedIndexSize": "byte",
+        "DataFreeSize": "byte",
+        "UsedPct": "%",
+        "TotalSize": "byte",
+        "UsedDiffPct": "%"
+      },
+      "_description": {
+        "D": "Top 10 database increase storage fastest this time",
+        "M": "Top 20 database of storage usage"
+      },
+      "_chart": {
+        "D": [
+          {
+            "type": "pie",
+            "name": "Ratio of used data size, index size vs data free size",
+            "chart_columns": [
+              "UsedDataSize",
+              "UsedIndexSize",
+              "DataFreeSize"
+            ]
+          },
+          {
+            "type": "bar",
+            "name": "Curent usage size of each database",
+            "chart_columns": [
+              "UsedSize"
+            ]
+          },
+          {
+            "type": "line",
+            "name": "Space usage timeline",
+            "chart_columns": [
+              "UsedPct"
+            ]
+          },
+          {
+            "type": "line",
+            "name": "Increament of space used percentage",
+            "chart_columns": [
+              "UsedDiffPct"
+            ]
+          }
+        ],
+        "M": [
+          {
+            "type": "pie",
+            "name": "Ratio of used data size, index size vs data free size",
+            "chart_columns": [
+              "UsedDataSize",
+              "UsedIndexSize",
+              "DataFreeSize"
+            ]
+          },
+          {
+            "type": "bar",
+            "name": "Curent usage size of each database",
+            "chart_columns": [
+              "UsedSize"
+            ]
+          },
+          {
+            "type": "line",
+            "name": "Space usage timeline",
+            "chart_columns": [
+              "UsedPct"
+            ]
+          },
+          {
+            "type": "line",
+            "name": "Increament of space used percentage",
+            "chart_columns": [
+              "UsedDiffPct"
+            ]
+          }
+        ]
+      }
+    },
+    "version": "1.0",
+    "fetchAt": "20131218140802GMT+07:00",
+    "fetchedAt_bin": 1387350482,
+    "istIid": "localhost-@MYSQL-information_schema",
+    "resourceId": "As/MyTopNDb",
+    "sourceJob": "MySQL.Database_Area.Top30Database",
+    "instanceName": "inst_2",
+    "data": {
+      "M": [
+        {
+          "DatabaseNm": "sakila",
+          "UsedDataSize": 4313920,
+          "UsedIndexSize": 2581504,
+          "DataFreeSize": 23484444672,
+          "UsedSize": 6895424,
+          "UsedDataPct": 62.56207015,
+          "TotalSize": 23491340096,
+          "UsedPct": 0.02935305,
+          "UsedDiffPct": 5.86E-6,
+          "RECORD_SEQ": 1004242
+        },
+        {
+          "DatabaseNm": "world",
+          "UsedDataSize": 374048,
+          "UsedIndexSize": 66560,
+          "DataFreeSize": 23484444672,
+          "UsedSize": 440608,
+          "UsedDataPct": 84.89360157,
+          "TotalSize": 23484885280,
+          "UsedPct": 0.00187613,
+          "UsedDiffPct": 3.7E-7,
+          "RECORD_SEQ": 1004243
+        }
+      ],
+      "D": [
+        {
+          "DatabaseNm": "sakila",
+          "UsedDataSize": 4313920,
+          "UsedIndexSize": 2581504,
+          "DataFreeSize": 23484444672,
+          "UsedSize": 6895424,
+          "UsedDataPct": 62.56207015,
+          "TotalSize": 23491340096,
+          "UsedPct": 0.02935305,
+          "UsedDiffPct": 5.86E-6,
+          "RECORD_SEQ": 1004242
+        },
+        {
+          "DatabaseNm": "world",
+          "UsedDataSize": 374048,
+          "UsedIndexSize": 66560,
+          "DataFreeSize": 23484444672,
+          "UsedSize": 440608,
+          "UsedDataPct": 84.89360157,
+          "TotalSize": 23484885280,
+          "UsedPct": 0.00187613,
+          "UsedDiffPct": 3.7E-7,
+          "RECORD_SEQ": 1004243
+        }
+      ]
+    }
+  },
+  {
+    "hostId": "localhost",
+    "type": "Subtyped",
+    "sid": "information_schema",
+    "KEYEXPR": {
+      "M": [
+        "DatabaseNm"
+      ],
+      "D": [
+        "DatabaseNm"
+      ],
+      "_sequence": {
+        "M": [
+          "UsedPct",
+          "UsedSize",
+          "UsedDataSize"
+        ],
+        "D": [
+          "UsedPct",
+          "UsedSize",
+          "UsedDataSize"
+        ]
+      },
+      "_unit": {
+        "UsedDataSize": "byte",
+        "UsedSize": "byte",
+        "UsedDataPct": "%",
+        "UsedIndexSize": "byte",
+        "DataFreeSize": "byte",
+        "UsedPct": "%",
+        "TotalSize": "byte",
+        "UsedDiffPct": "%"
+      },
+      "_description": {
+        "D": "Top 10 database increase storage fastest this time",
+        "M": "Top 20 database of storage usage"
+      },
+      "_chart": {
+        "D": [
+          {
+            "type": "pie",
+            "name": "Ratio of used data size, index size vs data free size",
+            "chart_columns": [
+              "UsedDataSize",
+              "UsedIndexSize",
+              "DataFreeSize"
+            ]
+          },
+          {
+            "type": "bar",
+            "name": "Curent usage size of each database",
+            "chart_columns": [
+              "UsedSize"
+            ]
+          },
+          {
+            "type": "line",
+            "name": "Space usage timeline",
+            "chart_columns": [
+              "UsedPct"
+            ]
+          },
+          {
+            "type": "line",
+            "name": "Increament of space used percentage",
+            "chart_columns": [
+              "UsedDiffPct"
+            ]
+          }
+        ],
+        "M": [
+          {
+            "type": "pie",
+            "name": "Ratio of used data size, index size vs data free size",
+            "chart_columns": [
+              "UsedDataSize",
+              "UsedIndexSize",
+              "DataFreeSize"
+            ]
+          },
+          {
+            "type": "bar",
+            "name": "Curent usage size of each database",
+            "chart_columns": [
+              "UsedSize"
+            ]
+          },
+          {
+            "type": "line",
+            "name": "Space usage timeline",
+            "chart_columns": [
+              "UsedPct"
+            ]
+          },
+          {
+            "type": "line",
+            "name": "Increament of space used percentage",
+            "chart_columns": [
+              "UsedDiffPct"
+            ]
+          }
+        ]
+      }
+    },
+    "version": "1.0",
+    "fetchAt": "20131218140807GMT+07:00",
+    "fetchedAt_bin": 1387350487,
+    "istIid": "localhost-@MYSQL-information_schema",
+    "resourceId": "As/MyTopNDb",
+    "sourceJob": "MySQL.Database_Area.Top30Database",
+    "instanceName": "inst_1",
+    "data": {
+      "M": [
+        {
+          "DatabaseNm": "sakila",
+          "UsedDataSize": 4313920,
+          "UsedIndexSize": 2581504,
+          "DataFreeSize": 23481536512,
+          "UsedSize": 6895424,
+          "UsedDataPct": 62.56207015,
+          "TotalSize": 23488431936,
+          "UsedPct": 0.02935668,
+          "UsedDiffPct": 8.83E-6,
+          "RECORD_SEQ": 1004671
+        },
+        {
+          "DatabaseNm": "world",
+          "UsedDataSize": 374048,
+          "UsedIndexSize": 66560,
+          "DataFreeSize": 23481536512,
+          "UsedSize": 440608,
+          "UsedDataPct": 84.89360157,
+          "TotalSize": 23481977120,
+          "UsedPct": 0.00187637,
+          "UsedDiffPct": 5.7E-7,
+          "RECORD_SEQ": 1004672
+        }
+      ],
+      "D": [
+        {
+          "DatabaseNm": "sakila",
+          "UsedDataSize": 4313920,
+          "UsedIndexSize": 2581504,
+          "DataFreeSize": 23481536512,
+          "UsedSize": 6895424,
+          "UsedDataPct": 62.56207015,
+          "TotalSize": 23488431936,
+          "UsedPct": 0.02935668,
+          "UsedDiffPct": 8.83E-6,
+          "RECORD_SEQ": 1004671
+        },
+        {
+          "DatabaseNm": "world",
+          "UsedDataSize": 374048,
+          "UsedIndexSize": 66560,
+          "DataFreeSize": 23481536512,
+          "UsedSize": 440608,
+          "UsedDataPct": 84.89360157,
+          "TotalSize": 23481977120,
+          "UsedPct": 0.00187637,
+          "UsedDiffPct": 5.7E-7,
+          "RECORD_SEQ": 1004672
+        }
+      ]
+    }
+  },
+  {
+    "hostId": "localhost",
+    "type": "Subtyped",
+    "sid": "information_schema",
+    "KEYEXPR": {
+      "M": [
+        "DatabaseNm"
+      ],
+      "D": [
+        "DatabaseNm"
+      ],
+      "_sequence": {
+        "M": [
+          "UsedPct",
+          "UsedSize",
+          "UsedDataSize"
+        ],
+        "D": [
+          "UsedPct",
+          "UsedSize",
+          "UsedDataSize"
+        ]
+      },
+      "_unit": {
+        "UsedDataSize": "byte",
+        "UsedSize": "byte",
+        "UsedDataPct": "%",
+        "UsedIndexSize": "byte",
+        "DataFreeSize": "byte",
+        "UsedPct": "%",
+        "TotalSize": "byte",
+        "UsedDiffPct": "%"
+      },
+      "_description": {
+        "D": "Top 10 database increase storage fastest this time",
+        "M": "Top 20 database of storage usage"
+      },
+      "_chart": {
+        "D": [
+          {
+            "type": "pie",
+            "name": "Ratio of used data size, index size vs data free size",
+            "chart_columns": [
+              "UsedDataSize",
+              "UsedIndexSize",
+              "DataFreeSize"
+            ]
+          },
+          {
+            "type": "bar",
+            "name": "Curent usage size of each database",
+            "chart_columns": [
+              "UsedSize"
+            ]
+          },
+          {
+            "type": "line",
+            "name": "Space usage timeline",
+            "chart_columns": [
+              "UsedPct"
+            ]
+          },
+          {
+            "type": "line",
+            "name": "Increament of space used percentage",
+            "chart_columns": [
+              "UsedDiffPct"
+            ]
+          }
+        ],
+        "M": [
+          {
+            "type": "pie",
+            "name": "Ratio of used data size, index size vs data free size",
+            "chart_columns": [
+              "UsedDataSize",
+              "UsedIndexSize",
+              "DataFreeSize"
+            ]
+          },
+          {
+            "type": "bar",
+            "name": "Curent usage size of each database",
+            "chart_columns": [
+              "UsedSize"
+            ]
+          },
+          {
+            "type": "line",
+            "name": "Space usage timeline",
+            "chart_columns": [
+              "UsedPct"
+            ]
+          },
+          {
+            "type": "line",
+            "name": "Increament of space used percentage",
+            "chart_columns": [
+              "UsedDiffPct"
+            ]
+          }
+        ]
+      }
+    },
+    "version": "1.0",
+    "fetchAt": "20131218140819GMT+07:00",
+    "fetchedAt_bin": 1387350499,
+    "istIid": "localhost-@MYSQL-information_schema",
+    "resourceId": "As/MyTopNDb",
+    "sourceJob": "MySQL.Database_Area.Top30Database",
+    "instanceName": "inst_1",
+    "data": {
+      "M": [
+        {
+          "DatabaseNm": "sakila",
+          "UsedDataSize": 4313920,
+          "UsedIndexSize": 2581504,
+          "DataFreeSize": 23481327616,
+          "UsedSize": 6895424,
+          "UsedDataPct": 62.56207015,
+          "TotalSize": 23488223040,
+          "UsedPct": 0.02935694,
+          "UsedDiffPct": 2.6E-7,
+          "RECORD_SEQ": 1005100
+        },
+        {
+          "DatabaseNm": "world",
+          "UsedDataSize": 374048,
+          "UsedIndexSize": 66560,
+          "DataFreeSize": 23481327616,
+          "UsedSize": 440608,
+          "UsedDataPct": 84.89360157,
+          "TotalSize": 23481768224,
+          "UsedPct": 0.00187638,
+          "UsedDiffPct": 1.0E-8,
+          "RECORD_SEQ": 1005101
+        }
+      ],
+      "D": [
+        {
+          "DatabaseNm": "sakila",
+          "UsedDataSize": 4313920,
+          "UsedIndexSize": 2581504,
+          "DataFreeSize": 23481327616,
+          "UsedSize": 6895424,
+          "UsedDataPct": 62.56207015,
+          "TotalSize": 23488223040,
+          "UsedPct": 0.02935694,
+          "UsedDiffPct": 2.6E-7,
+          "RECORD_SEQ": 1005100
+        },
+        {
+          "DatabaseNm": "world",
+          "UsedDataSize": 374048,
+          "UsedIndexSize": 66560,
+          "DataFreeSize": 23481327616,
+          "UsedSize": 440608,
+          "UsedDataPct": 84.89360157,
+          "TotalSize": 23481768224,
+          "UsedPct": 0.00187638,
+          "UsedDiffPct": 1.0E-8,
+          "RECORD_SEQ": 1005101
+        }
+      ]
+    }
+  }
+]

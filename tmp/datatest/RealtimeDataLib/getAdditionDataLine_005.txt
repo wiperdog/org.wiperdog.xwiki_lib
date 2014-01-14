@@ -1,0 +1,68 @@
+[
+  {
+    "hostId": "localhost",
+    "type": "Store",
+    "sid": "master",
+    "KEYEXPR": {
+      "_root": [
+        "DBName",
+        "DBFileName"
+      ],
+      "_sequence": [
+        "CurrentUsedPct",
+        "FileSizePageInt",
+        "CurrentUsedSizePageInt"
+      ],
+      "_chart": [
+        {
+          "type": "line",
+          "name": "Database Free Utilization Rate",
+          "chart_columns": [
+            "CurrentUsedPct",
+            "MaxUsedPct"
+          ],
+          "hint_columns": [
+            "MaxTotalSizePageInt",
+            "MaxFreeSizePageInt",
+            "FileSizePageInt",
+            "CurrentUsedSizePageInt"
+          ]
+        }
+      ]
+    },
+    "version": "1.0",
+    "fetchAt": "20131105073652GMT+07:00",
+    "fetchedAt_bin": 1383611812,
+    "istIid": "localhost-@MSSQL-master",
+    "resourceId": "As/MsDbFree",
+    "sourceJob": "SQL_Server.Database_Area.Database_free",
+    "data": [
+      {
+        "DBName": "TestJob324",
+        "DBFileName": "TestJob324_log",
+        "FileSizePageInt": 160,
+        "LocationAddr": "TestJob324_log.LDF",
+        "CurrentUsedSizePageInt": 84,
+        "CurrentFreeSizePageInt": 76,
+        "CurrentUsedPct": 53.0,
+        "MaxTotalSizePageInt": 3300133,
+        "MaxFreeSizePageInt": 3300049,
+        "MaxUsedPct": 85,
+        "RECORD_SEQ": 1
+      },
+      {
+        "DBName": "TestJob324",
+        "DBFileName": "TestJob324",
+        "FileSizePageInt": 288,
+        "LocationAddr": "TestJob324.mdf",
+        "CurrentUsedSizePageInt": 176,
+        "CurrentFreeSizePageInt": 112,
+        "CurrentUsedPct": 61.0,
+        "MaxTotalSizePageInt": 3300261,
+        "MaxFreeSizePageInt": 3300085,
+        "MaxUsedPct": 94,
+        "RECORD_SEQ": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,506 @@
+[
+  {
+    "type": "line_",
+    "chartName": "ReadsCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1.1(ReadsCnt)",
+        "value": 20
+      },
+      {
+        "seriesName": "db_test2.1(ReadsCnt)",
+        "value": 44
+      },
+      {
+        "seriesName": "db_test3.5(ReadsCnt)",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1.1(ReadsCnt)",
+        "detail": {
+          "ReadsCnt": 20,
+          "ReadsCumCnt": 11,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2.1(ReadsCnt)",
+        "detail": {
+          "ReadsCnt": 44,
+          "ReadsCumCnt": 44,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test3.5(ReadsCnt)",
+        "detail": {
+          "ReadsCnt": 33,
+          "ReadsCumCnt": 33,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "line_",
+    "chartName": "ReadsCumCnt_WritesCumCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1.1(ReadsCumCnt)",
+        "value": 11
+      },
+      {
+        "seriesName": "db_test1.1(WritesCumCnt)",
+        "value": 11
+      },
+      {
+        "seriesName": "db_test2.1(ReadsCumCnt)",
+        "value": 44
+      },
+      {
+        "seriesName": "db_test2.1(WritesCumCnt)",
+        "value": 44
+      },
+      {
+        "seriesName": "db_test3.5(ReadsCumCnt)",
+        "value": 33
+      },
+      {
+        "seriesName": "db_test3.5(WritesCumCnt)",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1.1(ReadsCumCnt)",
+        "detail": {
+          "ReadsCumCnt": 11,
+          "WritesCumCnt": 11,
+          "WritesCnt": 11,
+          "ReadsCnt": 20,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test1.1(WritesCumCnt)",
+        "detail": {
+          "ReadsCumCnt": 11,
+          "WritesCumCnt": 11,
+          "WritesCnt": 11,
+          "ReadsCnt": 20,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2.1(ReadsCumCnt)",
+        "detail": {
+          "ReadsCumCnt": 44,
+          "WritesCumCnt": 44,
+          "WritesCnt": 44,
+          "ReadsCnt": 44,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2.1(WritesCumCnt)",
+        "detail": {
+          "ReadsCumCnt": 44,
+          "WritesCumCnt": 44,
+          "WritesCnt": 44,
+          "ReadsCnt": 44,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test3.5(ReadsCumCnt)",
+        "detail": {
+          "ReadsCumCnt": 33,
+          "WritesCumCnt": 33,
+          "WritesCnt": 33,
+          "ReadsCnt": 33,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test3.5(WritesCumCnt)",
+        "detail": {
+          "ReadsCumCnt": 33,
+          "WritesCumCnt": 33,
+          "WritesCnt": 33,
+          "ReadsCnt": 33,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "0_BytesReadCumCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1.1",
+        "value": 11
+      },
+      {
+        "seriesName": "db_test2.1",
+        "value": 44
+      },
+      {
+        "seriesName": "db_test3.5",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1.1",
+        "detail": {
+          "BytesReadCumCnt": 11,
+          "BytesWriteCumCnt": 11,
+          "BytesOnDiskDbl": 11,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2.1",
+        "detail": {
+          "BytesReadCumCnt": 44,
+          "BytesWriteCumCnt": 44,
+          "BytesOnDiskDbl": 44,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test3.5",
+        "detail": {
+          "BytesReadCumCnt": 33,
+          "BytesWriteCumCnt": 33,
+          "BytesOnDiskDbl": 33,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "0_BytesWriteCumCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1.1",
+        "value": 11
+      },
+      {
+        "seriesName": "db_test2.1",
+        "value": 44
+      },
+      {
+        "seriesName": "db_test3.5",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1.1",
+        "detail": {
+          "BytesReadCumCnt": 11,
+          "BytesWriteCumCnt": 11,
+          "BytesOnDiskDbl": 11,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2.1",
+        "detail": {
+          "BytesReadCumCnt": 44,
+          "BytesWriteCumCnt": 44,
+          "BytesOnDiskDbl": 44,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test3.5",
+        "detail": {
+          "BytesReadCumCnt": 33,
+          "BytesWriteCumCnt": 33,
+          "BytesOnDiskDbl": 33,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "1_BytesReadsCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1.1",
+        "value": 11
+      },
+      {
+        "seriesName": "db_test2.1",
+        "value": 44
+      },
+      {
+        "seriesName": "db_test3.5",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1.1",
+        "detail": {
+          "BytesReadsCnt": 11,
+          "BytesWritesCnt": 11,
+          "BytesWriteCumCnt": 11,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2.1",
+        "detail": {
+          "BytesReadsCnt": 44,
+          "BytesWritesCnt": 44,
+          "BytesWriteCumCnt": 44,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test3.5",
+        "detail": {
+          "BytesReadsCnt": 33,
+          "BytesWritesCnt": 33,
+          "BytesWriteCumCnt": 33,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "1_BytesWritesCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1.1",
+        "value": 11
+      },
+      {
+        "seriesName": "db_test2.1",
+        "value": 44
+      },
+      {
+        "seriesName": "db_test3.5",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1.1",
+        "detail": {
+          "BytesReadsCnt": 11,
+          "BytesWritesCnt": 11,
+          "BytesWriteCumCnt": 11,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2.1",
+        "detail": {
+          "BytesReadsCnt": 44,
+          "BytesWritesCnt": 44,
+          "BytesWriteCumCnt": 44,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test3.5",
+        "detail": {
+          "BytesReadsCnt": 33,
+          "BytesWritesCnt": 33,
+          "BytesWriteCumCnt": 33,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "chartName": "0_db_test1_1",
+    "nameOfChart": "Draw Area Read Time( db_test1.1 )",
+    "data": [
+      {
+        "seriesName": "ReadTimeDbl",
+        "value": 11
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "ReadTimeDbl",
+        "detail": {
+          "ReadTimeDbl": 11,
+          "WriteTimeDbl": 11,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "chartName": "0_db_test2_1",
+    "nameOfChart": "Draw Area Read Time( db_test2.1 )",
+    "data": [
+      {
+        "seriesName": "ReadTimeDbl",
+        "value": 44
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "ReadTimeDbl",
+        "detail": {
+          "ReadTimeDbl": 44,
+          "WriteTimeDbl": 44,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "chartName": "0_db_test3_5",
+    "nameOfChart": "Draw Area Read Time( db_test3.5 )",
+    "data": [
+      {
+        "seriesName": "ReadTimeDbl",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "ReadTimeDbl",
+        "detail": {
+          "ReadTimeDbl": 33,
+          "WriteTimeDbl": 33,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "chartName": "1_db_test1_1",
+    "nameOfChart": "Draw Area Write Time( db_test1.1 )",
+    "data": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "value": 11
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "value": 11
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "detail": {
+          "WriteTimeDbl": 11,
+          "TotalTimeIODbl": 11,
+          "AverageIOTimeDbl": 11,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "detail": {
+          "WriteTimeDbl": 11,
+          "TotalTimeIODbl": 11,
+          "AverageIOTimeDbl": 11,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "chartName": "1_db_test2_1",
+    "nameOfChart": "Draw Area Write Time( db_test2.1 )",
+    "data": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "value": 44
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "value": 44
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "detail": {
+          "WriteTimeDbl": 44,
+          "TotalTimeIODbl": 44,
+          "AverageIOTimeDbl": 44,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "detail": {
+          "WriteTimeDbl": 44,
+          "TotalTimeIODbl": 44,
+          "AverageIOTimeDbl": 44,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "area",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "chartName": "1_db_test3_5",
+    "nameOfChart": "Draw Area Write Time( db_test3.5 )",
+    "data": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "value": 33
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "WriteTimeDbl",
+        "detail": {
+          "WriteTimeDbl": 33,
+          "TotalTimeIODbl": 33,
+          "AverageIOTimeDbl": 33,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "TotalTimeIODbl",
+        "detail": {
+          "WriteTimeDbl": 33,
+          "TotalTimeIODbl": 33,
+          "AverageIOTimeDbl": 33,
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  }
+]

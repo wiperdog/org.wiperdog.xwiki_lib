@@ -1,0 +1,194 @@
+[
+  {
+    "type": "bar",
+    "chartName": "0_BytesReadCumCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1.1",
+        "value": 11
+      },
+      {
+        "seriesName": "db_test2.1",
+        "value": 44
+      },
+      {
+        "seriesName": "db_test3.5",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1.1",
+        "detail": {
+          "BytesReadCumCnt": "11( byte )",
+          "BytesWriteCumCnt": "11( byte )",
+          "BytesOnDiskDbl": "11( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2.1",
+        "detail": {
+          "BytesReadCumCnt": "44( byte )",
+          "BytesWriteCumCnt": "44( byte )",
+          "BytesOnDiskDbl": "44( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test3.5",
+        "detail": {
+          "BytesReadCumCnt": "33( byte )",
+          "BytesWriteCumCnt": "33( byte )",
+          "BytesOnDiskDbl": "33( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "0_BytesWriteCumCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1.1",
+        "value": 11
+      },
+      {
+        "seriesName": "db_test2.1",
+        "value": 44
+      },
+      {
+        "seriesName": "db_test3.5",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1.1",
+        "detail": {
+          "BytesReadCumCnt": "11( byte )",
+          "BytesWriteCumCnt": "11( byte )",
+          "BytesOnDiskDbl": "11( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2.1",
+        "detail": {
+          "BytesReadCumCnt": "44( byte )",
+          "BytesWriteCumCnt": "44( byte )",
+          "BytesOnDiskDbl": "44( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test3.5",
+        "detail": {
+          "BytesReadCumCnt": "33( byte )",
+          "BytesWriteCumCnt": "33( byte )",
+          "BytesOnDiskDbl": "33( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "1_BytesReadsCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1.1",
+        "value": 11
+      },
+      {
+        "seriesName": "db_test2.1",
+        "value": 44
+      },
+      {
+        "seriesName": "db_test3.5",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1.1",
+        "detail": {
+          "BytesReadsCnt": "11( byte/interval )",
+          "BytesWritesCnt": "11( byte/interval )",
+          "BytesWriteCumCnt": "11( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2.1",
+        "detail": {
+          "BytesReadsCnt": "44( byte/interval )",
+          "BytesWritesCnt": "44( byte/interval )",
+          "BytesWriteCumCnt": "44( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test3.5",
+        "detail": {
+          "BytesReadsCnt": "33( byte/interval )",
+          "BytesWritesCnt": "33( byte/interval )",
+          "BytesWriteCumCnt": "33( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  },
+  {
+    "type": "bar",
+    "chartName": "1_BytesWritesCnt",
+    "categories": "2013/12/19 13:42:50 GMT+07:00",
+    "data": [
+      {
+        "seriesName": "db_test1.1",
+        "value": 11
+      },
+      {
+        "seriesName": "db_test2.1",
+        "value": 44
+      },
+      {
+        "seriesName": "db_test3.5",
+        "value": 33
+      }
+    ],
+    "detailData": [
+      {
+        "seriesName": "db_test1.1",
+        "detail": {
+          "BytesReadsCnt": "11( byte/interval )",
+          "BytesWritesCnt": "11( byte/interval )",
+          "BytesWriteCumCnt": "11( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test2.1",
+        "detail": {
+          "BytesReadsCnt": "44( byte/interval )",
+          "BytesWritesCnt": "44( byte/interval )",
+          "BytesWriteCumCnt": "44( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      },
+      {
+        "seriesName": "db_test3.5",
+        "detail": {
+          "BytesReadsCnt": "33( byte/interval )",
+          "BytesWritesCnt": "33( byte/interval )",
+          "BytesWriteCumCnt": "33( byte )",
+          "fetchAt": "2013/12/19 13:42:50 GMT+07:00"
+        }
+      }
+    ]
+  }
+]

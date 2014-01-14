@@ -2,6 +2,11 @@ package org.wiperdog.lib;
 
 import static org.junit.Assert.fail;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -10,7 +15,7 @@ import org.wiperdog.custommongodbconnection.CMongoDBConn;
 
 public class TestUTCommon {
 	static String param_file_path = "tmp\\conf_Standard.params";
-	
+
 	public static CMongoDBConn createNewConnectionForTest() {
 		CMongoDBConn conn = new CMongoDBConn();
 		try {
@@ -20,7 +25,7 @@ public class TestUTCommon {
 		}
 		return conn;
 	}
-	
+
 	public static boolean compare2object(Object expected, Object result) {
 		boolean isEquals = false;
 		if (expected instanceof Map && result instanceof Map) {
@@ -80,5 +85,25 @@ public class TestUTCommon {
 			}
 		}
 		return isEquals;
+	}
+
+	/**
+	 * Read file and convert json to Object
+	 * @param filename File's path
+	 * @return
+	 * @throws IOException
+	 */
+	public static Object getObjectFromFile(String filename) throws IOException {
+		Object result = null;
+		if (filename != null && filename != "") {
+			BufferedReader local_reader = new BufferedReader(new FileReader(filename));
+			String line = null;
+			String str = "";
+			while ((line = local_reader.readLine()) != null) {
+				str += line;
+			}
+			result = com.mongodb.util.JSON.parse(str);
+		}
+		return result;
 	}
 }
