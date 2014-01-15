@@ -257,7 +257,7 @@ class CMongoDBConn {
 	def getDataInPeriod(collection,fromDate,toDate,limit,istIid){
 		def realCollectionName = collection + "." + istIid
 		logger.trace("Begin getting data of $realCollectionName from : $fromDate to : $toDate with limit of $limit")
-		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss")
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
 		def list_data = []
 		assert collection != null || collection != "" || istIid != null || istIid !="" : "Can not get data ! Collection is null or empty string"
 		assert limit != null : "Can not get data ! Limit is null"
