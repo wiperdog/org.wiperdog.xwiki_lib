@@ -1,5 +1,6 @@
 /**
- *
+ * copied from CMongoDBConn_UT_01.java
+ * for mongodb without auth option
  */
 package org.wiperdog.custommongodbconnection;
 
@@ -24,20 +25,21 @@ import com.mongodb.MongoException;
  *
  */
 public class TestCMongoDBConn_01 {
-	private boolean mongdbpresent = false;
-	
+	private boolean mongdbpresent = true;
+	private final String [] args = []
 	public TestCMongoDBConn_01() {
 	}
 
 	@Before
 	public void startup() {
 		assumeTrue(mongdbpresent);
+		startmongo.main(args)
 	}
 	
 	@After
 	public void shutdown() {
 		assumeTrue(mongdbpresent);
-		
+		stopmongo.main(args)
 	}
 	
 	/**
@@ -53,118 +55,6 @@ public class TestCMongoDBConn_01 {
 			String dbname = "wiperdog";
 			String userName = "";
 			String password = "";
-			CMongoDBConn conn = new CMongoDBConn();
-			Object ret = conn.getConnection(host, port, dbname, userName, password);
-			assertTrue(ret instanceof com.gmongo.GMongo);
-			assertTrue(conn.getDb() != null && conn.getDb() instanceof com.mongodb.DB);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Check connect to remote host, port default
-	 * Expected: Connect successful result is Gmongo, getDb return a com.mongodb.DB instance
-	 */
-	@Test
-	public void getConnection5params002() {
-		assumeTrue(mongdbpresent);
-		try {
-			String host = "10.0.0.184";
-			int port = 27017;
-			String dbname = "wiperdog";
-			String userName = "";
-			String password = "";
-			CMongoDBConn conn = new CMongoDBConn();
-			Object ret = conn.getConnection(host, port, dbname, userName, password);
-			assertTrue(ret instanceof com.gmongo.GMongo);
-			assertTrue(conn.getDb() != null && conn.getDb() instanceof com.mongodb.DB);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Check connect to localhost, port custom
-	 * Expected: Connect successful result is Gmongo, getDb return a com.mongodb.DB instance
-	 */
-	@Test
-	public void getConnection5params003() {
-		assumeTrue(mongdbpresent);
-		try {
-			String host = "localhost";
-			int port = 27000;
-			String dbname = "wiperdog";
-			String userName = "";
-			String password = "";
-			CMongoDBConn conn = new CMongoDBConn();
-			Object ret = conn.getConnection(host, port, dbname, userName, password);
-			assertTrue(ret instanceof com.gmongo.GMongo);
-			assertTrue(conn.getDb() != null && conn.getDb() instanceof com.mongodb.DB);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Check connect to remote host, port custom
-	 * Expected: Connect successful result is Gmongo, getDb return a com.mongodb.DB instance
-	 */
-	@Test
-	public void getConnection5params004() {
-		assumeTrue(mongdbpresent);
-		try {
-			String host = "10.0.0.184";
-			int port = 27000;
-			String dbname = "wiperdog";
-			String userName = "";
-			String password = "";
-			CMongoDBConn conn = new CMongoDBConn();
-			Object ret = conn.getConnection(host, port, dbname, userName, password);
-			assertTrue(ret instanceof com.gmongo.GMongo);
-			assertTrue(conn.getDb() != null && conn.getDb() instanceof com.mongodb.DB);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Check connect to locahost, with authentication
-	 * DB needs authenticate test/test
-	 * Expected: Connect successful result is Gmongo, getDb return a com.mongodb.DB instance
-	 */
-	@Test
-	public void getConnection5params005() {
-		assumeTrue(mongdbpresent);
-		try {
-			String host = "localhost";
-			int port = 27017;
-			String dbname = "wiperdog";
-			String userName = "test";
-			String password = "test";
-			CMongoDBConn conn = new CMongoDBConn();
-			Object ret = conn.getConnection(host, port, dbname, userName, password);
-			assertTrue(ret instanceof com.gmongo.GMongo);
-			assertTrue(conn.getDb() != null && conn.getDb() instanceof com.mongodb.DB);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Check connect to remote host, with authentication
-	 * DB needs authenticate test/test
-	 * Expected: Connect successful result is Gmongo, getDb return a com.mongodb.DB instance
-	 */
-	@Test
-	public void getConnection5params006() {
-		assumeTrue(mongdbpresent);
-		try {
-			String host = "10.0.0.184";
-			int port = 27017;
-			String dbname = "wiperdog";
-			String userName = "test";
-			String password = "test";
 			CMongoDBConn conn = new CMongoDBConn();
 			Object ret = conn.getConnection(host, port, dbname, userName, password);
 			assertTrue(ret instanceof com.gmongo.GMongo);
@@ -196,49 +86,6 @@ public class TestCMongoDBConn_01 {
 		}
 	}
 
-	/**
-	 * Check connect to remote host, custom dbname
-	 * Expected: Connect successful result is Gmongo, getDb return a com.mongodb.DB instance
-	 */
-	@Test
-	public void getConnection5params008() {
-		assumeTrue(mongdbpresent);
-		try {
-			String host = "10.0.0.184";
-			int port = 27017;
-			String dbname = "wiperdog_test";
-			String userName = "";
-			String password = "";
-			CMongoDBConn conn = new CMongoDBConn();
-			Object ret = conn.getConnection(host, port, dbname, userName, password);
-			assertTrue(ret instanceof com.gmongo.GMongo);
-			assertTrue(conn.getDb() != null && conn.getDb() instanceof com.mongodb.DB);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	/**
-	 * Check connect to authentication host, custom dbname with login infomation
-	 * Expected: Connect successful result is Gmongo, getDb return a com.mongodb.DB instance
-	 */
-	@Test
-	public void getConnection5params009() {
-		assumeTrue(mongdbpresent);
-		try {
-			String host = "localhost";
-			int port = 27017;
-			String dbname = "wiperdog_test";
-			String userName = "test";
-			String password = "test";
-			CMongoDBConn conn = new CMongoDBConn();
-			Object ret = conn.getConnection(host, port, dbname, userName, password);
-			assertTrue(ret instanceof com.gmongo.GMongo);
-			assertTrue(conn.getDb() != null && conn.getDb() instanceof com.mongodb.DB);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 
 	/**
 	 * Check connect to non-authentication host, custom dbname with login
@@ -454,147 +301,6 @@ public class TestCMongoDBConn_01 {
 		String password = "";
 		CMongoDBConn conn = new CMongoDBConn();
 		Object ret = conn.getConnection(host, port, dbname, userName, password);
-	}
-
-	/**
-	 * Connect to authentication db but give wrong user/password
-	 * DB needs authenticate
-	 * Expected: Get GMongo instance successful but Exception when query
-	 * @throws Exception
-	 */
-	@Test(expected = Exception.class)
-	public void getConnection5params020() throws Exception {
-		assumeTrue(mongdbpresent);
-		String host = "10.0.0.184";
-		int port = 27017;
-		String dbname = "wiperdog";
-		String userName = "wronguser";
-		String password = "test";
-		CMongoDBConn conn = new CMongoDBConn();
-		Object ret = conn.getConnection(host, port, dbname, userName, password);
-		assertTrue(ret instanceof GMongo);
-		Set<String> lstCollections = ((DB)conn.getDb()).getCollectionNames();
-	}
-
-	/**
-	 * Connect to authentication db but give null user
-	 * DB needs authenticate
-	 * Expected: Get GMongo instance successful but Exception when query
-	 * @throws Exception
-	 */
-	@Test(expected = Exception.class)
-	public void getConnection5params021() throws Exception {
-		assumeTrue(mongdbpresent);
-		String host = "10.0.0.184";
-		int port = 27017;
-		String dbname = "wiperdog";
-		String userName = null;
-		String password = "test";
-		CMongoDBConn conn = new CMongoDBConn();
-		Object ret = conn.getConnection(host, port, dbname, userName, password);
-		((DB)conn.getDb()).getCollectionNames();
-	}
-
-	/**
-	 * Connect to authentication db but give empty user
-	 * DB needs authenticate
-	 * Expected: Get GMongo instance successful but Exception when query
-	 * @throws Exception
-	 */
-	@Test(expected = Exception.class)
-	public void getConnection5params022() throws Exception {
-		assumeTrue(mongdbpresent);
-			String host = "10.0.0.184";
-			int port = 27017;
-			String dbname = "wiperdog";
-			String userName = "";
-			String password = "test";
-			CMongoDBConn conn = new CMongoDBConn();
-			Object ret = conn.getConnection(host, port, dbname, userName, password);
-			((DB)conn.getDb()).getCollectionNames();
-	}
-
-	/**
-	 * Connect to authentication db but give space character user
-	 * Expected: Get GMongo instance successful but Exception when query
-	 *
-	 * @throws Exception
-	 *
-	 */
-	@Test(expected = Exception.class)
-	public void getConnection5params023() throws Exception {
-		assumeTrue(mongdbpresent);
-		String host = "10.0.0.184";
-		int port = 27017;
-		String dbname = "wiperdog";
-		String userName = " ";
-		String password = "test";
-		CMongoDBConn conn = new CMongoDBConn();
-		Object ret = conn.getConnection(host, port, dbname, userName, password);
-		((DB)conn.getDb()).getCollectionNames();
-	}
-
-	/**
-	 * Connect to authentication db but give wrong password
-	 * DB needs authenticate
-	 * Expected: Get GMongo instance successful but Exception when query
-	 * @throws Exception
-	 */
-	@Test(expected = Exception.class)
-	public void getConnection5params024() throws Exception {
-		assumeTrue(mongdbpresent);
-		String host = "10.0.0.184";
-		int port = 27017;
-		String dbname = "wiperdog";
-		String userName = "test";
-		String password = "wrongpassword";
-		CMongoDBConn conn = new CMongoDBConn();
-		Object ret = conn.getConnection(host, port, dbname, userName, password);
-		((DB) conn.getDb()).getCollectionNames();
-	}
-
-	/**
-	 * Connect to authentication db but give null password
-	 * DB needs authenticate
-	 * Expected: AssertionError with message "Password is null or empty!"
-	 * @throws Exception
-	 */
-	@Test(expected = AssertionError.class)
-	public void getConnection5params025() throws Exception {
-		assumeTrue(mongdbpresent);
-		try {
-			String host = "10.0.0.184";
-			int port = 27017;
-			String dbname = "wiperdog";
-			String userName = "test";
-			String password = null;
-			CMongoDBConn conn = new CMongoDBConn();
-			Object ret = conn.getConnection(host, port, dbname, userName, password);
-		} catch (AssertionError ae) {
-			assertTrue(ae.getMessage().contains("Password is null or empty!"));
-			throw ae;
-		}
-	}
-
-	/**
-	 * Connect to authentication db but doesn't give login information
-	 * DB needs authenticate
-	 * Expected: Get GMongo instance successful but Exception when query
-	 * @throws Exception
-	 */
-	@Test(expected = MongoException.class)
-	public void getConnection5params026() throws Exception {
-		assumeTrue(mongdbpresent);
-		String host = "10.0.0.184";
-		int port = 27017;
-		String dbname = "wiperdog";
-		String userName = "";
-		String password = "";
-		CMongoDBConn conn = new CMongoDBConn();
-		Object ret = conn.getConnection(host, port, dbname, userName, password);
-		assertTrue(ret instanceof com.gmongo.GMongo);
-		assertTrue(conn.getDb() != null && conn.getDb() instanceof com.mongodb.DB);
-		((DB) conn.getDb()).getCollectionNames();
 	}
 
 	/**
