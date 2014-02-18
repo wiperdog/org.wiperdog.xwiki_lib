@@ -1,0 +1,30 @@
+Tue Feb 18 15:37:21.608 [initandlisten] MongoDB starting : pid=9562 port=27017 dbpath=/root/SourceEclipseJuno/org.wiperdog.xwiki_lib/src/test/groovy/data 32-bit host=vmRHEL55x64
+Tue Feb 18 15:37:21.608 [initandlisten] 
+Tue Feb 18 15:37:21.608 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+Tue Feb 18 15:37:21.608 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
+Tue Feb 18 15:37:21.608 [initandlisten] **       Note that journaling defaults to off for 32 bit and is currently off.
+Tue Feb 18 15:37:21.608 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+Tue Feb 18 15:37:21.608 [initandlisten] 
+Tue Feb 18 15:37:21.608 [initandlisten] db version v2.4.5
+Tue Feb 18 15:37:21.608 [initandlisten] git version: a2ddc68ba7c9cee17bfe69ed840383ec3506602b
+Tue Feb 18 15:37:21.608 [initandlisten] build info: Linux bs-linux32.10gen.cc 2.6.21.7-2.fc8xen #1 SMP Fri Feb 15 12:39:36 EST 2008 i686 BOOST_LIB_VERSION=1_49
+Tue Feb 18 15:37:21.608 [initandlisten] allocator: system
+Tue Feb 18 15:37:21.608 [initandlisten] options: { dbpath: "/root/SourceEclipseJuno/org.wiperdog.xwiki_lib/src/test/groovy/data", fork: true, logpath: "/root/SourceEclipseJuno/org.wiperdog.xwiki_lib/src/test/groovy/log/mongod.log", noauth: true, pidfilepath: "/root/SourceEclipseJuno/org.wiperdog.xwiki_lib/src/test/groovy/run/mongod.pid" }
+Tue Feb 18 15:37:21.628 [FileAllocator] allocating new datafile /root/SourceEclipseJuno/org.wiperdog.xwiki_lib/src/test/groovy/data/local.ns, filling with zeroes...
+Tue Feb 18 15:37:21.628 [FileAllocator] creating directory /root/SourceEclipseJuno/org.wiperdog.xwiki_lib/src/test/groovy/data/_tmp
+Tue Feb 18 15:37:21.839 [FileAllocator] done allocating datafile /root/SourceEclipseJuno/org.wiperdog.xwiki_lib/src/test/groovy/data/local.ns, size: 16MB,  took 0.165 secs
+Tue Feb 18 15:37:21.882 [FileAllocator] allocating new datafile /root/SourceEclipseJuno/org.wiperdog.xwiki_lib/src/test/groovy/data/local.0, filling with zeroes...
+Tue Feb 18 15:37:22.153 [FileAllocator] done allocating datafile /root/SourceEclipseJuno/org.wiperdog.xwiki_lib/src/test/groovy/data/local.0, size: 16MB,  took 0.27 secs
+Tue Feb 18 15:37:22.186 [initandlisten] command local.$cmd command: { create: "startup_log", size: 10485760, capped: true } ntoreturn:1 keyUpdates:0  reslen:37 529ms
+Tue Feb 18 15:37:22.187 [initandlisten] ERROR: listen(): bind() failed errno:98 Address already in use for socket: 0.0.0.0:27017
+Tue Feb 18 15:37:22.187 [initandlisten] ERROR:   addr already in use
+Tue Feb 18 15:37:22.187 [initandlisten] now exiting
+Tue Feb 18 15:37:22.187 dbexit: 
+Tue Feb 18 15:37:22.187 [initandlisten] shutdown: going to close listening sockets...
+Tue Feb 18 15:37:22.187 [initandlisten] shutdown: going to flush diaglog...
+Tue Feb 18 15:37:22.187 [initandlisten] shutdown: going to close sockets...
+Tue Feb 18 15:37:22.187 [initandlisten] shutdown: waiting for fs preallocator...
+Tue Feb 18 15:37:22.187 [initandlisten] shutdown: closing all files...
+Tue Feb 18 15:37:22.187 [initandlisten] closeAllFiles() finished
+Tue Feb 18 15:37:22.187 [initandlisten] shutdown: removing fs lock...
+Tue Feb 18 15:37:22.187 dbexit: really exiting now
