@@ -2,7 +2,7 @@
 def scriptFile = getClass().protectionDomain.codeSource.location.path
 def scriptDir = new File(scriptFile).parent
 
-def mongo = '/home/ora112d/mongodb/bin/mongo'
+def mongo = '/usr/bin/mongo'
 
 def port = ""
 if (args.length > 0 && args[0].toInteger() > 1000) {

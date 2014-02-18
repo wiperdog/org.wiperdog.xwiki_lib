@@ -1,6 +1,6 @@
 [
     "mongoDB": [
-        "port": 27017,
+        "port": 27000,
         "host": "localhost",
         "dbName": "wiperdog_test",
         "user": "test",
